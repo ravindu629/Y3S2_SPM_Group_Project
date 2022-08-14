@@ -21,23 +21,8 @@ app.get("/", (req, res) => {
 });
 
 app.use("/api/admins", require("./routes/Admin.route"));
-app.use("/api/staffMembers", require("./routes/Staff.route"));
 app.use("/api/students", require("./routes/Student.route"));
-app.use("/api/markingSchemas", require("./routes/MarkingSchema.route"));
-app.use("/api/submissions", require("./routes/Submission.route"));
-
-app.use("/api/addMarks", require("./routes/SupervisorMarks.route"));
-app.use("/api/acceptTopic", require("./routes/AcceptTopic.route"));
-
-app.use("/api/studentGroups", require("./routes/StudentGroup.route"));
-app.use("/api/researchTopics", require("./routes/ResearchTopic.route"));
-app.use("/api/stdDocfiles", require("./routes/StdDocFiles.route"));
-
-app.use("/api/PanelMember", require("./routes/PanelMemberMarks.route"));
-
-app.use("/api/PanelMember", require("./routes/PanelMemberMarks.route"));
-
-app.use("/api/files", require("./routes/Files.route"));
+app.use("/api/staffMembers", require("./routes/Staff.route"));
 
 app.listen(port, () => {
   console.log("Server is starting on port " + port);
