@@ -1,0 +1,20 @@
+.loginMenu {
+  padding-top: 2%;
+}
+
+.loginForm {
+  padding-top: 1%;
+  padding-left: 7%;
+  padding-right: 16%;
+}
+
+.loginFormStd {
+  padding-top: 2%;
+  padding-left: 7%;
+  padding-right: 28%;
+}
+
+.loginHeading {
+  font-size: 180%;
+  color: #66fcf1;
+}

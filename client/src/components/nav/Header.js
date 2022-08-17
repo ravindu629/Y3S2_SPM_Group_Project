@@ -2,10 +2,9 @@ import React from "react";
 import "./nav.css";
 
 function Header() {
-  const year = new Date().getFullYear();
   return (
     <nav className="navbar navbar-expand-lg navbar-dark">
-      <a className="navbar-brand" href="">
+      <a className="navbar-brand" href="/">
         SLIIT
       </a>
       <button
@@ -27,12 +26,12 @@ function Header() {
             </a>
           </li>
           <li className="nav-item">
-            <a className="nav-link" href="#pricing">
+            <a className="nav-link" href="/studentLogin">
               Student
             </a>
           </li>
           <li className="nav-item">
-            <a className="nav-link" href="#cta">
+            <a className="nav-link" href="/staffLogin">
               Staff
             </a>
           </li>

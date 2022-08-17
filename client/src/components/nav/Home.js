@@ -17,19 +17,22 @@ function Home() {
             <div className="carousel-item active container-fluid">
               <h2 className="testimonial-text">Faculty Of Computing</h2>
               <img className="testimonial-image" src={it} alt="dog-profile" />
-
-              <ul>Software Engineering</ul>
-              <ul>Information Technology</ul>
-              <ul>Data Science</ul>
-              <ul>Cyber Security</ul>
+              <div className="courses_list">
+                <ul>Software Engineering</ul>
+                <ul>Information Technology</ul>
+                <ul>Data Science</ul>
+                <ul>Cyber Security</ul>
+              </div>
             </div>
             <div className="carousel-item container-fluid">
               <h2 className="testimonial-text">Faculty Of Engineering</h2>
               <img className="testimonial-image" src={eng} alt="lady-profile" />
-              <ul>Civil Engineering</ul>
-              <ul>Mechanical Engineering</ul>
-              <ul>Electrical Engineering</ul>
-              <ul>Electronic Engineering</ul>
+              <div className="courses_list">
+                <ul>Civil Engineering</ul>
+                <ul>Mechanical Engineering</ul>
+                <ul>Electrical Engineering</ul>
+                <ul>Electronic Engineering</ul>
+              </div>
             </div>
             <div className="carousel-item container-fluid">
               <h2 className="testimonial-text">Faculty Of Bussness</h2>
@@ -38,8 +41,12 @@ function Home() {
                 src={bussness}
                 alt="lady-profile"
               />
-              <ul>Bussness Management</ul>
-              <ul>Hotel Management</ul>
+              <div className="courses_list">
+                <ul>Bussness Management</ul>
+                <ul>Hotel Management</ul>
+                <ul>Hospital Management</ul>
+                <ul>Human Resourses Management</ul>
+              </div>
             </div>
           </div>
           <a

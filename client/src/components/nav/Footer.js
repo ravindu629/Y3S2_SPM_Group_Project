@@ -4,8 +4,8 @@ import "./nav.css";
 function Footer() {
   const year = new Date().getFullYear();
   return (
-    <footer className="white-section" id="footer">
-      <div className="container-fluid">
+    <footer className="foter">
+      <div>
         <a href="https://twitter.com/?lang=en">
           <i className="fab footer-icons fa-twitter"></i>
         </a>
