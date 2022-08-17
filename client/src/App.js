@@ -10,6 +10,7 @@ import StudentMenu from "./components/student/StudentMenu";
 import LectureMenu from "./components/lecture/LectureMenu";
 import SupportService from "./components/supportService/SupportService";
 import StudentLogin from "./components/login/StudentLogin";
+import AddSudent from "./components/student/AddStudent";
 
 function App() {
   return (
@@ -23,6 +24,8 @@ function App() {
         <Route path="/studentMenu" element={<StudentMenu />} />
         <Route path="/lectureMenu" element={<LectureMenu />} />
         <Route path="/supportServiceMenu" element={<SupportService />} />
+
+        <Route path="/addStudent" element={<AddSudent />} />
       </Routes>
 
       <Footer />
