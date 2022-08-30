@@ -12,6 +12,10 @@ import SupportService from "./components/supportService/SupportService";
 import StudentLogin from "./components/login/StudentLogin";
 import AddSudent from "./components/student/AddStudent";
 
+//suppoert services pages 
+
+
+
 function App() {
   return (
     <BrowserRouter>
@@ -26,6 +30,7 @@ function App() {
         <Route path="/supportServiceMenu" element={<SupportService />} />
 
         <Route path="/addStudent" element={<AddSudent />} />
+
       </Routes>
 
       <Footer />
