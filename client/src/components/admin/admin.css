@@ -1,0 +1,25 @@
+.adminMenu {
+  margin-top: 5%;
+  margin-left: 20%;
+  margin-right: 55%;
+}
+
+.heading {
+  font-size: 180%;
+  color: #66fcf1;
+  margin-bottom: 5%;
+}
+
+.admBtn {
+  margin-top: 20px;
+}
+
+.adminMenuBtns {
+  font-size: 105%;
+  font-weight: bold;
+  text-align: left;
+}
+
+button {
+  margin-bottom: 18px;
+}

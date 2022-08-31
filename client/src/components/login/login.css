@@ -6,12 +6,14 @@
   padding-top: 1%;
   padding-left: 7%;
   padding-right: 16%;
+  font-weight: bold;
 }
 
 .loginFormStd {
   padding-top: 2%;
   padding-left: 7%;
   padding-right: 28%;
+  font-weight: bold;
 }
 
 .loginHeading {
