@@ -2,15 +2,16 @@ import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import PersonAddAlt1Icon from "@mui/icons-material/PersonAddAlt1";
 import axios from "axios";
-import "./student.css";
+import "./admin.css";
 
-function AddStudent() {
+function AddStaffMember() {
   const [user, setUser] = useState({
     fName: "",
     lName: "",
-    studentId: "",
+    staffId: "",
     nic: "",
     faculty: "",
+    type: "",
     gender: "male",
     email: "",
     phoneNumber: "",
@@ -23,10 +24,10 @@ function AddStudent() {
     e.preventDefault();
 
     axios
-      .post("http://localhost:5000/api/students", user)
+      .post("http://localhost:5000/api/staffMembers", user)
       .then(() => {
-        alert("student added");
-        navigate("/studentLogin");
+        alert("staff member added");
+        navigate("/adminMenu");
       })
       .catch((err) => {
         alert(err);
@@ -46,9 +47,9 @@ function AddStudent() {
 
   return (
     <div className="container">
-      <div className="formStyle">
-        <div className="heading">Register Student</div>
-        <div className="formStyle_1">
+      <div className="staffformStyle">
+        <div className="staff_heading">Register New Staff Member</div>
+        <div className="staffformStyle_1">
           <form onSubmit={sendData}>
             <div className="form-group row">
               <label for="fname" className="col-sm-2 col-form-label">
@@ -85,18 +86,18 @@ function AddStudent() {
               </div>
             </div>
             <div className="form-group row">
-              <label for="stdid" className="col-sm-2 col-form-label">
-                Student Id
+              <label for="stfid" className="col-sm-2 col-form-label">
+                Staff Id
               </label>
               <div className="col-sm-10">
                 <input
                   type="text"
                   className="form-control"
-                  id="stdid"
-                  name="studentId"
-                  placeholder="enter student id"
+                  id="stfid"
+                  name="staffId"
+                  placeholder="enter staff id"
                   onChange={handleChange}
-                  value={user.studentId}
+                  value={user.staffId}
                   required
                 />
               </div>
@@ -118,6 +119,7 @@ function AddStudent() {
                 />
               </div>
             </div>
+
             <div class="form-group row">
               <label for="fac" className="col-sm-2 col-form-label">
                 Faculty
@@ -138,6 +140,27 @@ function AddStudent() {
                 </select>
               </div>
             </div>
+
+            <div class="form-group row">
+              <label for="typee" className="col-sm-2 col-form-label">
+                Type
+              </label>
+              <div className="col-sm-10">
+                <select
+                  id="typee"
+                  class="form-control"
+                  value={user.type}
+                  onChange={handleChange}
+                  name="type"
+                >
+                  <option selected value="Lecturer">
+                    Lecturer
+                  </option>
+                  <option value="Support Service">Support Service</option>
+                </select>
+              </div>
+            </div>
+
             <div class="form-group row">
               <label for="gen" className="col-sm-2 col-form-label">
                 Gender
@@ -232,4 +255,4 @@ function AddStudent() {
   );
 }
 
-export default AddStudent;
+export default AddStaffMember;

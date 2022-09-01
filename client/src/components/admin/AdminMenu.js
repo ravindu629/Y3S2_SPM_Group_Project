@@ -1,7 +1,10 @@
 import React from "react";
 import "./admin.css";
+import { useNavigate } from "react-router-dom";
 
 export default function AdminMenu() {
+  let navigate = useNavigate();
+
   return (
     <div className="adminMenu">
       <div className="heading">Admin Menu</div>
@@ -18,7 +21,13 @@ export default function AdminMenu() {
           <div className="adminMenuBtns">{">"} Manage Admins</div>
         </button>
 
-        <button type="button" className="btn btn-light btn-lg btn-block">
+        <button
+          type="button"
+          className="btn btn-light btn-lg btn-block"
+          onClick={() => {
+            navigate("/addStaffMember");
+          }}
+        >
           <div className="adminMenuBtns">{">"} Register New Staff Member</div>
         </button>
         <button type="button" className="btn btn-light btn-lg btn-block">

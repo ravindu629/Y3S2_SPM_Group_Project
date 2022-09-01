@@ -11,6 +11,7 @@ import LectureMenu from "./components/lecture/LectureMenu";
 import SupportService from "./components/supportService/SupportService";
 import StudentLogin from "./components/login/StudentLogin";
 import AddSudent from "./components/student/AddStudent";
+import AddStaffMember from "./components/admin/AddStaffMember";
 
 function App() {
   return (
@@ -26,6 +27,7 @@ function App() {
         <Route path="/supportServiceMenu" element={<SupportService />} />
 
         <Route path="/addStudent" element={<AddSudent />} />
+        <Route path="/addStaffMember" element={<AddStaffMember />} />
       </Routes>
 
       <Footer />
