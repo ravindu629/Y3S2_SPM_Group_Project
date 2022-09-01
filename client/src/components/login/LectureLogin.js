@@ -48,7 +48,7 @@ export default function LectureLogin() {
     <div>
       <div className="container mt-5">
         <div className="loginForm">
-          <div className="loginHeading">Lecture Login</div>
+          <div className="login_Heading">Lecture Login</div>
 
           <div className="row">
             <div className="col-sm-8">
