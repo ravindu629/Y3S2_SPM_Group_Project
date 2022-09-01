@@ -15,6 +15,10 @@ import AddStaffMember from "./components/admin/AddStaffMember";
 import Admins from "./components/admin/Admins";
 import AddAdmin from "./components/admin/AddAdmin";
 
+//suppoert services pages 
+
+
+
 function App() {
   return (
     <BrowserRouter>
@@ -29,9 +33,13 @@ function App() {
         <Route path="/supportServiceMenu" element={<SupportService />} />
 
         <Route path="/addStudent" element={<AddSudent />} />
+<<<<<<< HEAD
         <Route path="/addStaffMember" element={<AddStaffMember />} />
         <Route path="/addAdmin" element={<AddAdmin />} />
         <Route path="/admins" element={<Admins />} />
+=======
+
+>>>>>>> master
       </Routes>
 
       <Footer />
