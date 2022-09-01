@@ -13,6 +13,7 @@ import StudentLogin from "./components/login/StudentLogin";
 import AddSudent from "./components/student/AddStudent";
 import AddStaffMember from "./components/admin/AddStaffMember";
 import Admins from "./components/admin/Admins";
+import AddAdmin from "./components/admin/AddAdmin";
 
 function App() {
   return (
@@ -29,6 +30,7 @@ function App() {
 
         <Route path="/addStudent" element={<AddSudent />} />
         <Route path="/addStaffMember" element={<AddStaffMember />} />
+        <Route path="/addAdmin" element={<AddAdmin />} />
         <Route path="/admins" element={<Admins />} />
       </Routes>
 

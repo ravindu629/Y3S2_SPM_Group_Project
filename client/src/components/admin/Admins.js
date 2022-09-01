@@ -77,7 +77,6 @@ function Admins() {
                       style={{
                         borderRadius: 35,
                         backgroundColor: "",
-                        padding: "6px 18px",
                         marginRight: "18px",
                         color: "white",
                         fontWeight: "bold",
@@ -94,7 +93,6 @@ function Admins() {
                       style={{
                         borderRadius: 35,
                         backgroundColor: "brown",
-                        padding: "6px 18px",
                         marginRight: "18px",
                         color: "white",
                         fontWeight: "bold",

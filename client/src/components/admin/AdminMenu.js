@@ -36,7 +36,13 @@ export default function AdminMenu() {
         >
           <div className="adminMenuBtns">{">"} Register New Staff Member</div>
         </button>
-        <button type="button" className="btn btn-light btn-lg btn-block">
+        <button
+          type="button"
+          className="btn btn-light btn-lg btn-block"
+          onClick={() => {
+            navigate("/addAdmin");
+          }}
+        >
           <div className="adminMenuBtns"> {">"} Register New Admin</div>
         </button>
       </div>
