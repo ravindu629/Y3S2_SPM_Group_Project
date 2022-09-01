@@ -28,7 +28,7 @@
     display: flex;
     position: relative;
     padding-left: 260px;
-    margin-top: -403px;
+    margin-top: -470px;
     flex-direction: column;
     align-items: center;
 }
@@ -49,10 +49,15 @@
 .spm_module_button {
     width: 100vh;
     margin-left: 260px;
+    cursor: pointer;
 }
 
 .moduleMenu-image{
     width: 8vh;
     margin-right: 20vh;
     margin-left: -20vh;
+}
+
+.moduleMenu button:hover{
+    transform: scale(1.12);
 }
