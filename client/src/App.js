@@ -15,6 +15,15 @@ import AddSudent from "./components/student/AddStudent";
 import StudentMenu from "./components/student/StudentMenu";
 import SPMmodulePage from "./components/student/SPMmodulePage";
 
+import AddStaffMember from "./components/admin/AddStaffMember";
+import Admins from "./components/admin/Admins";
+import AddAdmin from "./components/admin/AddAdmin";
+
+//suppoert services pages 
+
+
+
+
 function App() {
   return (
     <BrowserRouter>
@@ -31,6 +40,12 @@ function App() {
         <Route path="/addStudent" element={<AddSudent />} />
         <Route path="/studentMenu" element={<StudentMenu />} />
         <Route path="/SPMmodulePage" element={<SPMmodulePage />} />
+
+
+        <Route path="/addStaffMember" element={<AddStaffMember />} />
+        <Route path="/addAdmin" element={<AddAdmin />} />
+        <Route path="/admins" element={<Admins />} />
+
 
       </Routes>
 
