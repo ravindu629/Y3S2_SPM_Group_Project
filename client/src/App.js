@@ -18,11 +18,9 @@ import SPMmodulePage from "./components/student/SPMmodulePage";
 import AddStaffMember from "./components/admin/AddStaffMember";
 import Admins from "./components/admin/Admins";
 import AddAdmin from "./components/admin/AddAdmin";
+import AdminUpdate from "./components/admin/AdminUpdate";
 
-//suppoert services pages 
-
-
-
+//suppoert services pages
 
 function App() {
   return (
@@ -41,12 +39,10 @@ function App() {
         <Route path="/studentMenu" element={<StudentMenu />} />
         <Route path="/SPMmodulePage" element={<SPMmodulePage />} />
 
-
         <Route path="/addStaffMember" element={<AddStaffMember />} />
         <Route path="/addAdmin" element={<AddAdmin />} />
+        <Route path="/updateAdmin/:id" element={<AdminUpdate />} />
         <Route path="/admins" element={<Admins />} />
-
-
       </Routes>
 
       <Footer />
