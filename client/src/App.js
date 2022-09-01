@@ -6,11 +6,14 @@ import Footer from "./components/nav/Footer";
 import Home from "./components/nav/Home";
 import StaffLogin from "./components/login/StaffLogin";
 import AdminMenu from "./components/admin/AdminMenu";
-import StudentMenu from "./components/student/StudentMenu";
 import LectureMenu from "./components/lecture/LectureMenu";
 import SupportService from "./components/supportService/SupportService";
+
+//Student
 import StudentLogin from "./components/login/StudentLogin";
 import AddSudent from "./components/student/AddStudent";
+import StudentMenu from "./components/student/StudentMenu";
+import SPMmodulePage from "./components/student/SPMmodulePage";
 
 function App() {
   return (
@@ -19,13 +22,16 @@ function App() {
       <Routes>
         <Route path="/" exact element={<Home />} />
         <Route path="/staffLogin" element={<StaffLogin />} />
-        <Route path="/studentLogin" element={<StudentLogin />} />
         <Route path="/adminMenu" element={<AdminMenu />} />
-        <Route path="/studentMenu" element={<StudentMenu />} />
         <Route path="/lectureMenu" element={<LectureMenu />} />
         <Route path="/supportServiceMenu" element={<SupportService />} />
 
+        {/*Student*/}
+        <Route path="/studentLogin" element={<StudentLogin />} />
         <Route path="/addStudent" element={<AddSudent />} />
+        <Route path="/studentMenu" element={<StudentMenu />} />
+        <Route path="/SPMmodulePage" element={<SPMmodulePage />} />
+
       </Routes>
 
       <Footer />

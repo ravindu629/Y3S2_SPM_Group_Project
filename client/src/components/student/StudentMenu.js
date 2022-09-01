@@ -32,7 +32,7 @@ export default function StudentMenu() {
       </div> <br/>
 
       <div className="moduleMenu">
-        <a href="#"><button className="spm_module_button">
+        <a href="/SPMmodulePage"><button className="spm_module_button">
           <img className="moduleMenu-image" src={books} alt="books" />Software Project Management - SE3080</button>
         </a><br />
         <a href="#"><button className="spm_module_button">
