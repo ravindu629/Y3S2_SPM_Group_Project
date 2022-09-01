@@ -27,6 +27,32 @@
 .next-you-image {
     display: flex;
     position: relative;
-    margin-left: 550px;
-    margin-top: -399px;
+    padding-left: 260px;
+    margin-top: -403px;
+    flex-direction: column;
+    align-items: center;
+}
+
+.next-you-image img {
+    width: 100vh;
+}
+
+.moduleMenu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    font-size: 20px;
+    padding-bottom: 10vh;
+}
+
+.spm_module_button {
+    width: 100vh;
+    margin-left: 260px;
+}
+
+.moduleMenu-image{
+    width: 8vh;
+    margin-right: 20vh;
+    margin-left: -20vh;
 }
