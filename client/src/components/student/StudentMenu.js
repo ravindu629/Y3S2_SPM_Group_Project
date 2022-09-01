@@ -35,10 +35,10 @@ export default function StudentMenu() {
         <a href="/SPMmodulePage"><button className="spm_module_button">
           <img className="moduleMenu-image" src={books} alt="books" />Software Project Management - SE3080</button>
         </a><br />
-        <a href="#"><button className="spm_module_button">
+        <a href="/SPMmodulePage"><button className="spm_module_button">
           <img className="moduleMenu-image" src={stationery} alt="stationery" />User Experience Engineering - SE3050</button>
         </a><br />
-        <a href="#"><button className="spm_module_button">
+        <a href="/SPMmodulePage"><button className="spm_module_button">
           <img className="moduleMenu-image" src={mortarboard} alt="mortarboard" />Case Studies in  Engineering - SE3070</button>
         </a><br />
       </div>

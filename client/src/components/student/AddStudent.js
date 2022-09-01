@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import PersonAddAlt1Icon from "@mui/icons-material/PersonAddAlt1";
 import axios from "axios";
 import "./AddStudent.css";
 
@@ -11,7 +10,7 @@ function AddStudent() {
     studentId: "",
     nic: "",
     faculty: "",
-    gender: "male",
+    gender: "",
     email: "",
     phoneNumber: "",
     password: "",
@@ -31,6 +30,18 @@ function AddStudent() {
       .catch((err) => {
         alert(err);
       });
+
+    setUser({
+      fName: "",
+      lName: "",
+      studentId: "",
+      nic: "",
+      faculty: "",
+      gender: "",
+      email: "",
+      phoneNumber: "",
+      password: "",
+    });
   }
 
   function handleChange(event) {

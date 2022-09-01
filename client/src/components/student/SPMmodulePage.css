@@ -6,6 +6,9 @@
     border-radius: 12px !important;
     margin: 0% 2% 7% 2%;
     padding-bottom: 3vh;
+    border-color: aqua;
+    border-style: solid;
+    border: 1;
 }
 
 .SPM__Module-Heading {
@@ -43,7 +46,7 @@
 .SPMRightNavBar {
     display: flex;
     flex-direction: column;
-    margin-top: -91vh;
+    margin-top: -95vh;
     margin-left: 78%;
     position: relative;
     width: 400px;
@@ -73,7 +76,7 @@
     margin-left: 25px;
     width: 330px;
     height: 68px;
-    transition-duration: 0.4;
+    transition-duration: 0.4ms;
 }
 
 .SPMRightNavBar button:hover{
