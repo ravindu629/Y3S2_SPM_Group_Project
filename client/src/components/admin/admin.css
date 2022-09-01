@@ -39,3 +39,7 @@ button {
   background-color: rgb(219, 235, 228);
   font-weight: 600;
 }
+
+.tableStyle {
+  padding: 3% 8%;
+}

@@ -12,6 +12,7 @@ import SupportService from "./components/supportService/SupportService";
 import StudentLogin from "./components/login/StudentLogin";
 import AddSudent from "./components/student/AddStudent";
 import AddStaffMember from "./components/admin/AddStaffMember";
+import Admins from "./components/admin/Admins";
 
 function App() {
   return (
@@ -28,6 +29,7 @@ function App() {
 
         <Route path="/addStudent" element={<AddSudent />} />
         <Route path="/addStaffMember" element={<AddStaffMember />} />
+        <Route path="/admins" element={<Admins />} />
       </Routes>
 
       <Footer />
