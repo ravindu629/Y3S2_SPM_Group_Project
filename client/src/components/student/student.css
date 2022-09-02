@@ -1,7 +1,8 @@
 .heading {
   font-size: 180%;
   color: #66fcf1;
-  margin-bottom: 2%;
+  margin-bottom: 3%;
+  font-weight: bold;
 }
 
 .formStyle {
@@ -9,7 +10,8 @@
 }
 
 .formStyle_1 {
-  padding: 3%;
-  background-color: white;
+  padding: 3% 3% 1%;
+  background-color: rgb(219, 235, 228);
   border-radius: 1%;
+  font-weight: 600;
 }

@@ -48,7 +48,7 @@ function AdminLogin() {
     <div>
       <div className="container mt-5">
         <div className="loginForm">
-          <div className="loginHeading">Admin Login</div>
+          <div className="login_Heading">Admin Login</div>
 
           <div className="row">
             <div className="col-sm-8">

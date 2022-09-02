@@ -1,0 +1,45 @@
+.adminMenu {
+  margin-top: 5%;
+  margin-left: 20%;
+  margin-right: 55%;
+  border: 2px solid white;
+  border-radius: 5px;
+  padding: 20px;
+}
+
+.staff_heading {
+  font-size: 150%;
+  color: #66fcf1;
+  margin-bottom: 2%;
+  font-weight: 600;
+}
+
+.admBtn {
+  margin-top: 20px;
+}
+
+.adminMenuBtns {
+  font-size: 105%;
+  font-weight: bold;
+  text-align: left;
+}
+
+button {
+  margin-bottom: 18px;
+}
+
+.staffformStyle {
+  padding: 3% 35% 15% 5%;
+}
+
+.staffformStyle_1 {
+  padding: 3% 3% 1%;
+  background-color: white;
+  border-radius: 1%;
+  background-color: rgb(219, 235, 228);
+  font-weight: 600;
+}
+
+.tableStyle {
+  padding: 3% 8% 10%;
+}

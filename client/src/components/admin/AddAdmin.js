@@ -1,16 +1,16 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import PersonAddAlt1Icon from "@mui/icons-material/PersonAddAlt1";
 import axios from "axios";
-import "./AddStudent.css";
+import "./admin.css";
 
-function AddStudent() {
+function AddAdmin() {
   const [user, setUser] = useState({
     fName: "",
     lName: "",
-    studentId: "",
+    adminId: "",
     nic: "",
-    faculty: "",
-    gender: "",
+    gender: "male",
     email: "",
     phoneNumber: "",
     password: "",
@@ -22,26 +22,14 @@ function AddStudent() {
     e.preventDefault();
 
     axios
-      .post("http://localhost:5000/api/students", user)
+      .post("http://localhost:5000/api/admins", user)
       .then(() => {
-        alert("student added");
-        navigate("/studentLogin");
+        alert("admin added");
+        navigate("/admins");
       })
       .catch((err) => {
         alert(err);
       });
-
-    setUser({
-      fName: "",
-      lName: "",
-      studentId: "",
-      nic: "",
-      faculty: "",
-      gender: "",
-      email: "",
-      phoneNumber: "",
-      password: "",
-    });
   }
 
   function handleChange(event) {
@@ -57,9 +45,9 @@ function AddStudent() {
 
   return (
     <div className="container">
-      <div className="formStyle">
-        <div className="heading">Register Student</div>
-        <div className="formStyle_1">
+      <div className="staffformStyle">
+        <div className="staff_heading">Register New Admin</div>
+        <div className="staffformStyle_1">
           <form onSubmit={sendData}>
             <div className="form-group row">
               <label for="fname" className="col-sm-2 col-form-label">
@@ -96,18 +84,18 @@ function AddStudent() {
               </div>
             </div>
             <div className="form-group row">
-              <label for="stdid" className="col-sm-2 col-form-label">
-                Student Id
+              <label for="admid" className="col-sm-2 col-form-label">
+                Admin Id
               </label>
               <div className="col-sm-10">
                 <input
                   type="text"
                   className="form-control"
-                  id="stdid"
-                  name="studentId"
-                  placeholder="enter student id"
+                  id="admid"
+                  name="adminId"
+                  placeholder="enter admin id"
                   onChange={handleChange}
-                  value={user.studentId}
+                  value={user.adminId}
                   required
                 />
               </div>
@@ -129,26 +117,7 @@ function AddStudent() {
                 />
               </div>
             </div>
-            <div class="form-group row">
-              <label for="fac" className="col-sm-2 col-form-label">
-                Faculty
-              </label>
-              <div className="col-sm-10">
-                <select
-                  id="fac"
-                  class="form-control"
-                  value={user.faculty}
-                  onChange={handleChange}
-                  name="faculty"
-                >
-                  <option selected value="FOC">
-                    FOC
-                  </option>
-                  <option value="FOE">FOE</option>
-                  <option value="FOB">FOB</option>
-                </select>
-              </div>
-            </div>
+
             <div class="form-group row">
               <label for="gen" className="col-sm-2 col-form-label">
                 Gender
@@ -176,6 +145,7 @@ function AddStudent() {
                 </div>
               </div>
             </div>
+
             <div className="form-group row">
               <label for="mail" className="col-sm-2 col-form-label">
                 Email
@@ -186,7 +156,7 @@ function AddStudent() {
                   className="form-control"
                   id="mail"
                   name="email"
-                  placeholder="Enter email address"
+                  placeholder="enter email address"
                   onChange={handleChange}
                   value={user.email}
                   required
@@ -203,7 +173,7 @@ function AddStudent() {
                   className="form-control"
                   id="phone"
                   name="phoneNumber"
-                  placeholder="Enter phone number"
+                  placeholder="enter phone number"
                   onChange={handleChange}
                   value={user.phoneNumber}
                   required
@@ -220,7 +190,7 @@ function AddStudent() {
                   className="form-control"
                   id="pass"
                   name="password"
-                  placeholder="Enter password"
+                  placeholder="enter password"
                   onChange={handleChange}
                   value={user.password}
                   required
@@ -229,8 +199,9 @@ function AddStudent() {
             </div>
             <div className="form-group row">
               <div className="col-sm-10">
-                <button type="submit" className="btn btn-primary">
-                  Submit
+                <button type="submit" className="btn btn-dark">
+                  <PersonAddAlt1Icon />
+                  &nbsp;&nbsp;Submit
                 </button>
               </div>
             </div>
@@ -241,4 +212,4 @@ function AddStudent() {
   );
 }
 
-export default AddStudent;
+export default AddAdmin;
