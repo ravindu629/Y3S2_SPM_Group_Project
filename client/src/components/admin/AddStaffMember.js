@@ -27,7 +27,7 @@ function AddStaffMember() {
       .post("http://localhost:5000/api/staffMembers", user)
       .then(() => {
         alert("staff member added");
-        navigate("/adminMenu");
+        navigate("/staffMembers");
       })
       .catch((err) => {
         alert(err);

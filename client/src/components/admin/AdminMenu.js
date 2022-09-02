@@ -9,7 +9,13 @@ export default function AdminMenu() {
     <div className="adminMenu">
       <div className="heading">Admin Menu</div>
       <div className="admBtn">
-        <button type="button" className="btn btn-light btn-lg btn-block">
+        <button
+          type="button"
+          className="btn btn-light btn-lg btn-block"
+          onClick={() => {
+            navigate("/staffMembers");
+          }}
+        >
           <div className="adminMenuBtns">{">"} Manage Staff Members</div>
         </button>
 
