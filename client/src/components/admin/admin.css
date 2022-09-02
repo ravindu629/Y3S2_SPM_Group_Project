@@ -10,8 +10,9 @@
 .staff_heading {
   font-size: 150%;
   color: #66fcf1;
-  margin-bottom: 2%;
+  margin-bottom: 1%;
   font-weight: 600;
+  text-align: center;
 }
 
 .admBtn {
@@ -19,8 +20,8 @@
 }
 
 .adminMenuBtns {
-  font-size: 105%;
-  font-weight: bold;
+  font-size: 100%;
+  font-weight: 600;
   text-align: left;
 }
 
@@ -42,4 +43,8 @@ button {
 
 .tableStyle {
   padding: 3% 8% 10%;
+}
+
+.searchBar {
+  padding: 0% 0% 2% 80%;
 }

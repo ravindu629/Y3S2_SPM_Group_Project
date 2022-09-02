@@ -4,6 +4,8 @@ import "./admin.css";
 import Button from "@mui/material/Button";
 import DeleteForeverIcon from "@mui/icons-material/DeleteForever";
 import EditIcon from "@mui/icons-material/Edit";
+import PersonAddAlt1Icon from "@mui/icons-material/PersonAddAlt1";
+import PictureAsPdfIcon from "@mui/icons-material/PictureAsPdf";
 import { useNavigate } from "react-router-dom";
 
 function Admins() {
@@ -40,11 +42,66 @@ function Admins() {
     setUsers(users.filter((user) => user._id !== _id));
   }
 
+  const btnStyle = {
+    borderRadius: 35,
+    backgroundColor: "white",
+    margin: "0 18px 18px",
+    color: "black",
+    fontWeight: "bold",
+  };
+
+  function filterData(admins, searchKey) {
+    const result = admins.filter((admin) => {
+      return admin.adminId.toLowerCase().includes(searchKey);
+    });
+
+    setUsers(result);
+  }
+
+  function handleSearchArea(e) {
+    const searchKey = e.target.value;
+
+    axios.get("http://localhost:5000/api/admins").then((res) => {
+      filterData(res.data, searchKey);
+    });
+  }
+
   return (
     <div className="tableStyle">
-      <div className="staff_heading">All Admins Details</div>
       <div>
-        <table className="table table-bordered">
+        <Button
+          variant="contained"
+          style={btnStyle}
+          startIcon={<PersonAddAlt1Icon />}
+          onClick={() => {
+            navigate("/addAdmin");
+          }}
+        >
+          Add New Admin
+        </Button>
+        <Button
+          variant="contained"
+          style={btnStyle}
+          startIcon={<PictureAsPdfIcon />}
+          onClick={window.print}
+        >
+          Generate Admin Report
+        </Button>
+      </div>
+      <div className="staff_heading">All Admins Details</div>
+      <div className="searchBar">
+        <input
+          type="text"
+          class="form-control rounded"
+          placeholder="Search"
+          aria-label="Search"
+          aria-describedby="search-addon"
+          onChange={handleSearchArea}
+        />
+      </div>
+
+      <div>
+        <table className="table table-bordered table-hover">
           <thead className="table-dark">
             <tr>
               <th scope="col">No</th>
@@ -95,7 +152,7 @@ function Admins() {
                         backgroundColor: "brown",
                         marginRight: "18px",
                         color: "white",
-                        fontWeight: "bold",
+                        fontWeight: "550600",
                       }}
                       startIcon={<DeleteForeverIcon />}
                       onClick={() => {

@@ -209,6 +209,8 @@ function AdminUpdate() {
                 />
               </div>
             </div>
+            <br />
+
             <div className="form-group row">
               <div className="col-sm-10">
                 <button type="submit" className="btn btn-dark">

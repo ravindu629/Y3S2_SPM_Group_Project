@@ -10,20 +10,18 @@ import LectureMenu from "./components/lecture/LectureMenu";
 
 import SupportService from "./components/supportService/SupportService";
 
-
 import StudentLogin from "./components/login/StudentLogin";
 import AddSudent from "./components/student/AddStudent";
 import StudentMenu from "./components/student/StudentMenu";
 import SPMmodulePage from "./components/student/SPMmodulePage";
 
-//suppoert services pages 
+//suppoert services pages
 import SupportServiceHome from "./components/supportService/SupportServiceHome";
-=======
+
 import AddStaffMember from "./components/admin/AddStaffMember";
 import Admins from "./components/admin/Admins";
 import AddAdmin from "./components/admin/AddAdmin";
 import AdminUpdate from "./components/admin/AdminUpdate";
-
 
 //suppoert services pages
 
@@ -36,22 +34,17 @@ function App() {
         <Route path="/staffLogin" element={<StaffLogin />} />
         <Route path="/adminMenu" element={<AdminMenu />} />
         <Route path="/lectureMenu" element={<LectureMenu />} />
-    
-
         {/*Student*/}
         <Route path="/studentLogin" element={<StudentLogin />} />
         <Route path="/addStudent" element={<AddSudent />} />
         <Route path="/studentMenu" element={<StudentMenu />} />
         <Route path="/SPMmodulePage" element={<SPMmodulePage />} />
-
         <Route path="/SupportServiceHome" element={<SupportServiceHome />} />
-
-=======
+        =======
         <Route path="/addStaffMember" element={<AddStaffMember />} />
         <Route path="/addAdmin" element={<AddAdmin />} />
         <Route path="/updateAdmin/:id" element={<AdminUpdate />} />
         <Route path="/admins" element={<Admins />} />
-
       </Routes>
 
       <Footer />
