@@ -106,7 +106,7 @@ const addHostalService = (req, res) => {
     try {
       const Hostalservice = await  HostalServices.findById( hostalId);
   
-      if (!sumarks) {
+      if (!Hostalservice) {
         return res.status(404).json("There is no user to remove");
       }
   

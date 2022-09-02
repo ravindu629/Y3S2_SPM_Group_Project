@@ -24,6 +24,10 @@ app.use("/api/admins", require("./routes/Admin.route"));
 app.use("/api/students", require("./routes/Student.route"));
 app.use("/api/staffMembers", require("./routes/Staff.route"));
 
+//support service
+app.use("/api/hostaldetails", require("./routes/HostalService.route"));
+app.use("/api/transportdetails", require("./routes/TransportService.route"));
+
 app.listen(port, () => {
   console.log("Server is starting on port " + port);
 });

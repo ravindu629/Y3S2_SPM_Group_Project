@@ -13,6 +13,9 @@ import AddSudent from "./components/student/AddStudent";
 
 //suppoert services pages 
 import SupportServiceHome from "./components/supportService/SupportServiceHome";
+import HostalDetails from "./components/supportService/HostalDetails"
+import AddHostal from "./components/supportService/AddHostal"
+import UpdateHostal from "./components/supportService/UpdateHostal"
 
 
 function App() {
@@ -29,8 +32,11 @@ function App() {
     
 
         <Route path="/addStudent" element={<AddSudent />} />
-
+   
         <Route path="/SupportServiceHome" element={<SupportServiceHome />} />
+        <Route path="/HostalDetails" element={<HostalDetails />} />
+        <Route path="/AddHostal" element={<AddHostal />} />
+        <Route path="/UpdateHostal" element={<UpdateHostal />} />
 
       </Routes>
 

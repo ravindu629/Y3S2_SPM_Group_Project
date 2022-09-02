@@ -18,7 +18,7 @@ export default function SupportServiceHome() {
       <br></br>
     
       <div className="navItem">
-        <a href="#">
+        <a href="/HostalDetails">
           <button
             type="button"
             className="btn btn-primary"
