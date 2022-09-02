@@ -10,7 +10,7 @@
 .staff_heading {
   font-size: 150%;
   color: #66fcf1;
-  margin-bottom: 1%;
+  margin: 1%;
   font-weight: 600;
   text-align: center;
 }
@@ -42,7 +42,7 @@ button {
 }
 
 .tableStyle {
-  padding: 3% 8% 10%;
+  padding: 3% 3% 10%;
 }
 
 .searchBar {
