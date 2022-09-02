@@ -14,6 +14,9 @@ import StudentLogin from "./components/login/StudentLogin";
 import AddSudent from "./components/student/AddStudent";
 import StudentMenu from "./components/student/StudentMenu";
 import SPMmodulePage from "./components/student/SPMmodulePage";
+//Student Group Navigation
+import StudentGroup from "./components/student/StudentGroup";
+import CreateStudentGroup from "./components/student/CreateStudentGroup";
 
 //suppoert services pages
 import SupportServiceHome from "./components/supportService/SupportServiceHome";
