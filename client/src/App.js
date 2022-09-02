@@ -14,6 +14,9 @@ import StudentLogin from "./components/login/StudentLogin";
 import AddSudent from "./components/student/AddStudent";
 import StudentMenu from "./components/student/StudentMenu";
 import SPMmodulePage from "./components/student/SPMmodulePage";
+//Student Group Navigation
+import StudentGroup from "./components/student/StudentGroup";
+import CreateStudentGroup from "./components/student/CreateStudentGroup";
 
 import AddStaffMember from "./components/admin/AddStaffMember";
 import Admins from "./components/admin/Admins";
@@ -40,6 +43,9 @@ function App() {
         <Route path="/addStudent" element={<AddSudent />} />
         <Route path="/studentMenu" element={<StudentMenu />} />
         <Route path="/SPMmodulePage" element={<SPMmodulePage />} />
+        {/*Student Group Navigation*/}
+        <Route path="/studentGroup" element={<StudentGroup />} />
+        <Route path="/CreateStudentGroup" element={<CreateStudentGroup />} />
 
 
         <Route path="/addStaffMember" element={<AddStaffMember />} />
