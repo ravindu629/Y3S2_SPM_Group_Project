@@ -103,14 +103,14 @@ function UpdateStaffMember() {
               </div>
             </div>
             <div className="form-group row">
-              <label for="stdid" className="col-sm-2 col-form-label">
+              <label for="stfid" className="col-sm-2 col-form-label">
                 Staff Id
               </label>
               <div className="col-sm-10">
                 <input
                   type="text"
                   className="form-control"
-                  id="stdid"
+                  id="stfid"
                   name="staffId"
                   onChange={handleChange}
                   value={user.staffId}
@@ -265,9 +265,9 @@ function UpdateStaffMember() {
 
             <div className="form-group row">
               <div className="col-sm-10">
-                <button type="submit" className="btn btn-dark">
+                <button type="submit" className="btn btn-dark btn-lg">
                   <UpgradeIcon />
-                  &nbsp;&nbsp;Update
+                  Update
                 </button>
               </div>
             </div>

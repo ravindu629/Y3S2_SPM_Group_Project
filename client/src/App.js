@@ -24,6 +24,8 @@ import AddAdmin from "./components/admin/AddAdmin";
 import AdminUpdate from "./components/admin/AdminUpdate";
 import StaffMembers from "./components/admin/StaffMembers";
 import UpdateStaffMember from "./components/admin/UpdateStaffMember";
+import Std from "./components/admin/Std";
+import UpdateStd from "./components/admin/UpdateStd";
 
 //suppoert services pages
 
@@ -47,8 +49,10 @@ function App() {
         <Route path="/addAdmin" element={<AddAdmin />} />
         <Route path="/updateAdmin/:id" element={<AdminUpdate />} />
         <Route path="/updateStaffMember/:id" element={<UpdateStaffMember />} />
+        <Route path="/updateStd/:id" element={<UpdateStd />} />
         <Route path="/admins" element={<Admins />} />
         <Route path="/staffMembers" element={<StaffMembers />} />
+        <Route path="/stds" element={<Std />} />
       </Routes>
 
       <Footer />

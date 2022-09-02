@@ -1,22 +1,29 @@
 .adminMenu {
-  margin-top: 5%;
-  margin-left: 20%;
-  margin-right: 55%;
+  margin-top: 3%;
+  margin-left: 15%;
+  margin-right: 50%;
   border: 2px solid white;
-  border-radius: 5px;
-  padding: 20px;
+  border-radius: 15px;
+  padding: 40px;
 }
 
 .staff_heading {
   font-size: 150%;
   color: #66fcf1;
-  margin: 1%;
+  margin-bottom: 2%;
+  font-weight: 600;
+  text-align: center;
+}
+
+.table_heading {
+  font-size: 150%;
+  color: #66fcf1;
   font-weight: 600;
   text-align: center;
 }
 
 .admBtn {
-  margin-top: 20px;
+  margin-top: 30px;
 }
 
 .adminMenuBtns {

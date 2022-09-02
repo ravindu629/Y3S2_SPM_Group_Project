@@ -88,7 +88,7 @@ function Admins() {
           Generate Admin Report
         </Button>
       </div>
-      <div className="staff_heading">All Admins Details</div>
+      <div className="table_heading">All Admins Details</div>
       <div className="searchBar">
         <input
           type="text"

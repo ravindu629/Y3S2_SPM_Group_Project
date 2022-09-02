@@ -4,11 +4,10 @@ import "./admin.css";
 import Button from "@mui/material/Button";
 import DeleteForeverIcon from "@mui/icons-material/DeleteForever";
 import EditIcon from "@mui/icons-material/Edit";
-import PersonAddAlt1Icon from "@mui/icons-material/PersonAddAlt1";
 import PictureAsPdfIcon from "@mui/icons-material/PictureAsPdf";
 import { useNavigate } from "react-router-dom";
 
-function StaffMembers() {
+function Std() {
   const [users, setUsers] = useState([]);
 
   let navigate = useNavigate();
@@ -16,7 +15,7 @@ function StaffMembers() {
   useEffect(() => {
     function getUsers() {
       axios
-        .get("http://localhost:5000/api/staffMembers")
+        .get("http://localhost:5000/api/students")
         .then((res) => {
           setUsers(res.data);
         })
@@ -29,11 +28,11 @@ function StaffMembers() {
 
   function deleteUser(_id) {
     axios
-      .delete("http://localhost:5000/api/staffMembers/" + _id)
+      .delete("http://localhost:5000/api/students/" + _id)
       .then((res) => {
         console.log(res.data);
 
-        alert("staff member deleted");
+        alert("student deleted");
       })
       .catch((err) => {
         alert(err);
@@ -45,14 +44,13 @@ function StaffMembers() {
   const btnStyle = {
     borderRadius: 35,
     backgroundColor: "white",
-    margin: "0 18px 18px",
     color: "black",
     fontWeight: "bold",
   };
 
-  function filterData(staffMembers, searchKey) {
-    const result = staffMembers.filter((member) => {
-      return member.staffId.toLowerCase().includes(searchKey);
+  function filterData(students, searchKey) {
+    const result = students.filter((student) => {
+      return student.studentId.toLowerCase().includes(searchKey);
     });
 
     setUsers(result);
@@ -61,7 +59,7 @@ function StaffMembers() {
   function handleSearchArea(e) {
     const searchKey = e.target.value;
 
-    axios.get("http://localhost:5000/api/staffMembers").then((res) => {
+    axios.get("http://localhost:5000/api/students").then((res) => {
       filterData(res.data, searchKey);
     });
   }
@@ -72,23 +70,13 @@ function StaffMembers() {
         <Button
           variant="contained"
           style={btnStyle}
-          startIcon={<PersonAddAlt1Icon />}
-          onClick={() => {
-            navigate("/addStaffMember");
-          }}
-        >
-          Add New Staff Member
-        </Button>
-        <Button
-          variant="contained"
-          style={btnStyle}
           startIcon={<PictureAsPdfIcon />}
           onClick={window.print}
         >
-          Generate Staff Report
+          Generate Student Report
         </Button>
       </div>
-      <div className="table_heading">All Staff Members Details</div>
+      <div className="table_heading">All Students Details</div>
       <div className="searchBar">
         <input
           type="text"
@@ -107,10 +95,9 @@ function StaffMembers() {
               <th scope="col">No</th>
               <th scope="col">First Name</th>
               <th scope="col">Last Name</th>
-              <th scope="col">Staff ID</th>
+              <th scope="col">Student ID</th>
               <th scope="col">NIC</th>
               <th scope="col">Faculty</th>
-              <th scope="col">Type</th>
               <th scope="col">Gender</th>
               <th scope="col">Email</th>
               <th scope="col">Phone Number</th>
@@ -125,10 +112,9 @@ function StaffMembers() {
                   <td>{index + 1}</td>
                   <td>{user.fName}</td>
                   <td>{user.lName}</td>
-                  <td>{user.staffId}</td>
+                  <td>{user.studentId}</td>
                   <td>{user.nic}</td>
                   <td>{user.faculty}</td>
-                  <td>{user.type}</td>
                   <td>{user.gender}</td>
                   <td>{user.email}</td>
                   <td>{user.phoneNumber}</td>
@@ -144,7 +130,7 @@ function StaffMembers() {
                       }}
                       startIcon={<EditIcon />}
                       onClick={() => {
-                        navigate(`/updateStaffMember/${user._id}`);
+                        navigate(`/updateStd/${user._id}`);
                       }}
                     >
                       Update
@@ -181,4 +167,4 @@ function StaffMembers() {
   );
 }
 
-export default StaffMembers;
+export default Std;
