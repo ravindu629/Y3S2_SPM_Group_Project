@@ -9,8 +9,8 @@ function AddStudent() {
     lName: "",
     studentId: "",
     nic: "",
-    faculty: "",
-    gender: "",
+    faculty: "FOC",
+    gender: "male",
     email: "",
     phoneNumber: "",
     password: "",
@@ -141,11 +141,15 @@ function AddStudent() {
                   onChange={handleChange}
                   name="faculty"
                 >
-                  <option selected value="FOC">
+                  <option selected={user.faculty === "FOC"} value="FOC">
                     FOC
                   </option>
-                  <option value="FOE">FOE</option>
-                  <option value="FOB">FOB</option>
+                  <option selected={user.faculty === "FOE"} value="FOE">
+                    FOE
+                  </option>
+                  <option selected={user.faculty === "FOB"} value="FOB">
+                    FOB
+                  </option>
                 </select>
               </div>
             </div>

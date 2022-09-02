@@ -9,7 +9,7 @@
 
 .staff_heading {
   font-size: 150%;
-  color: #66fcf1;
+  color: #cadefc;
   margin-bottom: 2%;
   font-weight: 600;
   text-align: center;
@@ -17,7 +17,7 @@
 
 .table_heading {
   font-size: 150%;
-  color: #66fcf1;
+  color: #cadefc;
   font-weight: 600;
   text-align: center;
 }
@@ -44,7 +44,7 @@ button {
   padding: 3% 3% 1%;
   background-color: white;
   border-radius: 1%;
-  background-color: rgb(219, 235, 228);
+  background-color: #d5def5;
   font-weight: 600;
 }
 

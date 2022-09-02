@@ -10,8 +10,8 @@ function AddStaffMember() {
     lName: "",
     staffId: "",
     nic: "",
-    faculty: "",
-    type: "",
+    faculty: "FOC",
+    type: "Lecturer",
     gender: "male",
     email: "",
     phoneNumber: "",
@@ -132,11 +132,15 @@ function AddStaffMember() {
                   onChange={handleChange}
                   name="faculty"
                 >
-                  <option selected value="FOC">
+                  <option selected={user.faculty === "FOC"} value="FOC">
                     FOC
                   </option>
-                  <option value="FOE">FOE</option>
-                  <option value="FOB">FOB</option>
+                  <option selected={user.faculty === "FOE"} value="FOE">
+                    FOE
+                  </option>
+                  <option selected={user.faculty === "FOB"} value="FOB">
+                    FOB
+                  </option>
                 </select>
               </div>
             </div>
@@ -153,10 +157,18 @@ function AddStaffMember() {
                   onChange={handleChange}
                   name="type"
                 >
-                  <option selected value="Lecturer">
+                  <option
+                    selected={user.faculty === "Lecturer"}
+                    value="Lecturer"
+                  >
                     Lecturer
                   </option>
-                  <option value="Support Service">Support Service</option>
+                  <option
+                    selected={user.faculty === "Support Service"}
+                    value="Support Service"
+                  >
+                    Support Service
+                  </option>
                 </select>
               </div>
             </div>
