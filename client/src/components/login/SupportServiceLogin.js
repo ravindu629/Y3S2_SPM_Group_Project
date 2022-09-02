@@ -23,7 +23,7 @@ export default function SupportServiceLogin() {
           alert("support service validated");
           setValid(res.data);
 
-          navigate("/supportServiceMenu");
+          navigate("/SupportServiceHome");
         }
       })
       .catch((err) => {
