@@ -8,7 +8,7 @@
 }
 
 .staff_heading {
-  font-size: 150%;
+  font-size: 180%;
   color: #cadefc;
   margin-bottom: 2%;
   font-weight: 600;
@@ -16,7 +16,8 @@
 }
 
 .table_heading {
-  font-size: 150%;
+  margin-top: 1%;
+  font-size: 180%;
   color: #cadefc;
   font-weight: 600;
   text-align: center;
@@ -54,4 +55,17 @@ button {
 
 .searchBar {
   padding: 0% 0% 2% 80%;
+}
+
+.adminMenuImg {
+  border-radius: 50%;
+  width: 35%;
+}
+
+.admProfile {
+  position: relative;
+  margin-top: -500px;
+  margin-left: 50%;
+  margin-right: 10%;
+  text-align: center;
 }
