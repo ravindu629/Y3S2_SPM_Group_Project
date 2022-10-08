@@ -71,6 +71,28 @@ button {
   text-align: center;
 }
 
-.profileIcon {
-  margin-top: 50px;
+.profileBottomArea {
+  margin-top: 20px;
+  padding: 0% 30%;
+}
+
+.profileHeading {
+  color: #cadefc;
+}
+
+.profileImage {
+  width: 17%;
+  border-radius: 50%;
+  margin-top: 30px;
+}
+
+.profileDetails {
+  color: white;
+  padding-top: 30px;
+  font-size: 120%;
+  padding: 3% 20% 10% 30%;
+}
+
+.profileContent {
+  text-align: center;
 }

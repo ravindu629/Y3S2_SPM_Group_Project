@@ -111,6 +111,22 @@ const validateAdmin = async (req, res) => {
   }
 };
 
+const ManageAdminProfile = async (req, res) => {
+  const admId = req.body.adminId;
+
+  try {
+    const foundUser = await Admin.findOne({ adminId: admId });
+
+    if (!foundUser) {
+      return res.status(404).json("invalid user");
+    } else {
+      res.json(foundUser);
+    }
+  } catch (error) {
+    res.status(400).json(error);
+  }
+};
+
 module.exports = {
   addAdmin,
   getAdmins,
@@ -118,4 +134,5 @@ module.exports = {
   updateAdmin,
   removeAdmin,
   validateAdmin,
+  ManageAdminProfile,
 };
