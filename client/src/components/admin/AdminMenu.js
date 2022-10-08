@@ -4,6 +4,7 @@ import "./admin.css";
 import { useNavigate } from "react-router-dom";
 import image from "../images/admin.jpg";
 import Button from "@mui/material/Button";
+import AccountCircleIcon from "@mui/icons-material/AccountCircle";
 
 export default function AdminMenu() {
   const [user, setUser] = useState({
@@ -16,6 +17,14 @@ export default function AdminMenu() {
     phoneNumber: "",
     password: "",
   });
+
+  const loginMenuBtn = {
+    borderRadius: 35,
+    backgroundColor: "white",
+    padding: "10px 30px",
+    color: "black",
+    fontWeight: "bold",
+  };
 
   let navigate = useNavigate();
 
@@ -94,13 +103,15 @@ export default function AdminMenu() {
       <div className="admProfile">
         <p className="heading">Profile</p>
         <img className="adminMenuImg" src={image} />
-        <div style={{ marginTop: "40px", color: "white", fontSize: "130%" }}>
-          <div style={{ textAlign: "left", paddingLeft: "35%" }}>
-            {user.fName} {user.lName} <br />
-            {user.adminId} <br />
-            {user.nic} <br />
-            {user.email} <br />
-          </div>
+        <div className="profileIcon">
+          <Button
+            variant="contained"
+            style={loginMenuBtn}
+            startIcon={<AccountCircleIcon />}
+            // onClick={}
+          >
+            View Profile
+          </Button>
         </div>
       </div>
     </div>

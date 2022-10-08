@@ -60,6 +60,7 @@ button {
 .adminMenuImg {
   border-radius: 50%;
   width: 35%;
+  margin-top: 15px;
 }
 
 .admProfile {
@@ -68,4 +69,8 @@ button {
   margin-left: 50%;
   margin-right: 10%;
   text-align: center;
+}
+
+.profileIcon {
+  margin-top: 50px;
 }
