@@ -1,39 +1,53 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import axios from "axios";
 import "./admin.css";
 import { useNavigate } from "react-router-dom";
 import image from "../images/admin.jpg";
 import Button from "@mui/material/Button";
+import AccountCircleIcon from "@mui/icons-material/AccountCircle";
 
 export default function AdminMenu() {
   const [user, setUser] = useState({
-    fName: "",
-    lName: "",
     adminId: "",
-    nic: "",
-    gender: "male",
-    email: "",
-    phoneNumber: "",
-    password: "",
   });
+
+  const loginMenuBtn = {
+    borderRadius: 35,
+    backgroundColor: "white",
+    padding: "7px 20px",
+    color: "black",
+    fontWeight: "bold",
+    marginTop: "25px",
+  };
 
   let navigate = useNavigate();
 
-  const id = "6310ae59a26163b8328af642";
-
-  useEffect(() => {
-    function getUser() {
+  function handleViewProfile() {
+    if (!user.adminId) {
+      alert("Enter Admin ID to view the profile");
+    } else {
       axios
-        .get(`http://localhost:5000/api/admins/${id}`)
+        .post("http://localhost:5000/api/admins/manageProfile", user)
         .then((res) => {
-          setUser(res.data);
+          const admin = res.data;
+          navigate(`/adminProfile/${admin._id}`);
         })
         .catch((err) => {
-          alert(err.message);
+          alert("Invalid Admin ID, Please try again!");
         });
     }
-    getUser();
-  }, []);
+  }
+
+  function handleChange(event) {
+    const { name, value } = event.target;
+
+    setUser((preValue) => {
+      return {
+        ...preValue,
+        [name]: value,
+      };
+    });
+  }
 
   return (
     <div>
@@ -94,13 +108,25 @@ export default function AdminMenu() {
       <div className="admProfile">
         <p className="heading">Profile</p>
         <img className="adminMenuImg" src={image} />
-        <div style={{ marginTop: "40px", color: "white", fontSize: "130%" }}>
-          <div style={{ textAlign: "left", paddingLeft: "35%" }}>
-            {user.fName} {user.lName} <br />
-            {user.adminId} <br />
-            {user.nic} <br />
-            {user.email} <br />
-          </div>
+        <div className="profileBottomArea">
+          <div style={{ color: "white", textAlign: "left" }}>Admin ID</div>
+          <input
+            type="text"
+            className="form-control"
+            name="adminId"
+            placeholder="Enter Admin ID"
+            onChange={handleChange}
+            value={user.adminId}
+            required
+          />
+          <Button
+            variant="contained"
+            style={loginMenuBtn}
+            startIcon={<AccountCircleIcon />}
+            onClick={handleViewProfile}
+          >
+            View Profile
+          </Button>
         </div>
       </div>
     </div>
