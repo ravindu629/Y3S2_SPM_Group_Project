@@ -5,7 +5,9 @@ import axios from "axios";
 import "./admin.css";
 import image from "../images/admin.jpg";
 import Button from "@mui/material/Button";
-import AccountCircleIcon from "@mui/icons-material/AccountCircle";
+import DeleteIcon from "@mui/icons-material/Delete";
+import UpgradeIcon from "@mui/icons-material/Upgrade";
+import ArrowBackIcon from "@mui/icons-material/ArrowBack";
 
 function AdminProfile() {
   const [user, setUser] = useState({
@@ -32,11 +34,18 @@ function AdminProfile() {
 
   const loginMenuBtnDelete = {
     borderRadius: 35,
-    backgroundColor: "F0F8FF",
+    backgroundColor: "#FF0000",
     padding: "10px 20px",
     color: "white",
     fontWeight: "bold",
     marginTop: "25px",
+  };
+
+  const btnStyleBack = {
+    borderRadius: 35,
+    margin: "0 18px 18px",
+    color: "White",
+    fontWeight: "bold",
   };
 
   const { id } = useParams();
@@ -61,6 +70,17 @@ function AdminProfile() {
 
   return (
     <div className="container">
+      <div>
+        <Button
+          variant="outlined"
+          style={btnStyleBack}
+          size="large"
+          startIcon={<ArrowBackIcon />}
+          onClick={() => {
+            navigate("/adminMenu");
+          }}
+        ></Button>
+      </div>
       <div className="profileContent">
         <h3 className="profileHeading">Admin Profile</h3>
         <img className="profileImage" src={image} />
@@ -99,8 +119,10 @@ function AdminProfile() {
                 <Button
                   variant="contained"
                   style={loginMenuBtnUpdate}
-                  startIcon={<AccountCircleIcon />}
-                  onClick={handleUpdate}
+                  startIcon={<UpgradeIcon />}
+                  onClick={() => {
+                    navigate(`/admProfileUpdate/${user._id}`);
+                  }}
                 >
                   Update Profile
                 </Button>
@@ -109,7 +131,7 @@ function AdminProfile() {
                 <Button
                   variant="contained"
                   style={loginMenuBtnDelete}
-                  startIcon={<AccountCircleIcon />}
+                  startIcon={<DeleteIcon />}
                   onClick={handleDelete}
                 >
                   Delete Profile
