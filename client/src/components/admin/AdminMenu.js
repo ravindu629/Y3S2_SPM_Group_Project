@@ -53,7 +53,7 @@ export default function AdminMenu() {
   }
 
   return (
-    <div>
+    <div className="AdmMenu">
       {" "}
       <div className="adminMenu">
         <div className="heading">Admin Menu</div>
@@ -92,19 +92,20 @@ export default function AdminMenu() {
             type="button"
             className="btn btn-light btn-lg btn-block"
             onClick={() => {
-              navigate("/addStaffMember");
+              navigate("/f_notices");
             }}
           >
-            <div className="adminMenuBtns">{">"} Register New Staff Member</div>
+            <div className="adminMenuBtns">{">"} Manage Faculty Notices</div>
           </button>
+
           <button
             type="button"
             className="btn btn-light btn-lg btn-block"
             onClick={() => {
-              navigate("/addAdmin");
+              navigate("/addStaffMember");
             }}
           >
-            <div className="adminMenuBtns"> {">"} Register New Admin</div>
+            <div className="adminMenuBtns">{">"} Register New Staff Member</div>
           </button>
         </div>
       </div>
