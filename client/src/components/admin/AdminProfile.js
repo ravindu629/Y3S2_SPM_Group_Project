@@ -64,9 +64,20 @@ function AdminProfile() {
     getUser();
   }, []);
 
-  function handleUpdate() {}
+  function deleteUser(_id) {
+    axios
+      .delete("http://localhost:5000/api/admins/" + _id)
+      .then((res) => {
+        console.log(res.data);
 
-  function handleDelete() {}
+        alert("Admin profile deleted");
+
+        navigate("/");
+      })
+      .catch((err) => {
+        alert(err);
+      });
+  }
 
   return (
     <div className="container">
@@ -132,7 +143,14 @@ function AdminProfile() {
                   variant="contained"
                   style={loginMenuBtnDelete}
                   startIcon={<DeleteIcon />}
-                  onClick={handleDelete}
+                  onClick={() => {
+                    if (
+                      window.confirm(
+                        "Are you sure you wish to delete this profile?"
+                      )
+                    )
+                      deleteUser(user._id);
+                  }}
                 >
                   Delete Profile
                 </Button>
