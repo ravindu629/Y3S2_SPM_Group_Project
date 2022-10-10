@@ -128,9 +128,9 @@ function AllNotices() {
                 <tr key={notice._id}>
                   <td>{index + 1}</td>
                   <td>{notice.date}</td>
-                  <td>{notice.topic.substring(0, 15) + "..."}</td>
+                  <td>{notice.topic.substring(0, 35) + "..."}</td>
                   <td>{notice.faculty}</td>
-                  <td>{notice.message.substring(0, 20) + "..."}</td>
+                  <td>{notice.message.substring(0, 45) + "..."}</td>
                   <td>
                     <Button
                       variant="contained"
