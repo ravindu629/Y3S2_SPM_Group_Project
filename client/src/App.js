@@ -31,6 +31,12 @@ import Std from "./components/admin/Std";
 import UpdateStd from "./components/admin/UpdateStd";
 import AdminProfile from "./components/admin/AdminProfile";
 import UpdateAdminProfile from "./components/admin/UpdateAdminProfile";
+import AddNotice from "./components/admin/AddNotice";
+import AllNotices from "./components/admin/AllNotices";
+import UpdateNotice from "./components/admin/UpdateNotice";
+import Faculty_Notces from "./components/admin/Faculty_Notices";
+import Faculty_Notices from "./components/admin/Faculty_Notices";
+import ViewNotice from "./components/admin/ViewNotice";
 
 //suppoert services pages
 
@@ -52,14 +58,20 @@ function App() {
 
         <Route path="/addStaffMember" element={<AddStaffMember />} />
         <Route path="/addAdmin" element={<AddAdmin />} />
+        <Route path="/addNotice" element={<AddNotice />} />
         <Route path="/updateAdmin/:id" element={<AdminUpdate />} />
         <Route path="/updateStaffMember/:id" element={<UpdateStaffMember />} />
         <Route path="/updateStd/:id" element={<UpdateStd />} />
+        <Route path="/updateF_Notice/:id" element={<UpdateNotice />} />
         <Route path="/admins" element={<Admins />} />
         <Route path="/staffMembers" element={<StaffMembers />} />
+        <Route path="/f_notices" element={<AllNotices />} />
         <Route path="/stds" element={<Std />} />
         <Route path="/adminProfile/:id" element={<AdminProfile />} />
         <Route path="/admProfileUpdate/:id" element={<UpdateAdminProfile />} />
+
+        <Route path="/notices" element={<Faculty_Notices />} />
+        <Route path="/viewNotice/:id" element={<ViewNotice />} />
       </Routes>
 
       <Footer />

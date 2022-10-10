@@ -9,6 +9,7 @@ import AccountCircleIcon from "@mui/icons-material/AccountCircle";
 export default function AdminMenu() {
   const [user, setUser] = useState({
     adminId: "",
+    password: "",
   });
 
   const loginMenuBtn = {
@@ -25,6 +26,8 @@ export default function AdminMenu() {
   function handleViewProfile() {
     if (!user.adminId) {
       alert("Enter Admin ID to view the profile");
+    } else if (!user.password) {
+      alert("Enter Password to view the profile");
     } else {
       axios
         .post("http://localhost:5000/api/admins/manageProfile", user)
@@ -33,7 +36,7 @@ export default function AdminMenu() {
           navigate(`/adminProfile/${admin._id}`);
         })
         .catch((err) => {
-          alert("Invalid Admin ID, Please try again!");
+          alert("Login details are invalid, Please try again!!!");
         });
     }
   }
@@ -50,7 +53,7 @@ export default function AdminMenu() {
   }
 
   return (
-    <div>
+    <div className="AdmMenu">
       {" "}
       <div className="adminMenu">
         <div className="heading">Admin Menu</div>
@@ -89,19 +92,20 @@ export default function AdminMenu() {
             type="button"
             className="btn btn-light btn-lg btn-block"
             onClick={() => {
-              navigate("/addStaffMember");
+              navigate("/f_notices");
             }}
           >
-            <div className="adminMenuBtns">{">"} Register New Staff Member</div>
+            <div className="adminMenuBtns">{">"} Manage Faculty Notices</div>
           </button>
+
           <button
             type="button"
             className="btn btn-light btn-lg btn-block"
             onClick={() => {
-              navigate("/addAdmin");
+              navigate("/addStaffMember");
             }}
           >
-            <div className="adminMenuBtns"> {">"} Register New Admin</div>
+            <div className="adminMenuBtns">{">"} Register New Staff Member</div>
           </button>
         </div>
       </div>
@@ -117,6 +121,16 @@ export default function AdminMenu() {
             placeholder="Enter Admin ID"
             onChange={handleChange}
             value={user.adminId}
+            required
+          />
+          <div style={{ color: "white", textAlign: "left" }}>Password</div>
+          <input
+            type="password"
+            className="form-control"
+            name="password"
+            placeholder="Enter Password"
+            onChange={handleChange}
+            value={user.password}
             required
           />
           <Button
