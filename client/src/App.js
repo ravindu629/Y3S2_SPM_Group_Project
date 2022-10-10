@@ -34,6 +34,9 @@ import UpdateAdminProfile from "./components/admin/UpdateAdminProfile";
 import AddNotice from "./components/admin/AddNotice";
 import AllNotices from "./components/admin/AllNotices";
 import UpdateNotice from "./components/admin/UpdateNotice";
+import Faculty_Notces from "./components/admin/Faculty_Notices";
+import Faculty_Notices from "./components/admin/Faculty_Notices";
+import ViewNotice from "./components/admin/ViewNotice";
 
 //suppoert services pages
 
@@ -66,6 +69,9 @@ function App() {
         <Route path="/stds" element={<Std />} />
         <Route path="/adminProfile/:id" element={<AdminProfile />} />
         <Route path="/admProfileUpdate/:id" element={<UpdateAdminProfile />} />
+
+        <Route path="/notices" element={<Faculty_Notices />} />
+        <Route path="/viewNotice/:id" element={<ViewNotice />} />
       </Routes>
 
       <Footer />

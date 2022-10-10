@@ -5,7 +5,6 @@ import Button from "@mui/material/Button";
 import DeleteForeverIcon from "@mui/icons-material/DeleteForever";
 import EditIcon from "@mui/icons-material/Edit";
 import PersonAddAlt1Icon from "@mui/icons-material/PersonAddAlt1";
-import PictureAsPdfIcon from "@mui/icons-material/PictureAsPdf";
 import ArrowBackIcon from "@mui/icons-material/ArrowBack";
 
 import { useNavigate } from "react-router-dom";
@@ -129,9 +128,9 @@ function AllNotices() {
                 <tr key={notice._id}>
                   <td>{index + 1}</td>
                   <td>{notice.date}</td>
-                  <td>{notice.topic.substring(1, 15) + "..."}</td>
+                  <td>{notice.topic.substring(0, 15) + "..."}</td>
                   <td>{notice.faculty}</td>
-                  <td>{notice.message.substring(1, 20) + "..."}</td>
+                  <td>{notice.message.substring(0, 20) + "..."}</td>
                   <td>
                     <Button
                       variant="contained"
