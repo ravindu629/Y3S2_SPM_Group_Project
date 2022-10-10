@@ -5,7 +5,7 @@
 **Member Details :**
 | Name | Student ID | Username | Branch Name |
 |--|--|--|--|
-|Saranga R.G.V|IT20096298|virajsaranga|supportsevice|
+|Saranga R.G.V|IT20096298|virajsaranga|supportservice|
 |Jayasinghe A.H.N|IT20010058|HashiniJayasinghe99|lecture|
 |Divyantha U.A.S|IT20000462|sandarudivyantha|student|
 |Wijerathne D.M.R|IT19208022|ravindu629|admin|
