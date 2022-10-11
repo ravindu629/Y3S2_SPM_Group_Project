@@ -17,6 +17,20 @@ import SPMmodulePage from "./components/student/SPMmodulePage";
 //Student Group Navigation
 import StudentGroup from "./components/student/StudentGroup";
 import CreateStudentGroup from "./components/student/CreateStudentGroup";
+import UpdateStudentGroup from "./components/student/UpdateStudentGroup";
+//Student Project Navigation
+import StudentProject from "./components/student/StudentProject";
+import RegisterStudentProject from "./components/student/RegisterStudentProject";
+import UpdateStudentProject from "./components/student/UpdateStudentProject";
+//Student Profile Navugation
+import StudentProfile from "./components/student/StudentProfile";
+import StudentProfileLogin from "./components/student/StudentProfileLogin";
+import StudentProfileUpdate from "./components/student/StudentProfileUpdate";
+
+
+
+
+
 
 import AddStaffMember from "./components/admin/AddStaffMember";
 import Admins from "./components/admin/Admins";
@@ -46,6 +60,15 @@ function App() {
         {/*Student Group Navigation*/}
         <Route path="/studentGroup" element={<StudentGroup />} />
         <Route path="/CreateStudentGroup" element={<CreateStudentGroup />} />
+        <Route path="/updateStudentGroup/:id" element={<UpdateStudentGroup />} />
+        {/**Student Project Navigation*/}
+        <Route path="/studentProject" element={<StudentProject />} />
+        <Route path="/RegisterStudentProject" element={<RegisterStudentProject />} />
+        <Route path="/UpdateStudentProject/:id" element={<UpdateStudentProject />} />
+        {/**Student Profile Navigation*/}
+        <Route path="/StudentProfile" element={<StudentProfile />} />
+        <Route path="/StudentProfileLogin" element={<StudentProfileLogin />} />
+        <Route path="/StudentProfileUpdate/:id" element={<StudentProfileUpdate />} />
 
 
         <Route path="/addStaffMember" element={<AddStaffMember />} />

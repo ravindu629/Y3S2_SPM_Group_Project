@@ -3,6 +3,10 @@ import axios from "axios";
 import "./StudentGroup.css";
 import DeleteForeverIcon from "@mui/icons-material/DeleteForever";
 import EditIcon from "@mui/icons-material/Edit";
+import Button from "@mui/material/Button";
+import plus from "../images/StudentImages/plus.gif"
+import pdf from "../images/StudentImages/pdf.gif"
+
 
 export default function StudentGroup() {
     const [groups, setGroups] = useState([]);
@@ -36,18 +40,47 @@ export default function StudentGroup() {
         setGroups(groups.filter((group) => group._id !== _id));
     }
 
+    /*-----*/
+ 
+    function filterData(studentGroups, searchKey) {
+        const result = studentGroups.filter((studentGroup) => {
+            return studentGroup.groupID.toLowerCase().includes(searchKey.toLowerCase());
+        });
 
+        setGroups(result);
+    }
+
+    function handleSearchArea(e) {
+        const searchKey = e.target.value;
+
+        axios.get("http://localhost:5000/api/studentGroups").then((res) => {
+            filterData(res.data, searchKey);
+        });
+    }
+    /*---------*/
 
     return (
         <div className="all">
             <div>
-                <a href="/CreateStudentGroup">
-                    <button type="button" className="stGroupPageBtn button2">
-                        <pre> ➕ Create New Student Group</pre>
-                    </button>
-                </a>
-                <button  class="reserchTopicPageBtn button4" onClick={window.print}> 📋 Download PDF</button>   
+                <a href="/CreateStudentGroup"><button type="button" className="stGroupPageBtn button10">
+                    <img className="Student_Group" src={plus} alt="plus-image" /> Create New Student Group
+                </button> </a>
+                <button class="stGroupPageBtn button20" onClick={window.print}> 
+                <img className="Student_Group" src={pdf} alt="pdf-image" />  Download PDF</button>
             </div>
+
+            {/*Search function*/}
+            <div className="searchBar">
+                <input
+                    type="text"
+                    class="form-control rounded"
+                    placeholder="Search"
+                    aria-label="Search"
+                    aria-describedby="search-addon"
+                    onChange={handleSearchArea}
+                ></input>
+            </div>
+            {/*-------*/}
 
             <h2 className="heading">Student Group Details</h2><br />
 

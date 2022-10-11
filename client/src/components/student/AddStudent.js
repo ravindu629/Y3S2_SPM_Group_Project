@@ -60,17 +60,18 @@ function AddStudent() {
       <div className="heading">Register Student</div>
 
       <div className="container">
+        <div className="AddStudent__page_layout">
         <div className="formStyle">
           <div className="formStyle_1">
             <form onSubmit={sendData}>
               <div className="form-group row">
-                <label for="fname" className="col-sm-2 col-form-label">
+                <label for="fname" className="col-sm-2 col-form-label, AddStudentForm-LestSide">
                   First Name
                 </label>
                 <div className="col-sm-10">
                   <input
                     type="text"
-                    className="form-control"
+                    className="form-control, AddStudentForm-RightSide"
                     id="fname"
                     name="fName"
                     placeholder="Enter first name"
@@ -81,13 +82,13 @@ function AddStudent() {
                 </div>
               </div>
               <div className="form-group row">
-                <label for="lname" className="col-sm-2 col-form-label">
+                <label for="lname" className="col-sm-2 col-form-label, AddStudentForm-LestSide">
                   Last Name
                 </label>
                 <div className="col-sm-10">
                   <input
                     type="text"
-                    className="form-control"
+                    className="form-control, AddStudentForm-RightSide"
                     id="lname"
                     name="lName"
                     placeholder="Enter last name "
@@ -98,13 +99,13 @@ function AddStudent() {
                 </div>
               </div>
               <div className="form-group row">
-                <label for="stdid" className="col-sm-2 col-form-label">
+                <label for="stdid" className="col-sm-2 col-form-label, AddStudentForm-LestSide">
                   Student ID
                 </label>
                 <div className="col-sm-10">
                   <input
                     type="text"
-                    className="form-control"
+                    className="form-control, AddStudentForm-RightSide"
                     id="stdid"
                     name="studentId"
                     placeholder="Enter student id"
@@ -115,13 +116,13 @@ function AddStudent() {
                 </div>
               </div>
               <div className="form-group row">
-                <label for="NIC" className="col-sm-2 col-form-label">
+                <label for="NIC" className="col-sm-2 col-form-label, AddStudentForm-LestSide">
                   NIC
                 </label>
                 <div className="col-sm-10">
                   <input
                     type="text"
-                    className="form-control"
+                    className="form-control, AddStudentForm-RightSide"
                     id="NIC"
                     name="nic"
                     placeholder="Enter nic here"
@@ -132,7 +133,7 @@ function AddStudent() {
                 </div>
               </div>
               <div className="form-group row">
-                <label for="fac" className="col-sm-2 col-form-label">
+                <label for="fac" className="col-sm-2 col-form-label, AddStudentForm-LestSide">
                   Faculty
                 </label>
                 &nbsp;&nbsp;&nbsp;&nbsp;
@@ -179,7 +180,7 @@ function AddStudent() {
                 </div>
               </div>
               <div className="form-group row">
-                <label for="NIC" className="col-sm-2 col-form-label">
+                <label for="NIC" className="col-sm-2 col-form-label, AddStudentForm-LestSide">
                   Gender
                 </label>
                 &nbsp;&nbsp;&nbsp;&nbsp;
@@ -216,13 +217,13 @@ function AddStudent() {
               </div>
 
               <div className="form-group row">
-                <label for="mail" className="col-sm-2 col-form-label">
+                <label for="mail" className="col-sm-2 col-form-label, AddStudentForm-LestSide">
                   Email
                 </label>
                 <div className="col-sm-10">
                   <input
                     type="email"
-                    className="form-control"
+                    className="form-control, AddStudentForm-RightSide"
                     id="mail"
                     name="email"
                     placeholder="Enter email address"
@@ -233,13 +234,13 @@ function AddStudent() {
                 </div>
               </div>
               <div className="form-group row">
-                <label for="phone" className="col-sm-2 col-form-label">
+                <label for="phone" className="col-sm-2 col-form-label, AddStudentForm-LestSide">
                   Phone No
                 </label>
                 <div className="col-sm-10">
                   <input
                     type="number"
-                    className="form-control"
+                    className="form-control, AddStudentForm-RightSide"
                     id="phone"
                     name="phoneNumber"
                     placeholder="Enter phone number"
@@ -250,13 +251,13 @@ function AddStudent() {
                 </div>
               </div>
               <div className="form-group row">
-                <label for="pass" className="col-sm-2 col-form-label">
+                <label for="pass" className="col-sm-2 col-form-label, AddStudentForm-LestSide">
                   Password
                 </label>
                 <div className="col-sm-10">
                   <input
                     type="password"
-                    className="form-control"
+                    className="form-control, AddStudentForm-RightSide"
                     id="pass"
                     name="password"
                     placeholder="Enter password"
@@ -268,12 +269,15 @@ function AddStudent() {
               </div>
               <div className="form-group row">
                 <div className="col-sm-10">
+                  <div className="AddStudentsumitt_btn">
                   <button type="submit" className="btn btn-primary">
                     Submit
                   </button>
+                  </div>
                 </div>
               </div>
             </form>
+          </div>
           </div>
         </div>
       </div>

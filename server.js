@@ -24,6 +24,7 @@ app.use("/api/admins", require("./routes/Admin.route"));
 
 app.use("/api/students", require("./routes/Student.route"));
 app.use("/api/studentGroups", require("./routes/StudentGroup.route"));
+app.use("/api/studentProjects", require("./routes/StudentProject.route"));
 
 app.use("/api/staffMembers", require("./routes/Staff.route"));
 

@@ -4,11 +4,29 @@ const { Schema } = mongoose;
 const studentSchema = new Schema({
   fName: String,
   lName: String,
-  studentId: String,
-  nic: String,
+  studentId: {
+    type: String,
+    required: true,
+    trim: true,
+    unique: true,
+    index: true,
+  },
+  nic: {
+    type: String,
+    required: true,
+    trim: true,
+    unique: true,
+    index: true,
+  },
   faculty: String,
   gender: String,
-  email: String,
+  email: {
+    type: String,
+    required: true,
+    trim: true,
+    unique: true,
+    index: true,
+  },
   phoneNumber: Number,
   password: String,
 });
