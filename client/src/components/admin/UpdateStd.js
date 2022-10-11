@@ -1,17 +1,17 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-import PersonAddAlt1Icon from "@mui/icons-material/PersonAddAlt1";
+import { useParams } from "react-router";
 import axios from "axios";
 import "./admin.css";
+import UpgradeIcon from "@mui/icons-material/Upgrade";
 
-function AddStaffMember() {
+function UpdateStd() {
   const [user, setUser] = useState({
     fName: "",
     lName: "",
-    staffId: "",
+    studentId: "",
     nic: "",
-    faculty: "FOC",
-    type: "Lecturer",
+    faculty: "",
     gender: "male",
     email: "",
     phoneNumber: "",
@@ -20,14 +20,32 @@ function AddStaffMember() {
 
   let navigate = useNavigate();
 
-  function sendData(e) {
+  const { id } = useParams();
+
+  useEffect(() => {
+    function getUser() {
+      axios
+        .get(`http://localhost:5000/api/students/${id}`)
+        .then((res) => {
+          setUser(res.data);
+        })
+        .catch((err) => {
+          alert(err.message);
+        });
+    }
+    getUser();
+  }, []);
+
+  function updateData(e) {
     e.preventDefault();
 
+    const updatedUser = user;
+
     axios
-      .post("http://localhost:5000/api/staffMembers", user)
+      .put(`http://localhost:5000/api/students/${id}`, updatedUser)
       .then(() => {
-        alert("staff member added");
-        navigate("/staffMembers");
+        alert("student updated");
+        navigate("/stds");
       })
       .catch((err) => {
         alert(err);
@@ -48,9 +66,9 @@ function AddStaffMember() {
   return (
     <div className="container">
       <div className="staffformStyle">
-        <div className="staff_heading">Register New Staff Member</div>
+        <div className="staff_heading">Update Student</div>
         <div className="staffformStyle_1">
-          <form onSubmit={sendData}>
+          <form onSubmit={updateData}>
             <div className="form-group row">
               <label for="fname" className="col-sm-2 col-form-label">
                 First Name
@@ -61,7 +79,6 @@ function AddStaffMember() {
                   className="form-control"
                   id="fname"
                   name="fName"
-                  placeholder="Enter first name"
                   onChange={handleChange}
                   value={user.fName}
                   required
@@ -78,7 +95,6 @@ function AddStaffMember() {
                   className="form-control"
                   id="lname"
                   name="lName"
-                  placeholder="Enter last name"
                   onChange={handleChange}
                   value={user.lName}
                   required
@@ -86,18 +102,17 @@ function AddStaffMember() {
               </div>
             </div>
             <div className="form-group row">
-              <label for="stfid" className="col-sm-2 col-form-label">
-                Staff Id
+              <label for="stdid" className="col-sm-2 col-form-label">
+                Student Id
               </label>
               <div className="col-sm-10">
                 <input
                   type="text"
                   className="form-control"
-                  id="stfid"
-                  name="staffId"
-                  placeholder="Enter Staff ID"
+                  id="stdid"
+                  name="studentId"
                   onChange={handleChange}
-                  value={user.staffId}
+                  value={user.studentId}
                   required
                 />
               </div>
@@ -112,7 +127,6 @@ function AddStaffMember() {
                   className="form-control"
                   id="NIC"
                   name="nic"
-                  placeholder="Enter NIC"
                   onChange={handleChange}
                   value={user.nic}
                   required
@@ -140,34 +154,6 @@ function AddStaffMember() {
                   </option>
                   <option selected={user.faculty === "FOB"} value="FOB">
                     FOB
-                  </option>
-                </select>
-              </div>
-            </div>
-
-            <div class="form-group row">
-              <label for="typee" className="col-sm-2 col-form-label">
-                Type
-              </label>
-              <div className="col-sm-10">
-                <select
-                  id="typee"
-                  class="form-control"
-                  value={user.type}
-                  onChange={handleChange}
-                  name="type"
-                >
-                  <option
-                    selected={user.faculty === "Lecturer"}
-                    value="Lecturer"
-                  >
-                    Lecturer
-                  </option>
-                  <option
-                    selected={user.faculty === "Support Service"}
-                    value="Support Service"
-                  >
-                    Support Service
                   </option>
                 </select>
               </div>
@@ -211,7 +197,6 @@ function AddStaffMember() {
                   className="form-control"
                   id="mail"
                   name="email"
-                  placeholder="Enter email address"
                   onChange={handleChange}
                   value={user.email}
                   required
@@ -228,7 +213,6 @@ function AddStaffMember() {
                   className="form-control"
                   id="phone"
                   name="phoneNumber"
-                  placeholder="Enter phone number"
                   onChange={handleChange}
                   value={user.phoneNumber}
                   required
@@ -245,7 +229,6 @@ function AddStaffMember() {
                   className="form-control"
                   id="pass"
                   name="password"
-                  placeholder="Enter password"
                   onChange={handleChange}
                   value={user.password}
                   required
@@ -257,8 +240,8 @@ function AddStaffMember() {
             <div className="form-group row">
               <div className="col-sm-10">
                 <button type="submit" className="btn btn-dark btn-lg">
-                  <PersonAddAlt1Icon />
-                  &nbsp;&nbsp;Submit
+                  <UpgradeIcon />
+                  Update
                 </button>
               </div>
             </div>
@@ -269,4 +252,4 @@ function AddStaffMember() {
   );
 }
 
-export default AddStaffMember;
+export default UpdateStd;

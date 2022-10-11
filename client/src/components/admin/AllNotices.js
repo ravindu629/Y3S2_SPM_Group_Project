@@ -5,42 +5,42 @@ import Button from "@mui/material/Button";
 import DeleteForeverIcon from "@mui/icons-material/DeleteForever";
 import EditIcon from "@mui/icons-material/Edit";
 import PersonAddAlt1Icon from "@mui/icons-material/PersonAddAlt1";
-import PictureAsPdfIcon from "@mui/icons-material/PictureAsPdf";
 import ArrowBackIcon from "@mui/icons-material/ArrowBack";
+
 import { useNavigate } from "react-router-dom";
 
-function Admins() {
-  const [users, setUsers] = useState([]);
+function AllNotices() {
+  const [notices, setNotices] = useState([]);
 
   let navigate = useNavigate();
 
   useEffect(() => {
-    function getUsers() {
+    function getNotices() {
       axios
-        .get("http://localhost:5000/api/admins")
+        .get("http://localhost:5000/api/notices")
         .then((res) => {
-          setUsers(res.data);
+          setNotices(res.data);
         })
         .catch((err) => {
           alert(err.message);
         });
     }
-    getUsers();
+    getNotices();
   }, []);
 
-  function deleteUser(_id) {
+  function deleteNotice(_id) {
     axios
-      .delete("http://localhost:5000/api/admins/" + _id)
+      .delete("http://localhost:5000/api/notices/" + _id)
       .then((res) => {
         console.log(res.data);
 
-        alert("admin deleted");
+        alert("Faculty notice deleted");
       })
       .catch((err) => {
         alert(err);
       });
 
-    setUsers(users.filter((user) => user._id !== _id));
+    setNotices(notices.filter((notice) => notice._id !== _id));
   }
 
   const btnStyle = {
@@ -58,18 +58,18 @@ function Admins() {
     fontWeight: "bold",
   };
 
-  function filterData(admins, searchKey) {
-    const result = admins.filter((admin) => {
-      return admin.adminId.toLowerCase().includes(searchKey);
+  function filterData(facultyNotices, searchKey) {
+    const result = facultyNotices.filter((fNotice) => {
+      return fNotice.faculty.toLowerCase().includes(searchKey);
     });
 
-    setUsers(result);
+    setNotices(result);
   }
 
   function handleSearchArea(e) {
     const searchKey = e.target.value;
 
-    axios.get("http://localhost:5000/api/admins").then((res) => {
+    axios.get("http://localhost:5000/api/notices").then((res) => {
       filterData(res.data, searchKey);
     });
   }
@@ -91,21 +91,13 @@ function Admins() {
           style={btnStyle}
           startIcon={<PersonAddAlt1Icon />}
           onClick={() => {
-            navigate("/addAdmin");
+            navigate("/addNotice");
           }}
         >
-          Add New Admin
-        </Button>
-        <Button
-          variant="contained"
-          style={btnStyle}
-          startIcon={<PictureAsPdfIcon />}
-          onClick={window.print}
-        >
-          Generate Admin Report
+          Add New Faculty Notice
         </Button>
       </div>
-      <div className="table_heading">All Admins Details</div>
+      <div className="table_heading">All Faculty Notices Details</div>
       <div className="searchBar">
         <input
           type="text"
@@ -122,29 +114,23 @@ function Admins() {
           <thead className="table-dark">
             <tr>
               <th scope="col">No</th>
-              <th scope="col">First Name</th>
-              <th scope="col">Last Name</th>
-              <th scope="col">Admin ID</th>
-              <th scope="col">NIC</th>
-              <th scope="col">Gender</th>
-              <th scope="col">Email</th>
-              <th scope="col">Phone Number</th>
+              <th scope="col">Date</th>
+              <th scope="col">Topic</th>
+              <th scope="col">Faculty</th>
+              <th scope="col">Content</th>
 
               <th></th>
             </tr>
           </thead>
           <tbody className="table-light">
-            {users.map((user, index) => {
+            {notices.map((notice, index) => {
               return (
-                <tr key={user._id}>
+                <tr key={notice._id}>
                   <td>{index + 1}</td>
-                  <td>{user.fName}</td>
-                  <td>{user.lName}</td>
-                  <td>{user.adminId}</td>
-                  <td>{user.nic}</td>
-                  <td>{user.gender}</td>
-                  <td>{user.email}</td>
-                  <td>{user.phoneNumber}</td>
+                  <td>{notice.date}</td>
+                  <td>{notice.topic.substring(0, 35) + "..."}</td>
+                  <td>{notice.faculty}</td>
+                  <td>{notice.message.substring(0, 45) + "..."}</td>
                   <td>
                     <Button
                       variant="contained"
@@ -157,7 +143,7 @@ function Admins() {
                       }}
                       startIcon={<EditIcon />}
                       onClick={() => {
-                        navigate(`/updateAdmin/${user._id}`);
+                        navigate(`/updateF_Notice/${notice._id}`);
                       }}
                     >
                       Update
@@ -178,7 +164,7 @@ function Admins() {
                             "Are you sure you wish to delete this record?"
                           )
                         )
-                          deleteUser(user._id);
+                          deleteNotice(notice._id);
                       }}
                     >
                       Delete
@@ -194,4 +180,4 @@ function Admins() {
   );
 }
 
-export default Admins;
+export default AllNotices;

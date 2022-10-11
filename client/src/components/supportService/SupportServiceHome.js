@@ -3,7 +3,7 @@ import React from "react";
 
 export default function SupportServiceHome() {
   return (
-    <div style={{ paddingLeft: "220px", paddingTop: "80px" }}>
+    <div style={{ paddingLeft: "220px", paddingTop: "80px", background: "" }}>
       <h2>
         {" "}
         &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;
@@ -13,72 +13,68 @@ export default function SupportServiceHome() {
           <i>Support Service Home </i>
         </b>
       </h2>
-
+     
       <br></br>
       <br></br>
-
+    
       <div className="navItem">
-        <a href="/">
+        <a href="#">
           <button
             type="button"
             className="btn btn-primary"
             style={{
               width: "20%",
               fontSize: "140%",
-              height: "135px",
+              height: "70px",
               marginTop: "20px",
-              borderBottomLeftRadius: "30px",
               borderColor: "black",
-              backgroundColor: "#8000ff",
+              backgroundColor: "",
             }}
           >
             <b>Manage Hostel Services </b>
           </button>
+          <br></br>
         </a>
         &nbsp;&nbsp; &nbsp;&nbsp;
-        <a href="/">
+        <a href="#">
           <button
             type="button"
             className="btn btn-primary"
             style={{
               width: "20%",
               fontSize: "140%",
-              height: "135px",
+              height: "70px",
               marginTop: "20px",
-              backgroundColor: "#8000ff",
+              backgroundColor: "",
               borderColor: "black",
-              borderTopRightRadius: "30px",
+             
             }}
           >
             <b> Manage Transport Service </b>
           </button>
+          <br></br>
         </a>
         &nbsp;&nbsp; &nbsp;&nbsp;
-        <a href="/">
+        <a href="#">
           <button
             type="button"
             className="btn btn-primary"
             style={{
               width: "20%",
               fontSize: "140%",
-              height: "135px",
+              height: "70 px",
               marginTop: "20px",
-              backgroundColor: "#8000ff",
+              backgroundColor: "",
               borderColor: "black",
-              borderBottomLeftRadius: "30px",
+              
             }}
           >
             <b>Contact Details </b>
           </button>
         </a>
       </div>
-
       <br></br>
       <br></br>
-
-      
-      
-    
     </div>
   );
 }
