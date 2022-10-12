@@ -68,21 +68,20 @@ function AddHostal() {
   return (
     <div className="">
     <br></br>
-      <div className="supDownloadbtn">
-      <a href="https://drive.google.com/drive/folders/1-YTswm8zPPp4P7eodwATGxHIiXc5wXuI?usp=sharing">
-      <button class="btn btn-warning"> 📰 <b> Download Submitted Document </b> </button>
-
-      </a>
-      </div>
-      <div className="formStyle">
-        <h2 className="heading"> Add Hostel </h2>
+     
+      
+        <h2 className="heading">&nbsp;&nbsp;  &nbsp;&nbsp;&nbsp;&nbsp;  &nbsp;&nbsp;&nbsp;&nbsp;  &nbsp;&nbsp; &nbsp;&nbsp;  &nbsp;&nbsp; &nbsp;&nbsp;  &nbsp;&nbsp; &nbsp;&nbsp;  &nbsp;&nbsp; &nbsp;&nbsp;  &nbsp;&nbsp; &nbsp;&nbsp;  &nbsp;&nbsp; &nbsp;&nbsp;  &nbsp;&nbsp;&nbsp;&nbsp;  &nbsp;&nbsp;&nbsp;&nbsp;  &nbsp;&nbsp;&nbsp;&nbsp;  &nbsp;&nbsp;&nbsp;&nbsp; Add Hostel </h2>
         <br></br>
+
+        <div className="form" >
+          <br></br>
+          <div className="formStyle">
         <form onSubmit={sendData}>
      
 
         <div className="form-group row">
             <label for="hostalID" className="col-sm-2 col-form-label">
-          Hostel Id
+         <b>&nbsp;   Hostel Id  </b>
             </label>
             <div className="col-sm-10">
               <input
@@ -94,13 +93,14 @@ function AddHostal() {
                 onChange={handleChange}
                 value={hostal.hostalID}
                 required
+                
               />
             </div>
           </div>
 
           <div className="form-group row">
             <label for="hostalName" className="col-sm-2 col-form-label">
-            Hostel Name
+           <b> &nbsp;  Hostel Name </b>
             </label>
             <div className="col-sm-10">
               <input
@@ -117,7 +117,7 @@ function AddHostal() {
           </div>
           <div className="form-group row">
             <label for="Address" className="col-sm-2 col-form-label">
-            Address
+            <b>&nbsp; Address </b>
             </label>
             <div className="col-sm-10">
               <input
@@ -135,7 +135,7 @@ function AddHostal() {
 
           <div className="form-group row">
             <label for="bedRooms" className="col-sm-2 col-form-label">
-            Bedrooms
+           <b> &nbsp; Bedrooms </b>
             </label>
             <div className="col-sm-10">
               <input
@@ -153,7 +153,7 @@ function AddHostal() {
 
           <div className="form-group row">
             <label for="bathrooms" className="col-sm-2 col-form-label">
-            Bathrooms
+           <b> &nbsp; Bathrooms </b>
             </label>
             <div className="col-sm-10">
               <input
@@ -170,10 +170,10 @@ function AddHostal() {
             </div>
           </div>
 
-
+          
           <div className="form-group row">
             <label for="persons" className="col-sm-2 col-form-label">
-              Person
+             <b> &nbsp; Person  </b>
             </label>
             <div className="col-sm-10">
               <input
@@ -191,7 +191,7 @@ function AddHostal() {
 
           <div className="form-group row">
             <label for="charge" className="col-sm-2 col-form-label">
-          Charge per person
+         <b> &nbsp; price  </b>
             </label>
             <div className="col-sm-10">
               <input
@@ -199,17 +199,17 @@ function AddHostal() {
                 className="form-control"
                 id="charge"
                 name="charge"
-                placeholder="enter charge"
+                placeholder="enter charge per person"
                 onChange={handleChange}
                 value={hostal.charge}
                 required
               />
             </div>
-
-
-            <div className="form-group row">
-            <label for="contactNo" className="col-sm-2 col-form-label">
-              Contact No
+            
+          </div>
+          <div class="form-group row">
+          <label for="contactNo" className="col-sm-2 col-form-label">
+             <b>  Contact No </b>
             </label>
             <div className="col-sm-10">
               <input
@@ -221,26 +221,31 @@ function AddHostal() {
                 onChange={handleChange}
                 value={hostal.contactNo}
                 required
+                maxLength={10}
               />
             </div>
-          </div>
-            
-          </div>
-<br></br>
-          <div className="form-group row">
+            </div>
+          
+
+          <div >
         
-            <div className="addmarkSubBtn">
+            <div className="addHostel-btn">
            
               <button type="submit" className="btn btn-primary">
-              &nbsp;&nbsp;
-                Add
-                &nbsp;&nbsp;
+            
+              &nbsp;&nbsp;  &nbsp;&nbsp; Add &nbsp;&nbsp;&nbsp;&nbsp;
+              
               </button>
+             
              
             </div>
             
           </div>
+          
         </form>
+        <br></br>
+        
+      </div>
       </div>
     </div>
   );

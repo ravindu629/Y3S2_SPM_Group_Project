@@ -82,7 +82,7 @@ const addHostalService = (req, res) => {
         contactNo,
       } = req.body;
   
-      const updateHostal = await HostalServices.findByIdAndUpdate(HostalId, {
+      const updateHostal = await HostalServices.findByIdAndUpdate(hostalId, {
         hostalID,
         hostalName,
         address,

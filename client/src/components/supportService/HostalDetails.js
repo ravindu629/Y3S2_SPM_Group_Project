@@ -5,7 +5,7 @@ import DeleteForeverIcon from "@mui/icons-material/DeleteForever";
 
 
  function HostalDetails () {
-    const [Hostal, setHostal, setUsers] = useState([]);
+    const [Hostal, setHostal] = useState([]);
 
     useEffect(() => {
         function getHostals() {
@@ -34,44 +34,83 @@ import DeleteForeverIcon from "@mui/icons-material/DeleteForever";
             alert(err);
           });
     
-        setUsers(Hostal.filter((hostal) => hostal._id !== _id));
+        setHostal(Hostal.filter((hostal) => hostal._id !== _id));
+      }
+      const btnStyle = {
+        borderRadius: 35,
+        backgroundColor: "white",
+        color: "black",
+        fontWeight: "bold",
+      };
+    
+      function filterData(hostal, searchKey) {
+        const result = hostal.filter((hostal) => {
+          return hostal.hostalID.toLowerCase().includes(searchKey);
+        });
+    
+        setHostal(result);
       }
     
+      function handleSearchArea(e) {
+        const searchKey = e.target.value;
+    
+        axios.get("http://localhost:5000/api/hostaldetails").then((res) => {
+          filterData(res.data, searchKey);
+        });
+      }
 
 
     return (
         <div className="all">
-            <div  >
+           <br></br>
+  
+            <h2 className="heading">    &nbsp;&nbsp;  &nbsp;&nbsp;  &nbsp;&nbsp;  &nbsp;&nbsp;  &nbsp;&nbsp;  &nbsp;&nbsp;  &nbsp;&nbsp;  &nbsp;&nbsp; &nbsp;&nbsp;   &nbsp;&nbsp;  &nbsp;&nbsp;  &nbsp;&nbsp;  &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;  &nbsp;&nbsp;  &nbsp;&nbsp;   Available Hostels Details</h2><br />
+            
+            <div  className="add-get-btn">
                 <a href="/Addhostal">
-                    <button type="button" className="">
-                        <b>Add Hostel</b>
+                  <br></br>
+                    <button type="button" className="button_getreport">
+                        <b> ➕ Add Hostel     &nbsp;&nbsp;</b>
                     </button>
+                 
                 </a>  
-               
-                <a href="#">
-                    <button type="button" className="">
-                        <b> Get Report</b>
+                &nbsp;&nbsp;   &nbsp;&nbsp;   &nbsp;&nbsp;   &nbsp;&nbsp;   &nbsp;&nbsp;
+                <a href="/ViewHostelReport">
+                &nbsp;&nbsp;
+                    <button type="button" className="button_getreport">
+                        <b> 📚 Get Report    &nbsp;&nbsp;</b>
                     </button>
                 </a>         
                        
-                
+                 
             </div>
-
-            <h2 className="heading">Available Hostels Details</h2><br />
-
+            
+            <div className="searchBar-hostal">
+        <input
+          type="text"
+          class="form-control rounded"
+          placeholder=" 🔍  Search"
+          aria-label="Search"
+          aria-describedby="search-addon"
+          onChange={handleSearchArea}
+        />
+      </div>
+   <br></br>
+   <div className="table_search">
+            <div className="table table-success table-striped">
             <table className="table table-bordered">
-                <thead className="table-dark">
+                <thead className="">
                     <tr>
-                        <th scope="col"></th>
-                        <th scope="col">Hostal ID</th>
-                        <th scope="col">Hostal Name</th>
-                        <th scope="col">Address</th>
-                        <th scope="col">Bedrooms</th>
-                        <th scope="col">Bathrooms</th>
-                        <th scope="col">Persons</th>
-                        <th scope="col">Charge per person</th>
-                        <th scope="col">Contact No</th>
-                        <th scope="col">Update or delete</th>
+                        <th  scope="col"></th>
+                        <th  className="table-secondary" scope="col">Hostal ID</th>
+                        <th className="table-danger" scope="col">Hostal Name</th>
+                        <th className="table-warning" scope="col">Address</th>
+                        <th className="table-info" scope="col">Bedrooms</th>
+                        <th className="table-primary" scope="col">Bathrooms</th>
+                        <th className="table-secondary" scope="col">Persons</th>
+                        <th className="table-success" scope="col">Charge per person</th>
+                        <th className="table-danger" scope="col">Contact No</th>
+                        <th className="table-light" scope="col">Update or delete</th>
                        
                        
                        
@@ -95,7 +134,7 @@ import DeleteForeverIcon from "@mui/icons-material/DeleteForever";
                                 <td>
                   <a
                     className="btn btn-warning"
-                    href={`/Updatehostal/${hostal._id}`}
+                    href={`/UpdateHostal/${hostal._id}`}
                   >
                     <EditIcon />
                     &nbsp;&nbsp; <b>Update</b>
@@ -124,6 +163,8 @@ import DeleteForeverIcon from "@mui/icons-material/DeleteForever";
                     })}
                 </tbody>
             </table>
+            </div>
+            </div>
 
         </div >
     )
