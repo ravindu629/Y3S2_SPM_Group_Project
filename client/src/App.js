@@ -32,8 +32,17 @@ import StudentProfileUpdate from "./components/student/StudentProfileUpdate";
 
 
 
-//suppoert services pages
+//support services pages 
 import SupportServiceHome from "./components/supportService/SupportServiceHome";
+import HostalDetails from "./components/supportService/HostalDetails"
+import AddHostal from "./components/supportService/AddHostal"
+import UpdateHostal from "./components/supportService/UpdateHostal"
+import TransportDetails from "./components/supportService/TransportDetails"
+import AddTransport from "./components/supportService/AddTransport";
+import UpdateTransport from "./components/supportService/UpdateTransport"
+import ViewHostelReport from "./components/supportService/ViewHostelReport"
+import ViewTransportReport from "./components/supportService/ViewTransportReport"
+import ContactDetails from "./components/supportService/ContactDetails"
 
 import AddStaffMember from "./components/admin/AddStaffMember";
 import Admins from "./components/admin/Admins";
@@ -52,7 +61,6 @@ import Faculty_Notces from "./components/admin/Faculty_Notices";
 import Faculty_Notices from "./components/admin/Faculty_Notices";
 import ViewNotice from "./components/admin/ViewNotice";
 
-//suppoert services pages
 
 function App() {
   return (
@@ -84,6 +92,18 @@ function App() {
 
 
         <Route path="/SupportServiceHome" element={<SupportServiceHome />} />
+        <Route path="/HostalDetails" element={<HostalDetails />} />
+        <Route path="/AddHostal" element={<AddHostal />} />
+        <Route path="/UpdateHostal/:id" element={<UpdateHostal />} />
+        <Route path="/TransportDetails" element={<TransportDetails/>} />
+        <Route path="/AddTransport" element={<AddTransport/>} />
+        <Route path="/UpdateTransport/:id" element={<UpdateTransport/>} />
+        <Route path="/ViewHostelReport" element={<ViewHostelReport/>} />
+        <Route path="/ViewTransportReport" element={<ViewTransportReport/>} />
+        <Route path="/ContactDetails" element={<ContactDetails/>} />
+
+
+
 
 
         <Route path="/addStaffMember" element={<AddStaffMember />} />
