@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
-import "./login.css";
+import "./StudentLogin.css";
 import VpnKey from "@mui/icons-material/VpnKey";
 
 export default function StudentLogin() {
@@ -46,53 +46,48 @@ export default function StudentLogin() {
 
   return (
     <div>
-      <div className="container mt-5">
-        <div className="loginFormStd">
-          <div className="loginHeading">Student Login</div>
+      <div className="loginHeading">Student Login</div>
 
-          <div className="row">
-            <div className="col-sm-8">
-              <div className="card">
-                <div className="card-body">
-                  <form onSubmit={sendData}>
-                    <div className="form-group">
-                      <label for="id">Student Id</label>
-                      <input
-                        type="text"
-                        className="form-control"
-                        name="studentId"
-                        value={user.studentId}
-                        onChange={handleChange}
-                        required
-                      />
-                    </div>
-                    <div className="form-group">
-                      <label for="password">Password</label>
-                      <input
-                        type="password"
-                        className="form-control"
-                        name="password"
-                        value={user.password}
-                        onChange={handleChange}
-                        required
-                      />
-                    </div>
-                    <button type="submit" className="btn btn-dark">
-                      <VpnKey />
-                      &nbsp;&nbsp; Login
-                    </button>
-                  </form>
-                  <br />
-                  <br />
-                  <div>
-                    <label for="password">
-                      If you don't have an account click to
-                    </label>
-                    &nbsp;&nbsp;
-                    <a href="/addStudent">Register</a>
-                  </div>
-                </div>
+      <div className="container">
+        <div className="formStyle">
+          <div className="formStyle_2">
+
+            <form onSubmit={sendData}>
+              <div className="form-group ">
+                <label for="id" >Student ID</label>
+                <input
+                  type="text"
+                  className="form-control"
+                  name="studentId"
+                  value={user.studentId}
+                  onChange={handleChange}
+                  required
+                />
               </div>
+              <div className="form-group">
+                <label for="password">Password</label>
+                <input
+                  type="password"
+                  className="form-control"
+                  name="password"
+                  value={user.password}
+                  onChange={handleChange}
+                  required
+                />
+              </div>
+              <button type="submit" className="btn btn-dark">
+                <VpnKey />
+                &nbsp;&nbsp; Login
+              </button>
+            </form>
+            <br />
+            <br />
+            <div>
+              <label for="password">
+                If you don't have an account click to
+              </label>
+              &nbsp;&nbsp;
+              <a href="/addStudent">Register</a>
             </div>
           </div>
         </div>

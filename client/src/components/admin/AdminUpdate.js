@@ -1,16 +1,17 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
+import { useParams } from "react-router";
 import axios from "axios";
-import "./AddStudent.css";
+import "./admin.css";
+import UpgradeIcon from "@mui/icons-material/Upgrade";
 
-function AddStudent() {
+function AdminUpdate() {
   const [user, setUser] = useState({
     fName: "",
     lName: "",
-    studentId: "",
+    adminId: "",
     nic: "",
-    faculty: "",
-    gender: "",
+    gender: "male",
     email: "",
     phoneNumber: "",
     password: "",
@@ -18,30 +19,36 @@ function AddStudent() {
 
   let navigate = useNavigate();
 
-  function sendData(e) {
+  const { id } = useParams();
+
+  useEffect(() => {
+    function getUser() {
+      axios
+        .get(`http://localhost:5000/api/admins/${id}`)
+        .then((res) => {
+          setUser(res.data);
+        })
+        .catch((err) => {
+          alert(err.message);
+        });
+    }
+    getUser();
+  }, []);
+
+  function updateData(e) {
     e.preventDefault();
 
+    const updatedUser = user;
+
     axios
-      .post("http://localhost:5000/api/students", user)
+      .put(`http://localhost:5000/api/admins/${id}`, updatedUser)
       .then(() => {
-        alert("student added");
-        navigate("/studentLogin");
+        alert("admin updated");
+        navigate("/admins");
       })
       .catch((err) => {
         alert(err);
       });
-
-    setUser({
-      fName: "",
-      lName: "",
-      studentId: "",
-      nic: "",
-      faculty: "",
-      gender: "",
-      email: "",
-      phoneNumber: "",
-      password: "",
-    });
   }
 
   function handleChange(event) {
@@ -57,10 +64,10 @@ function AddStudent() {
 
   return (
     <div className="container">
-      <div className="formStyle">
-        <div className="heading">Register Student</div>
-        <div className="formStyle_1">
-          <form onSubmit={sendData}>
+      <div className="staffformStyle">
+        <div className="staff_heading">Update Admin</div>
+        <div className="staffformStyle_1">
+          <form onSubmit={updateData}>
             <div className="form-group row">
               <label for="fname" className="col-sm-2 col-form-label">
                 First Name
@@ -71,7 +78,6 @@ function AddStudent() {
                   className="form-control"
                   id="fname"
                   name="fName"
-                  placeholder="enter first name"
                   onChange={handleChange}
                   value={user.fName}
                   required
@@ -88,7 +94,6 @@ function AddStudent() {
                   className="form-control"
                   id="lname"
                   name="lName"
-                  placeholder="enter last name"
                   onChange={handleChange}
                   value={user.lName}
                   required
@@ -96,18 +101,17 @@ function AddStudent() {
               </div>
             </div>
             <div className="form-group row">
-              <label for="stdid" className="col-sm-2 col-form-label">
-                Student Id
+              <label for="admid" className="col-sm-2 col-form-label">
+                Admin Id
               </label>
               <div className="col-sm-10">
                 <input
                   type="text"
                   className="form-control"
-                  id="stdid"
-                  name="studentId"
-                  placeholder="enter student id"
+                  id="admid"
+                  name="adminId"
                   onChange={handleChange}
-                  value={user.studentId}
+                  value={user.adminId}
                   required
                 />
               </div>
@@ -122,33 +126,13 @@ function AddStudent() {
                   className="form-control"
                   id="NIC"
                   name="nic"
-                  placeholder="enter nic"
                   onChange={handleChange}
                   value={user.nic}
                   required
                 />
               </div>
             </div>
-            <div class="form-group row">
-              <label for="fac" className="col-sm-2 col-form-label">
-                Faculty
-              </label>
-              <div className="col-sm-10">
-                <select
-                  id="fac"
-                  class="form-control"
-                  value={user.faculty}
-                  onChange={handleChange}
-                  name="faculty"
-                >
-                  <option selected value="FOC">
-                    FOC
-                  </option>
-                  <option value="FOE">FOE</option>
-                  <option value="FOB">FOB</option>
-                </select>
-              </div>
-            </div>
+
             <div class="form-group row">
               <label for="gen" className="col-sm-2 col-form-label">
                 Gender
@@ -176,6 +160,7 @@ function AddStudent() {
                 </div>
               </div>
             </div>
+
             <div className="form-group row">
               <label for="mail" className="col-sm-2 col-form-label">
                 Email
@@ -186,7 +171,6 @@ function AddStudent() {
                   className="form-control"
                   id="mail"
                   name="email"
-                  placeholder="Enter email address"
                   onChange={handleChange}
                   value={user.email}
                   required
@@ -203,7 +187,6 @@ function AddStudent() {
                   className="form-control"
                   id="phone"
                   name="phoneNumber"
-                  placeholder="Enter phone number"
                   onChange={handleChange}
                   value={user.phoneNumber}
                   required
@@ -220,7 +203,6 @@ function AddStudent() {
                   className="form-control"
                   id="pass"
                   name="password"
-                  placeholder="Enter password"
                   onChange={handleChange}
                   value={user.password}
                   required
@@ -229,8 +211,9 @@ function AddStudent() {
             </div>
             <div className="form-group row">
               <div className="col-sm-10">
-                <button type="submit" className="btn btn-primary">
-                  Submit
+                <button type="submit" className="btn btn-dark">
+                  <UpgradeIcon />
+                  &nbsp;&nbsp;Update
                 </button>
               </div>
             </div>
@@ -241,4 +224,4 @@ function AddStudent() {
   );
 }
 
-export default AddStudent;
+export default AdminUpdate;
