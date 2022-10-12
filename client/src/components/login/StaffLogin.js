@@ -29,20 +29,22 @@ function StaffLogin() {
     setLec(true);
   }
 
+  const loginMenuBtn = {
+    borderRadius: 35,
+    backgroundColor: "white",
+    padding: "10px 20px",
+    marginRight: "28px",
+    color: "black",
+    fontWeight: "bold",
+  };
+
   return (
     <div>
       <div className="container">
         <div className="loginMenu">
           <Button
             variant="contained"
-            style={{
-              borderRadius: 35,
-              backgroundColor: "white",
-              padding: "12px 28px",
-              marginRight: "18px",
-              color: "black",
-              fontWeight: "bold",
-            }}
+            style={loginMenuBtn}
             startIcon={<InputIcon />}
             onClick={adminLoginHandle}
           >
@@ -50,14 +52,7 @@ function StaffLogin() {
           </Button>
           <Button
             variant="contained"
-            style={{
-              borderRadius: 35,
-              backgroundColor: "white",
-              padding: "12px 28px",
-              marginRight: "18px",
-              color: "black",
-              fontWeight: "bold",
-            }}
+            style={loginMenuBtn}
             startIcon={<InputIcon />}
             onClick={ssLoginHandle}
           >
@@ -65,13 +60,7 @@ function StaffLogin() {
           </Button>
           <Button
             variant="contained"
-            style={{
-              borderRadius: 35,
-              backgroundColor: "white",
-              padding: "12px 28px",
-              color: "black",
-              fontWeight: "bold",
-            }}
+            style={loginMenuBtn}
             startIcon={<InputIcon />}
             onClick={lecturerLoginHandle}
           >

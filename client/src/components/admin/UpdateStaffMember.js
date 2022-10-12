@@ -5,12 +5,14 @@ import axios from "axios";
 import "./admin.css";
 import UpgradeIcon from "@mui/icons-material/Upgrade";
 
-function AdminUpdate() {
+function UpdateStaffMember() {
   const [user, setUser] = useState({
     fName: "",
     lName: "",
-    adminId: "",
+    staffId: "",
     nic: "",
+    faculty: "",
+    type: "",
     gender: "male",
     email: "",
     phoneNumber: "",
@@ -24,7 +26,7 @@ function AdminUpdate() {
   useEffect(() => {
     function getUser() {
       axios
-        .get(`http://localhost:5000/api/admins/${id}`)
+        .get(`http://localhost:5000/api/staffMembers/${id}`)
         .then((res) => {
           setUser(res.data);
         })
@@ -41,10 +43,10 @@ function AdminUpdate() {
     const updatedUser = user;
 
     axios
-      .put(`http://localhost:5000/api/admins/${id}`, updatedUser)
+      .put(`http://localhost:5000/api/staffMembers/${id}`, updatedUser)
       .then(() => {
-        alert("admin updated");
-        navigate("/admins");
+        alert("staff member updated");
+        navigate("/staffMembers");
       })
       .catch((err) => {
         alert(err);
@@ -65,7 +67,7 @@ function AdminUpdate() {
   return (
     <div className="container">
       <div className="staffformStyle">
-        <div className="staff_heading">Update Admin</div>
+        <div className="staff_heading">Update Staff Member</div>
         <div className="staffformStyle_1">
           <form onSubmit={updateData}>
             <div className="form-group row">
@@ -101,17 +103,17 @@ function AdminUpdate() {
               </div>
             </div>
             <div className="form-group row">
-              <label for="admid" className="col-sm-2 col-form-label">
-                Admin Id
+              <label for="stfid" className="col-sm-2 col-form-label">
+                Staff Id
               </label>
               <div className="col-sm-10">
                 <input
                   type="text"
                   className="form-control"
-                  id="admid"
-                  name="adminId"
+                  id="stfid"
+                  name="staffId"
                   onChange={handleChange}
-                  value={user.adminId}
+                  value={user.staffId}
                   required
                 />
               </div>
@@ -130,6 +132,56 @@ function AdminUpdate() {
                   value={user.nic}
                   required
                 />
+              </div>
+            </div>
+
+            <div class="form-group row">
+              <label for="fac" className="col-sm-2 col-form-label">
+                Faculty
+              </label>
+              <div className="col-sm-10">
+                <select
+                  id="fac"
+                  class="form-control"
+                  value={user.faculty}
+                  onChange={handleChange}
+                  name="faculty"
+                >
+                  <option selected={user.faculty === "FOC"} value="FOC">
+                    FOC
+                  </option>
+                  <option selected={user.faculty === "FOE"} value="FOE">
+                    FOE
+                  </option>
+                  <option selected={user.faculty === "FOB"} value="FOB">
+                    FOB
+                  </option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-group row">
+              <label for="typee" className="col-sm-2 col-form-label">
+                Type
+              </label>
+              <div className="col-sm-10">
+                <select
+                  id="typee"
+                  class="form-control"
+                  value={user.type}
+                  onChange={handleChange}
+                  name="type"
+                >
+                  <option selected={user.type === "Lecturer"} value="Lecturer">
+                    Lecturer
+                  </option>
+                  <option
+                    selected={user.type === "Support Service"}
+                    value="Support Service"
+                  >
+                    Support Service
+                  </option>
+                </select>
               </div>
             </div>
 
@@ -215,7 +267,7 @@ function AdminUpdate() {
               <div className="col-sm-10">
                 <button type="submit" className="btn btn-dark btn-lg">
                   <UpgradeIcon />
-                  &nbsp;&nbsp;Update
+                  Update
                 </button>
               </div>
             </div>
@@ -226,4 +278,4 @@ function AdminUpdate() {
   );
 }
 
-export default AdminUpdate;
+export default UpdateStaffMember;

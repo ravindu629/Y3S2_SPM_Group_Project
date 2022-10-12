@@ -10,8 +10,8 @@ function AddStaffMember() {
     lName: "",
     staffId: "",
     nic: "",
-    faculty: "",
-    type: "",
+    faculty: "FOC",
+    type: "Lecturer",
     gender: "male",
     email: "",
     phoneNumber: "",
@@ -27,7 +27,7 @@ function AddStaffMember() {
       .post("http://localhost:5000/api/staffMembers", user)
       .then(() => {
         alert("staff member added");
-        navigate("/adminMenu");
+        navigate("/staffMembers");
       })
       .catch((err) => {
         alert(err);
@@ -61,7 +61,7 @@ function AddStaffMember() {
                   className="form-control"
                   id="fname"
                   name="fName"
-                  placeholder="enter first name"
+                  placeholder="Enter first name"
                   onChange={handleChange}
                   value={user.fName}
                   required
@@ -78,7 +78,7 @@ function AddStaffMember() {
                   className="form-control"
                   id="lname"
                   name="lName"
-                  placeholder="enter last name"
+                  placeholder="Enter last name"
                   onChange={handleChange}
                   value={user.lName}
                   required
@@ -95,7 +95,7 @@ function AddStaffMember() {
                   className="form-control"
                   id="stfid"
                   name="staffId"
-                  placeholder="enter staff id"
+                  placeholder="Enter Staff ID"
                   onChange={handleChange}
                   value={user.staffId}
                   required
@@ -112,7 +112,7 @@ function AddStaffMember() {
                   className="form-control"
                   id="NIC"
                   name="nic"
-                  placeholder="enter nic"
+                  placeholder="Enter NIC"
                   onChange={handleChange}
                   value={user.nic}
                   required
@@ -132,11 +132,15 @@ function AddStaffMember() {
                   onChange={handleChange}
                   name="faculty"
                 >
-                  <option selected value="FOC">
+                  <option selected={user.faculty === "FOC"} value="FOC">
                     FOC
                   </option>
-                  <option value="FOE">FOE</option>
-                  <option value="FOB">FOB</option>
+                  <option selected={user.faculty === "FOE"} value="FOE">
+                    FOE
+                  </option>
+                  <option selected={user.faculty === "FOB"} value="FOB">
+                    FOB
+                  </option>
                 </select>
               </div>
             </div>
@@ -153,10 +157,18 @@ function AddStaffMember() {
                   onChange={handleChange}
                   name="type"
                 >
-                  <option selected value="Lecturer">
+                  <option
+                    selected={user.faculty === "Lecturer"}
+                    value="Lecturer"
+                  >
                     Lecturer
                   </option>
-                  <option value="Support Service">Support Service</option>
+                  <option
+                    selected={user.faculty === "Support Service"}
+                    value="Support Service"
+                  >
+                    Support Service
+                  </option>
                 </select>
               </div>
             </div>
@@ -199,7 +211,7 @@ function AddStaffMember() {
                   className="form-control"
                   id="mail"
                   name="email"
-                  placeholder="enter email address"
+                  placeholder="Enter email address"
                   onChange={handleChange}
                   value={user.email}
                   required
@@ -216,7 +228,7 @@ function AddStaffMember() {
                   className="form-control"
                   id="phone"
                   name="phoneNumber"
-                  placeholder="enter phone number"
+                  placeholder="Enter phone number"
                   onChange={handleChange}
                   value={user.phoneNumber}
                   required
@@ -233,16 +245,18 @@ function AddStaffMember() {
                   className="form-control"
                   id="pass"
                   name="password"
-                  placeholder="enter password"
+                  placeholder="Enter password"
                   onChange={handleChange}
                   value={user.password}
                   required
                 />
               </div>
             </div>
+            <br />
+
             <div className="form-group row">
               <div className="col-sm-10">
-                <button type="submit" className="btn btn-dark">
+                <button type="submit" className="btn btn-dark btn-lg">
                   <PersonAddAlt1Icon />
                   &nbsp;&nbsp;Submit
                 </button>

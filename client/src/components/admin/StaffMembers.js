@@ -7,9 +7,10 @@ import EditIcon from "@mui/icons-material/Edit";
 import PersonAddAlt1Icon from "@mui/icons-material/PersonAddAlt1";
 import PictureAsPdfIcon from "@mui/icons-material/PictureAsPdf";
 import ArrowBackIcon from "@mui/icons-material/ArrowBack";
+
 import { useNavigate } from "react-router-dom";
 
-function Admins() {
+function StaffMembers() {
   const [users, setUsers] = useState([]);
 
   let navigate = useNavigate();
@@ -17,7 +18,7 @@ function Admins() {
   useEffect(() => {
     function getUsers() {
       axios
-        .get("http://localhost:5000/api/admins")
+        .get("http://localhost:5000/api/staffMembers")
         .then((res) => {
           setUsers(res.data);
         })
@@ -30,11 +31,11 @@ function Admins() {
 
   function deleteUser(_id) {
     axios
-      .delete("http://localhost:5000/api/admins/" + _id)
+      .delete("http://localhost:5000/api/staffMembers/" + _id)
       .then((res) => {
         console.log(res.data);
 
-        alert("admin deleted");
+        alert("staff member deleted");
       })
       .catch((err) => {
         alert(err);
@@ -58,9 +59,9 @@ function Admins() {
     fontWeight: "bold",
   };
 
-  function filterData(admins, searchKey) {
-    const result = admins.filter((admin) => {
-      return admin.adminId.toLowerCase().includes(searchKey);
+  function filterData(staffMembers, searchKey) {
+    const result = staffMembers.filter((member) => {
+      return member.staffId.toLowerCase().includes(searchKey);
     });
 
     setUsers(result);
@@ -69,7 +70,7 @@ function Admins() {
   function handleSearchArea(e) {
     const searchKey = e.target.value;
 
-    axios.get("http://localhost:5000/api/admins").then((res) => {
+    axios.get("http://localhost:5000/api/staffMembers").then((res) => {
       filterData(res.data, searchKey);
     });
   }
@@ -91,10 +92,10 @@ function Admins() {
           style={btnStyle}
           startIcon={<PersonAddAlt1Icon />}
           onClick={() => {
-            navigate("/addAdmin");
+            navigate("/addStaffMember");
           }}
         >
-          Add New Admin
+          Add New Staff Member
         </Button>
         <Button
           variant="contained"
@@ -102,10 +103,10 @@ function Admins() {
           startIcon={<PictureAsPdfIcon />}
           onClick={window.print}
         >
-          Generate Admin Report
+          Generate Staff Report
         </Button>
       </div>
-      <div className="table_heading">All Admins Details</div>
+      <div className="table_heading">All Staff Members Details</div>
       <div className="searchBar">
         <input
           type="text"
@@ -124,8 +125,10 @@ function Admins() {
               <th scope="col">No</th>
               <th scope="col">First Name</th>
               <th scope="col">Last Name</th>
-              <th scope="col">Admin ID</th>
+              <th scope="col">Staff ID</th>
               <th scope="col">NIC</th>
+              <th scope="col">Faculty</th>
+              <th scope="col">Type</th>
               <th scope="col">Gender</th>
               <th scope="col">Email</th>
               <th scope="col">Phone Number</th>
@@ -140,8 +143,10 @@ function Admins() {
                   <td>{index + 1}</td>
                   <td>{user.fName}</td>
                   <td>{user.lName}</td>
-                  <td>{user.adminId}</td>
+                  <td>{user.staffId}</td>
                   <td>{user.nic}</td>
+                  <td>{user.faculty}</td>
+                  <td>{user.type}</td>
                   <td>{user.gender}</td>
                   <td>{user.email}</td>
                   <td>{user.phoneNumber}</td>
@@ -157,7 +162,7 @@ function Admins() {
                       }}
                       startIcon={<EditIcon />}
                       onClick={() => {
-                        navigate(`/updateAdmin/${user._id}`);
+                        navigate(`/updateStaffMember/${user._id}`);
                       }}
                     >
                       Update
@@ -194,4 +199,4 @@ function Admins() {
   );
 }
 
-export default Admins;
+export default StaffMembers;
