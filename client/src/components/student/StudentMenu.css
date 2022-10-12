@@ -4,19 +4,20 @@
     text-decoration: none;
     margin-left: 20px;
     font-size: 20px;
-
+    margin-top: 0vh;
 }
 
 .left-nav-bar-button {
     width: 280px;
     height: 70px;
+    margin-top: 7px;
     background-color: #ffffff;
     font-weight: bold;
     text-align: left;
 }
 
 .btn-1 {
-    margin-top: 10vh;
+    margin-top: 1vh;
 }
 
 .left-nav-bar-image {
@@ -48,6 +49,7 @@
 
 .spm_module_button {
     width: 100vh;
+    height: 70px;
     margin-left: 260px;
     cursor: pointer;
 }
@@ -55,7 +57,7 @@
 .moduleMenu-image{
     width: 8vh;
     margin-right: 20vh;
-    margin-left: -20vh;
+    margin-left: -12vh;
 }
 
 .moduleMenu button:hover{
