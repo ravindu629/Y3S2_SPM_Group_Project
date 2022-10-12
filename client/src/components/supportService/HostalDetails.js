@@ -64,7 +64,7 @@ import DeleteForeverIcon from "@mui/icons-material/DeleteForever";
         <div className="all">
            <br></br>
   
-            <h2 className="heading">    &nbsp;&nbsp;  &nbsp;&nbsp;  &nbsp;&nbsp;  &nbsp;&nbsp;  &nbsp;&nbsp;  &nbsp;&nbsp;  &nbsp;&nbsp;  &nbsp;&nbsp; &nbsp;&nbsp;   &nbsp;&nbsp;  &nbsp;&nbsp;  &nbsp;&nbsp;  &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;  &nbsp;&nbsp;  &nbsp;&nbsp;   Available Hostels Details</h2><br />
+            <h2 className="heading"> Available Hostels Details</h2><br />
             
             <div  className="add-get-btn">
                 <a href="/Addhostal">

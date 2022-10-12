@@ -67,7 +67,7 @@ import DeleteForeverIcon from "@mui/icons-material/DeleteForever";
         <div className="">
            
 
-            <h2 className="heading"> &nbsp;&nbsp;  &nbsp;&nbsp;  &nbsp;&nbsp;  &nbsp;&nbsp;&nbsp;&nbsp;  &nbsp;&nbsp;  &nbsp;&nbsp;  &nbsp;&nbsp;&nbsp;&nbsp;  &nbsp;&nbsp;  &nbsp;&nbsp;  &nbsp;&nbsp;  &nbsp;&nbsp;  &nbsp;&nbsp;  &nbsp;&nbsp;  &nbsp;&nbsp;  &nbsp;&nbsp;  &nbsp;&nbsp;  &nbsp;&nbsp;  &nbsp;&nbsp;  Transport Service Details</h2><br />
+            <h2 className="heading">Transport Service Details</h2><br />
             <div className="add-get-btn">
                 <a href="/AddTransport">
                     <button type="button" className="button_getreport">

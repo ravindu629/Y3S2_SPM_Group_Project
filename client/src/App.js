@@ -8,7 +8,7 @@ import StaffLogin from "./components/login/StaffLogin";
 import AdminMenu from "./components/admin/AdminMenu";
 import LectureMenu from "./components/lecture/LectureMenu";
 
-import SupportService from "./components/supportService/SupportService";
+
 
 
 import StudentLogin from "./components/login/StudentLogin";
@@ -18,7 +18,7 @@ import SPMmodulePage from "./components/student/SPMmodulePage";
 
 //support services pages 
 import SupportServiceHome from "./components/supportService/SupportServiceHome";
-<<<<<<< HEAD
+
 import HostalDetails from "./components/supportService/HostalDetails"
 import AddHostal from "./components/supportService/AddHostal"
 import UpdateHostal from "./components/supportService/UpdateHostal"
@@ -28,16 +28,14 @@ import UpdateTransport from "./components/supportService/UpdateTransport"
 import ViewHostelReport from "./components/supportService/ViewHostelReport"
 import ViewTransportReport from "./components/supportService/ViewTransportReport"
 import ContactDetails from "./components/supportService/ContactDetails"
-=======
-=======
+
 import AddStaffMember from "./components/admin/AddStaffMember";
 import Admins from "./components/admin/Admins";
 import AddAdmin from "./components/admin/AddAdmin";
 import AdminUpdate from "./components/admin/AdminUpdate";
 
 
-//suppoert services pages
->>>>>>> 6c2c6cbf98801e789128caec27986ee5901ab7d0
+
 
 function App() {
   return (
@@ -53,13 +51,13 @@ function App() {
         {/*Student*/}
         <Route path="/studentLogin" element={<StudentLogin />} />
         <Route path="/addStudent" element={<AddSudent />} />
-<<<<<<< HEAD
+
    
-=======
+
         <Route path="/studentMenu" element={<StudentMenu />} />
         <Route path="/SPMmodulePage" element={<SPMmodulePage />} />
 
->>>>>>> 6c2c6cbf98801e789128caec27986ee5901ab7d0
+
         <Route path="/SupportServiceHome" element={<SupportServiceHome />} />
         <Route path="/HostalDetails" element={<HostalDetails />} />
         <Route path="/AddHostal" element={<AddHostal />} />
