@@ -21,7 +21,11 @@ app.get("/", (req, res) => {
 });
 
 app.use("/api/admins", require("./routes/Admin.route"));
+app.use("/api/notices", require("./routes/Notice.route"));
+
 app.use("/api/students", require("./routes/Student.route"));
+app.use("/api/studentGroups", require("./routes/StudentGroup.route"));
+
 app.use("/api/staffMembers", require("./routes/Staff.route"));
 
 //support service

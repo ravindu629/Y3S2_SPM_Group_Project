@@ -5,7 +5,7 @@ import axios from "axios";
 import "./admin.css";
 import UpgradeIcon from "@mui/icons-material/Upgrade";
 
-function AdminUpdate() {
+function UpdateAdminProfile() {
   const [user, setUser] = useState({
     fName: "",
     lName: "",
@@ -44,7 +44,7 @@ function AdminUpdate() {
       .put(`http://localhost:5000/api/admins/${id}`, updatedUser)
       .then(() => {
         alert("admin updated");
-        navigate("/admins");
+        navigate(`/adminProfile/${user._id}`);
       })
       .catch((err) => {
         alert(err);
@@ -65,7 +65,7 @@ function AdminUpdate() {
   return (
     <div className="container">
       <div className="staffformStyle">
-        <div className="staff_heading">Update Admin</div>
+        <div className="staff_heading">Update Admin Profile</div>
         <div className="staffformStyle_1">
           <form onSubmit={updateData}>
             <div className="form-group row">
@@ -226,4 +226,4 @@ function AdminUpdate() {
   );
 }
 
-export default AdminUpdate;
+export default UpdateAdminProfile;
