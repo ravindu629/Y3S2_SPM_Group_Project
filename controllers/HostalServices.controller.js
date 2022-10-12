@@ -82,7 +82,7 @@ const addHostalService = (req, res) => {
         contactNo,
       } = req.body;
   
-      const updateHostal = await HostalServices.findByIdAndUpdate(HostalId, {
+      const updateHostal = await HostalServices.findByIdAndUpdate(hostalId, {
         hostalID,
         hostalName,
         address,
@@ -106,7 +106,7 @@ const addHostalService = (req, res) => {
     try {
       const Hostalservice = await  HostalServices.findById( hostalId);
   
-      if (!sumarks) {
+      if (!Hostalservice) {
         return res.status(404).json("There is no user to remove");
       }
   

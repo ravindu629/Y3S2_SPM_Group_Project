@@ -62,9 +62,9 @@ const addTransportService = (req, res) => {
     const transportlId = req.params.id;
   
     try {
-      const tarnsportId = await TarnsportService.findById(transportlId);
+      const tarnsportID = await TarnsportService.findById(transportlId);
   
-      if (!tarnsportId) {
+      if (!tarnsportID) {
         return res.status(404).json("There is no student to update");
       }
   
@@ -78,7 +78,7 @@ const addTransportService = (req, res) => {
         contactNo,
       } = req.body;
   
-      const updateTransport = await TarnsportService.findByIdAndUpdate(tarnsportId, {
+      const updateTransport = await TarnsportService.findByIdAndUpdate(transportlId, {
         transportID,
         vehicleType,
         ownerName,
@@ -101,7 +101,7 @@ const addTransportService = (req, res) => {
     try {
       const Transportservice = await  TarnsportService.findById( transportId);
   
-      if (!sumarks) {
+      if (!Transportservice) {
         return res.status(404).json("There is no user to remove");
       }
   
