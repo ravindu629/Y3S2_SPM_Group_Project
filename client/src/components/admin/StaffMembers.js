@@ -76,7 +76,7 @@ function StaffMembers() {
   }
 
   return (
-    <div className="tableStyle">
+    <div className="admin_table_style">
       <div>
         <Button
           variant="outlined"
@@ -107,11 +107,11 @@ function StaffMembers() {
         </Button>
       </div>
       <div className="table_heading">All Staff Members Details</div>
-      <div className="searchBar">
+      <div className="admin_searchBar">
         <input
           type="text"
           class="form-control rounded"
-          placeholder="Search"
+          placeholder="Search by Staff ID"
           aria-label="Search"
           aria-describedby="search-addon"
           onChange={handleSearchArea}
