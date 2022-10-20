@@ -50,7 +50,7 @@ export default function StudentLogin() {
 
       <div className="container">
         <div className="formStyle">
-          <div className="formStyle_2">
+          <div className="LoginformMainDiv">
 
             <form onSubmit={sendData}>
               <div className="form-group ">

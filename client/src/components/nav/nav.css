@@ -86,4 +86,6 @@
 .courses_list {
   font-weight: bold;
   font-size: 180%;
+  text-align: left;
+  padding-left: 35%;
 }

@@ -14,15 +14,15 @@ const {
 
 } = require("../controllers/Transport.controller");
 
-router.get("/",   getTransportServices);
+router.get("/", getTransportServices);
 
-router.get("/:id", getTransport);
+router.get("/:id",getTransport);
 
-router.post("/",  addTransportService);
+router.post("/", addTransportService);
 
-router.put("/:id", updateTransport);
+router.put("/:id",updateTransport);
 
-router.delete("/:id", removeTransport);
+router.delete("/:id",removeTransport);
 
 
 

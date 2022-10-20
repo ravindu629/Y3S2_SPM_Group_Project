@@ -61,7 +61,7 @@ function AddStaffMember() {
                   className="form-control"
                   id="fname"
                   name="fName"
-                  placeholder="enter first name"
+                  placeholder="Enter first name"
                   onChange={handleChange}
                   value={user.fName}
                   required
@@ -78,7 +78,7 @@ function AddStaffMember() {
                   className="form-control"
                   id="lname"
                   name="lName"
-                  placeholder="enter last name"
+                  placeholder="Enter last name"
                   onChange={handleChange}
                   value={user.lName}
                   required
@@ -95,7 +95,7 @@ function AddStaffMember() {
                   className="form-control"
                   id="stfid"
                   name="staffId"
-                  placeholder="enter staff id"
+                  placeholder="Enter Staff ID"
                   onChange={handleChange}
                   value={user.staffId}
                   required
@@ -112,7 +112,7 @@ function AddStaffMember() {
                   className="form-control"
                   id="NIC"
                   name="nic"
-                  placeholder="enter nic"
+                  placeholder="Enter NIC"
                   onChange={handleChange}
                   value={user.nic}
                   required
@@ -211,7 +211,7 @@ function AddStaffMember() {
                   className="form-control"
                   id="mail"
                   name="email"
-                  placeholder="enter email address"
+                  placeholder="Enter email address"
                   onChange={handleChange}
                   value={user.email}
                   required
@@ -228,7 +228,7 @@ function AddStaffMember() {
                   className="form-control"
                   id="phone"
                   name="phoneNumber"
-                  placeholder="enter phone number"
+                  placeholder="Enter phone number"
                   onChange={handleChange}
                   value={user.phoneNumber}
                   required
@@ -245,7 +245,7 @@ function AddStaffMember() {
                   className="form-control"
                   id="pass"
                   name="password"
-                  placeholder="enter password"
+                  placeholder="Enter password"
                   onChange={handleChange}
                   value={user.password}
                   required

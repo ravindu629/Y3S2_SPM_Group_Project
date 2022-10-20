@@ -2,7 +2,10 @@ const mongoose = require("mongoose");
 const { Schema } = mongoose;
 
 const transportSchema = new Schema({
-  transportID: String,
+  transportID: {
+    type:String,
+    unique:true,
+  },
   vehicleType: String,
   ownerName: String,
   capacity: String,

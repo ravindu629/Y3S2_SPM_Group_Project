@@ -6,6 +6,8 @@ import DeleteForeverIcon from "@mui/icons-material/DeleteForever";
 import EditIcon from "@mui/icons-material/Edit";
 import PersonAddAlt1Icon from "@mui/icons-material/PersonAddAlt1";
 import PictureAsPdfIcon from "@mui/icons-material/PictureAsPdf";
+import ArrowBackIcon from "@mui/icons-material/ArrowBack";
+
 import { useNavigate } from "react-router-dom";
 
 function StaffMembers() {
@@ -50,6 +52,13 @@ function StaffMembers() {
     fontWeight: "bold",
   };
 
+  const btnStyleBack = {
+    borderRadius: 35,
+    margin: "0 18px 18px",
+    color: "White",
+    fontWeight: "bold",
+  };
+
   function filterData(staffMembers, searchKey) {
     const result = staffMembers.filter((member) => {
       return member.staffId.toLowerCase().includes(searchKey);
@@ -69,6 +78,15 @@ function StaffMembers() {
   return (
     <div className="tableStyle">
       <div>
+        <Button
+          variant="outlined"
+          style={btnStyleBack}
+          size="large"
+          startIcon={<ArrowBackIcon />}
+          onClick={() => {
+            navigate("/adminMenu");
+          }}
+        ></Button>
         <Button
           variant="contained"
           style={btnStyle}

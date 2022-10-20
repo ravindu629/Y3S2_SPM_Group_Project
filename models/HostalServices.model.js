@@ -2,7 +2,10 @@ const mongoose = require("mongoose");
 const { Schema } = mongoose;
 
 const hostalSchema = new Schema({
-  hostalID: String,
+  hostalID: {
+    type:String,
+    unique:true,
+  },
   hostalName: String,
   address: String,
   bedRooms: String,

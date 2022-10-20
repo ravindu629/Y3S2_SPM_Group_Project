@@ -8,6 +8,7 @@ const {
   updateAdmin,
   removeAdmin,
   validateAdmin,
+  ManageAdminProfile,
 } = require("../controllers/Admin.controller");
 
 router.get("/", getAdmins);
@@ -21,5 +22,7 @@ router.put("/:id", updateAdmin);
 router.delete("/:id", removeAdmin);
 
 router.post("/validate", validateAdmin);
+
+router.post("/manageProfile", ManageAdminProfile);
 
 module.exports = router;

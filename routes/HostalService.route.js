@@ -17,7 +17,7 @@ router.get("/:id", getHostal);
 
 router.post("/", addHostalService);
 
-router.put("/:id", updateHostal);
+router.put("/:id",updateHostal);
 
 router.delete("/:id", removeHostal);
 

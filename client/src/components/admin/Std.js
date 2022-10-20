@@ -5,6 +5,8 @@ import Button from "@mui/material/Button";
 import DeleteForeverIcon from "@mui/icons-material/DeleteForever";
 import EditIcon from "@mui/icons-material/Edit";
 import PictureAsPdfIcon from "@mui/icons-material/PictureAsPdf";
+import ArrowBackIcon from "@mui/icons-material/ArrowBack";
+
 import { useNavigate } from "react-router-dom";
 
 function Std() {
@@ -44,7 +46,15 @@ function Std() {
   const btnStyle = {
     borderRadius: 35,
     backgroundColor: "white",
+    margin: "0 18px 18px",
     color: "black",
+    fontWeight: "bold",
+  };
+
+  const btnStyleBack = {
+    borderRadius: 35,
+    margin: "0 18px 18px",
+    color: "White",
     fontWeight: "bold",
   };
 
@@ -67,6 +77,15 @@ function Std() {
   return (
     <div className="tableStyle">
       <div>
+        <Button
+          variant="outlined"
+          style={btnStyleBack}
+          size="large"
+          startIcon={<ArrowBackIcon />}
+          onClick={() => {
+            navigate("/adminMenu");
+          }}
+        ></Button>
         <Button
           variant="contained"
           style={btnStyle}

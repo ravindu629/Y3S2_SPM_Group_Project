@@ -55,7 +55,7 @@ export default function SupportServiceLogin() {
               <div className="card">
                 <div className="card-body">
                   <form onSubmit={sendData}>
-                    <div className="form-group">
+                    <div className="form-group-login">
                       <label for="id">Staff Id</label>
                       <input
                         type="text"
@@ -66,7 +66,7 @@ export default function SupportServiceLogin() {
                         required
                       />
                     </div>
-                    <div className="form-group">
+                    <div className="form-group-login">
                       <label for="password">Password</label>
                       <input
                         type="password"
