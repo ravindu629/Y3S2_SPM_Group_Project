@@ -29,6 +29,11 @@ import StaffMembers from "./components/admin/StaffMembers";
 import UpdateStaffMember from "./components/admin/UpdateStaffMember";
 import Std from "./components/admin/Std";
 import UpdateStd from "./components/admin/UpdateStd";
+import UploadQuiz from "./components/lecture/UploadQuiz"
+import ViewQuizzes from "./components/lecture/ViewQuizzes";
+/*import updateQ from "./components/lecture/updateQ";*/
+import UpdateQuiz from "./components/lecture/UpdateQuiz";
+
 
 //suppoert services pages
 
@@ -56,6 +61,14 @@ function App() {
         <Route path="/admins" element={<Admins />} />
         <Route path="/staffMembers" element={<StaffMembers />} />
         <Route path="/stds" element={<Std />} />
+        
+        {/*Quiz  related paths*/}
+        <Route path="/uploadQuiz" element={<UploadQuiz />} />
+        <Route path="/viewAllQuizzes" element={<ViewQuizzes />} />
+        {/*<Route path="/updateQ" element={<updateQ />} />*/}
+        <Route path="/UpdateQuiz/:id" element={<UpdateQuiz />} />
+        
+        
       </Routes>
 
       <Footer />

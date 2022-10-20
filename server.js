@@ -27,6 +27,8 @@ app.use("/api/studentGroups", require("./routes/StudentGroup.route"));
 
 app.use("/api/staffMembers", require("./routes/Staff.route"));
 
+app.use("/api/quiz", require("./routes/Quiz.route"));
+
 app.listen(port, () => {
   console.log("Server is starting on port " + port);
 });
