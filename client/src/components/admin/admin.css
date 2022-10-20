@@ -49,7 +49,7 @@ button {
 }
 
 .staffformStyle {
-  padding: 3% 35% 15% 5%;
+  padding: 3% 20% 15% 20%;
 }
 
 .staffformStyle_1 {
@@ -60,7 +60,7 @@ button {
   font-weight: 600;
 }
 
-.tableStyle {
+.admin_table_style {
   padding: 3% 3% 10%;
 }
 
@@ -68,8 +68,8 @@ button {
   padding: 0% 3% 10%;
 }
 
-.searchBar {
-  padding: 0% 0% 2% 80%;
+.admin_searchBar {
+  padding: 0% 0% 3% 80%;
 }
 
 .adminMenuImg {
@@ -93,6 +93,14 @@ button {
 
 .profileHeading {
   color: #cadefc;
+}
+
+.admProfileLoginHeading {
+  font-size: 180%;
+  color: #66fcf1;
+  margin-bottom: 3%;
+  font-weight: bold;
+  text-align: center;
 }
 
 .profileImage {
@@ -129,6 +137,16 @@ button {
   font-weight: bold;
   color: lightcoral;
 }
+
+.note h4 {
+  font-size: 1.4em;
+  margin-bottom: 10px;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  font-weight: 500;
+  color: rgb(77, 111, 224);
+}
+
 .note p {
   font-size: 1.2em;
   margin-bottom: 10px;

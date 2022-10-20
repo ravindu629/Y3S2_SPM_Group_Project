@@ -52,7 +52,7 @@ function Faculty_Notices() {
   return (
     <div className="tableStyle_FN">
       <div className="table_heading_FN">Admin Notices</div>
-      <div className="searchBar">
+      <div className="admin_searchBar">
         <input
           type="text"
           class="form-control rounded"
@@ -80,7 +80,7 @@ function Faculty_Notices() {
               <h1>{notice.date}</h1>
               <h1>{notice.faculty}</h1>
               <br />
-              <p>{notice.topic.substring(0, 55) + "..."}</p>
+              <h4>{notice.topic.substring(0, 55) + "..."}</h4>
               <p>{notice.message.substring(0, 55) + "..."}</p>
             </div>
           );

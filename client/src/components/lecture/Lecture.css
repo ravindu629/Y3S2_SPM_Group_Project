@@ -1,60 +1,77 @@
 .lectureMenu {
-    margin-top: 3%;
-    margin-left: 8%;
-    margin-right: 60%;
-    border: 2px solid #96cae2;
-    background-color: #57abb6;
-    border-radius: 15px;
-    padding: 40px;
-  }
+  margin-top: 3%;
+  margin-left: 8%;
+  margin-right: 60%;
+  border: 2px solid #96cae2;
+  background-color: #57abb6;
+  border-radius: 15px;
+  padding: 40px;
+}
 
-  .lectureMenuBtns {
-    font-size: 100%;
-    font-weight: 600;
-    text-align: center;
-  }
-  
+.lectureMenuBtns {
+  font-size: 100%;
+  font-weight: 600;
+  text-align: center;
+}
+
 .lecBtn {
-    margin-top: 30px;
-  }
+  margin-top: 30px;
+}
 
-  button {
-    margin-bottom: 18px;
-
+button {
+  margin-bottom: 18px;
+}
+#lecI {
+  margin-right: 60%;
+  margin-top: 5%;
+  width: 400px;
+  height: 400px;
+  background-image: image(sir);
+}
+.AllVheading {
+  width: 100%;
+  color: hsl(0, 0%, 100%);
+}
+.lMheading {
+  font-size: 150%;
+  color: #0b110d;
+  font-weight: 600;
+  text-align: center;
+  margin-top: -6.9%;
+}
+.handI {
+  font-size: 40px;
+  position: relative;
+  animation-name: example;
+  animation-duration: 4s;
+  animation-delay: -2s;
+  animation-iteration-count: infinite;
+}
+@keyframes example {
+  0% {
+    color: rgb(226, 241, 6);
+    left: 0px;
+    top: 50px;
+    font-size: 60px;
   }
-  #lecI{
-    margin-right: 60%;
-    magrgin-top:5%;
-    width: 400px;
-    height: 400px;
-    background-image: image(sir);
-;  }
-  .AllVheading{
-    width:100%;
-    color: hsl(0, 0%, 100%);
+  25% {
+    color: red;
+    left: 0px;
+    top: 0px;
   }
-  .lMheading {
-    font-size: 150%;
-    color: #0b110d;
-    font-weight: 600;
-    text-align: center;
-    margin-top: -6.9%;
+  75% {
+    color: rgb(226, 241, 6);
+    left: 0px;
+    top: 50px;
+    font-size: 60px;
   }
-  .handI{
-    font-size: 40px;
-    position: relative;
-    animation-name: example;
-    animation-duration: 4s;
-    animation-delay: -2s;
-    animation-iteration-count: infinite;
+  100% {
+    color: red;
+    left: 0px;
+    top: 0px;
   }
-  @keyframes example{
-    0%  {color:rgb(226, 241, 6); left:0px; top:50px;font-size: 60px;}
-  25% {color:red; left:0px; top:0px;}
-    75%  {color:rgb(226, 241, 6); left:0px; top:50px;font-size: 60px;}
-  100% {color:red; left:0px; top:0px;}
-  }
-  .QuizformStyle {
+}
+.QuizformStyle {
   padding: 1% 6% 15% 8%;
 }
 
@@ -64,33 +81,32 @@
   border-radius: 1%;
   background-color: rgb(219, 235, 228);
   font-weight: 600;
-  
 }
-.AllQTable{
+.AllQTable {
   height: 600px;
   overflow-x: scroll;
 }
-.quizDetails{
+.quizDetails {
   height: 600px;
   overflow-y: scroll;
   border-color: blue;
 }
-.scroll{
+.scroll {
   height: 400px;
   overflow-y: scroll;
 }
 .Quiz_heading {
-    font-size: 150%;
-    color: #fce066;
-    margin-bottom: 2%;
-    font-weight: 600;
-    text-align: center;
-  }
-  .divider{
-    border-left: 6px solid green;
-    height: 500px;
-    position: absolute;
-    left: 50%;
-    margin-left: -3px;
-    top: 73px;
-  }
+  font-size: 150%;
+  color: #fce066;
+  margin-bottom: 2%;
+  font-weight: 600;
+  text-align: center;
+}
+.divider {
+  border-left: 6px solid green;
+  height: 500px;
+  position: absolute;
+  left: 50%;
+  margin-left: -3px;
+  top: 73px;
+}
