@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import EditIcon from "@mui/icons-material/Edit";
 import DeleteForeverIcon from "@mui/icons-material/DeleteForever";
-
+import "./Supportserviceform.css";
 
  function HostalDetails () {
     const [Hostal, setHostal] = useState([]);

@@ -1,7 +1,7 @@
 import React from "react";
 import "./SupportService.css";
 import theNextYou from "../images/SupportServiceImages/main image.png";
-
+import "./Supportserviceform.css";
 
 export default function SMenu() {
   return (
