@@ -92,25 +92,25 @@ const getQuiz = async (req, res) => {
   const QuizId = req.params.id;
 
   try {
-    const quiz = await Quiz.findById(QuizId);
-    res.json(quiz);
+    const quizDetail = await Quiz.findById(QuizId);
+    res.json(quizDetail);
   } catch (error) {
     res.status(400).json(error);
   }
 };
 
-const removeQuiz = async (req, res) => {
+const removeQuiz= async (req, res) => {
   const QuizId = req.params.id;
 
   try {
-    const quiz = await Quiz.findById(QuizId);
+    const quizDetails = await Quiz.findById(QuizId);
 
-    if (!user) {
+    if (!quizDetails) {
       return res.status(404).json("There is no quiz to remove");
     }
 
-    const removedQuiz = await Admin.findByIdAndDelete(QuizId);
-    res.status(200).json(removedQuiz);
+    const removeQuiz= await Quiz.findByIdAndDelete(QuizId);
+    res.status(200).json(removeQuiz);
   } catch (error) {
     res.status(400).json(error.message);
   }
@@ -137,4 +137,5 @@ module.exports = {
     validateQuiz,
     getQuiz,
     UpdateQuiz,
+    removeQuiz,
   };

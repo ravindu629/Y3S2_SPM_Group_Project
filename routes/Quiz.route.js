@@ -7,6 +7,7 @@ const {
     validateQuiz,
     getQuiz,
     UpdateQuiz,
+    removeQuiz,
 } = require("../controllers/Quiz.controller");
 
 router.post("/", addQuiz);
@@ -19,4 +20,5 @@ router.get("/:id", getQuiz);
 
 router.put("/:id", UpdateQuiz);
 
+router.delete("/:id", removeQuiz);
 module.exports = router
