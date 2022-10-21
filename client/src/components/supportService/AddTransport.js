@@ -79,7 +79,7 @@ function AddTransport() {
             <label for="transportID" className="col-sm-2 col-form-label">
          <b> Transport Id </b>
             </label>
-            <div className="col-sm-10">
+            <div className="col-sm-10 supLabel">
               <input
                 type="text"
                 className="form-s-control"
@@ -98,7 +98,7 @@ function AddTransport() {
             <label for="vehicleType" className="col-sm-2 col-form-label">
           <b>  vehicle Type </b> 
             </label>
-            <div className="col-sm-10">
+            <div className="col-sm-10 supLabel">
               <select
                 type="text"
                 className="form-s-control"
@@ -124,7 +124,7 @@ function AddTransport() {
             <label for="ownerName" className="col-sm-2 col-form-label">
            <b> owner Name </b>
             </label>
-            <div className="col-sm-10">
+            <div className="col-sm-10 supLabel">
               <input
                 type="Text"
                 className="form-s-control"
@@ -142,7 +142,7 @@ function AddTransport() {
             <label for="capacity" className="col-sm-2 col-form-label">
            <b> capacity </b>
             </label>
-            <div className="col-sm-10">
+            <div className="col-sm-10 supLabel">
               <input
                 type="text"
                 className="form-s-control"
@@ -160,7 +160,7 @@ function AddTransport() {
             <label for="coverage" className="col-sm-2 col-form-label">
             <b> coverage </b>
             </label>
-            <div className="col-sm-10">
+            <div className="col-sm-10 supLabel">
               <input
                 type="text"
                 className="form-s-control"
@@ -180,7 +180,7 @@ function AddTransport() {
             <label for="time" className="col-sm-2 col-form-label">
            <b>  Time </b>
             </label>
-            <div className="col-sm-10">
+            <div className="col-sm-10 supLabel">
               <input
                 type="time"
                 className="form-s-control"
@@ -198,7 +198,7 @@ function AddTransport() {
             <label for="contactNo" className="col-sm-2 col-form-label">
            <b>  contact No </b>
             </label>
-            <div className="col-sm-10">
+            <div className="col-sm-10 supLabel">
               <input
                 type="text"
                 className="form-s-control"

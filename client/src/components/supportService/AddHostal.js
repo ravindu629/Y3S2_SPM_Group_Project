@@ -72,7 +72,7 @@ function AddHostal() {
               <label for="hostalID" className="col-sm-2 col-form-label">
                 <b> Hostel Id </b>
               </label>
-              <div className="col-sm-10">
+              <div className="col-sm-10 supLabel">
                 <input
                   type="text"
                   className="form-s-control"
@@ -90,7 +90,7 @@ function AddHostal() {
               <label for="hostalName" className="col-sm-2 col-form-label">
                 <b> Hostel Name </b>
               </label>
-              <div className="col-sm-10">
+              <div className="col-sm-10 supLabel">
                 <input
                   type="text"
                   className="form-s-control"
@@ -107,7 +107,7 @@ function AddHostal() {
               <label for="Address" className="col-sm-2 col-form-label">
                 <b> Address </b>
               </label>
-              <div className="col-sm-10">
+              <div className="col-sm-10 supLabel">
                 <input
                   type="Text"
                   className="form-s-control"
@@ -125,7 +125,7 @@ function AddHostal() {
               <label for="bedRooms" className="col-sm-2 col-form-label">
                 <b> Bedrooms </b>
               </label>
-              <div className="col-sm-10">
+              <div className="col-sm-10 supLabel">
                 <input
                   type="text"
                   className="form-s-control"
@@ -143,7 +143,8 @@ function AddHostal() {
               <label for="bathrooms" className="col-sm-2 col-form-label">
                 <b> &nbsp; Bathrooms </b>
               </label>
-              <div className="col-sm-10">
+              <div className="col-sm-10 supLabel">
+                <br></br>
                 <input
                   type="text"
                   className="form-s-control"
@@ -162,7 +163,7 @@ function AddHostal() {
               <label for="persons" className="col-sm-2 col-form-label">
                 <b> Person </b>
               </label>
-              <div className="col-sm-10">
+              <div className="col-sm-10 supLabel">
                 <input
                   type="text"
                   className="form-s-control"
@@ -180,7 +181,7 @@ function AddHostal() {
               <label for="charge" className="col-sm-2 col-form-label">
                 <b> price </b>
               </label>
-              <div className="col-sm-10">
+              <div className="col-sm-10 supLabel">
                 <input
                   type="text"
                   className="form-s-control"
@@ -197,7 +198,7 @@ function AddHostal() {
               <label for="contactNo" className="col-sm-2 col-form-label">
                 <b> Contact No </b>
               </label>
-              <div className="col-sm-10">
+              <div className="col-sm-10 supLabel">
                 <input
                   type="tel"
                   className="form-s-control"

@@ -69,7 +69,7 @@ import "./Supportserviceform.css";
 
     <div class="supAddMarksForm">
       <br></br>
-         <h2 className="heading-s"> &nbsp;&nbsp;  &nbsp;&nbsp;  &nbsp;&nbsp;  &nbsp;&nbsp; &nbsp;&nbsp;  &nbsp;&nbsp; &nbsp;&nbsp;  &nbsp;&nbsp; &nbsp;&nbsp;  &nbsp;&nbsp; &nbsp;&nbsp;  &nbsp;&nbsp;  &nbsp;&nbsp; &nbsp;&nbsp;  &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Update Transport Details</h2>
+         <h2 className="heading-s">   &nbsp;&nbsp; &nbsp;&nbsp;  &nbsp;&nbsp; &nbsp;&nbsp;  &nbsp;&nbsp; &nbsp;&nbsp;  &nbsp;&nbsp; &nbsp;&nbsp;  &nbsp;&nbsp;  &nbsp;&nbsp; &nbsp;&nbsp;  &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Update Transport Details</h2>
 <br></br>
        <div className="form-transport">
        <div className="formStyle-s">
@@ -78,7 +78,7 @@ import "./Supportserviceform.css";
             <label for="transportID" class="col-sm-2 col-form-label">
            <b> Transpor ID </b>
             </label>
-            <div class="col-sm-10">
+            <div class="col-sm-10 supLabel">
               <input
                 type="text"
                 class="form-s-control"
@@ -97,7 +97,7 @@ import "./Supportserviceform.css";
             <label for="vehicleType" class="col-sm-2 col-form-label">
           <b>   Vehicle Type </b>
             </label>
-            <div class="col-sm-10">
+            <div class="col-sm-10 supLabel">
            <select
                 type="text"
                 class="form-s-control"
@@ -122,7 +122,7 @@ import "./Supportserviceform.css";
             <label for="ownerName" class="col-sm-2 col-form-label">
            <b> Owner Name </b>
             </label>
-            <div class="col-sm-10">
+            <div class="col-sm-10 supLabel">
               <input
                 type="text"
                 class="form-s-control"
@@ -140,7 +140,7 @@ import "./Supportserviceform.css";
             <label for="capacity" class="col-sm-2 col-form-label">
             <b> Capacity </b>
             </label>
-            <div class="col-sm-10">
+            <div class="col-sm-10 supLabel">
               <input
                 type="text"
                 class="form-s-control"
@@ -158,7 +158,7 @@ import "./Supportserviceform.css";
             <label for="coverage" class="col-sm-2 col-form-label">
            <b> Coverage </b> 
             </label>
-            <div class="col-sm-10">
+            <div class="col-sm-10 supLabel">
               <input
                 type="text"
                 class="form-s-control"
@@ -176,7 +176,7 @@ import "./Supportserviceform.css";
             <label for="time" class="col-sm-2 col-form-label">
           <b>   Time </b>
             </label>
-            <div class="col-sm-10">
+            <div class="col-sm-10 supLabel">
               <input
                 type="text"
                 class="form-s-control"
@@ -194,7 +194,7 @@ import "./Supportserviceform.css";
             <label for="contactNo" class="col-sm-2 col-form-label">
            <b>  Contact No </b>
             </label>
-            <div class="col-sm-10">
+            <div class="col-sm-10 supLabel">
               <input
                 type="text"
                 class="form-s-control"
