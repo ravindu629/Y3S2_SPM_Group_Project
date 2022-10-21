@@ -4,7 +4,7 @@ import "./Lecture.css";
 import Button from "@mui/material/Button";
 import DeleteForeverIcon from "@mui/icons-material/DeleteForever";
 import EditIcon from "@mui/icons-material/Edit";
-import PersonAddAlt1Icon from "@mui/icons-material/PersonAddAlt1";
+import AddIcon from '@mui/icons-material/Add';
 import PictureAsPdfIcon from "@mui/icons-material/PictureAsPdf";
 import { useNavigate } from "react-router-dom";
 import HomeIcon from '@mui/icons-material/Home';
@@ -88,12 +88,12 @@ return (
         <Button
           variant="contained"
           style={btnStyle}
-          startIcon={<PersonAddAlt1Icon />}
+          startIcon={<AddIcon />}
           onClick={() => {
             navigate("/upload-marking");
           }}
         >
-          Add New Quiz
+          Add Marking
         </Button>
         <Button
           variant="contained"
@@ -101,7 +101,7 @@ return (
           startIcon={<PictureAsPdfIcon />}
           onClick={()=>printDiv(`quiz-report`)}
         >
-          Generate Quiz Report
+          Generate Marking Report
         </Button>
         </div>
         <div className="homebtn">
