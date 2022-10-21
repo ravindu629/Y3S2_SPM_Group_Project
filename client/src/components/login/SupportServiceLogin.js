@@ -53,36 +53,42 @@ export default function SupportServiceLogin() {
           <div className="row">
             <div className="col-sm-8">
               <div className="card">
-                <div className="card-body">
-                  <form onSubmit={sendData}>
-                    <div className="form-group-login">
-                      <label for="id">Staff Id</label>
-                      <input
-                        type="text"
-                        className="form-control"
-                        name="staffId"
-                        value={user.staffId}
-                        onChange={handleChange}
-                        required
-                      />
-                    </div>
-                    <div className="form-group-login">
-                      <label for="password">Password</label>
-                      <input
-                        type="password"
-                        className="form-control"
-                        name="password"
-                        value={user.password}
-                        onChange={handleChange}
-                        required
-                      />
-                    </div>
-                    <button type="submit" className="btn btn-dark">
-                      <VpnKey />
-                      &nbsp;&nbsp; Login
-                    </button>
-                  </form>
-                  <br />
+                <div className="loginContent">
+                  <div className="card-body">
+                    <form onSubmit={sendData}>
+                      <div className="form-group-login">
+                        <label for="id">Staff Id</label>
+                        <input
+                          type="text"
+                          className="form-control"
+                          name="staffId"
+                          value={user.staffId}
+                          onChange={handleChange}
+                          required
+                        />
+                      </div>
+                      <div className="form-group-login">
+                        <label for="password">Password</label>
+                        <input
+                          type="password"
+                          className="form-control"
+                          name="password"
+                          value={user.password}
+                          onChange={handleChange}
+                          required
+                        />
+                      </div>
+                      <button
+                        type="submit"
+                        className="btn btn-dark"
+                        style={{ marginTop: "15px" }}
+                      >
+                        <VpnKey />
+                        &nbsp;&nbsp; Login
+                      </button>
+                    </form>
+                    <br />
+                  </div>
                 </div>
               </div>
             </div>

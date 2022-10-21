@@ -56,7 +56,7 @@ export default function AdminMenu() {
     <div className="AdmMenu">
       {" "}
       <div className="adminMenu">
-        <div className="heading">Admin Menu</div>
+        <div className="admProfileLoginHeading">Admin Menu</div>
         <div className="admBtn">
           <button
             type="button"
@@ -110,7 +110,7 @@ export default function AdminMenu() {
         </div>
       </div>
       <div className="admProfile">
-        <p className="heading">Profile</p>
+        <p className="admProfileLoginHeading">Profile</p>
         <img className="adminMenuImg" src={image} />
         <div className="profileBottomArea">
           <div style={{ color: "white", textAlign: "left" }}>Admin ID</div>

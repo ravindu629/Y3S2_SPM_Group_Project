@@ -9,11 +9,12 @@ import books from "../images/StudentImages/books.gif"
 import stationery from "../images/StudentImages/stationery.gif"
 import mortarboard from "../images/StudentImages/mortarboard.gif"
 
+
 export default function StudentMenu() {
   return (
     <div>
       <div class="left-nav-bar">
-        <a href="#"><button className="left-nav-bar-button btn-1">
+        <a href="/StudentProfileLogin"><button className="left-nav-bar-button btn-1">
           <img className="left-nav-bar-image" src={profile} alt="Profile-image" />Profile</button>
         </a>  <br />
         <a href="#"><button className="left-nav-bar-button btn-2">
@@ -41,6 +42,7 @@ export default function StudentMenu() {
         <a href="/SPMmodulePage"><button className="spm_module_button">
           <img className="moduleMenu-image" src={mortarboard} alt="mortarboard" />Case Studies in  Engineering - SE3070</button>
         </a><br />
+
       </div>
 
     </div>

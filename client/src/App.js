@@ -17,6 +17,20 @@ import SPMmodulePage from "./components/student/SPMmodulePage";
 //Student Group Navigation
 import StudentGroup from "./components/student/StudentGroup";
 import CreateStudentGroup from "./components/student/CreateStudentGroup";
+import UpdateStudentGroup from "./components/student/UpdateStudentGroup";
+//Student Project Navigation
+import StudentProject from "./components/student/StudentProject";
+import RegisterStudentProject from "./components/student/RegisterStudentProject";
+import UpdateStudentProject from "./components/student/UpdateStudentProject";
+//Student Profile Navugation
+import StudentProfile from "./components/student/StudentProfile";
+import StudentProfileLogin from "./components/student/StudentProfileLogin";
+import StudentProfileUpdate from "./components/student/StudentProfileUpdate";
+
+
+
+
+
 
 //support services pages 
 import SupportServiceHome from "./components/supportService/SupportServiceHome";
@@ -42,6 +56,13 @@ import StaffMembers from "./components/admin/StaffMembers";
 import UpdateStaffMember from "./components/admin/UpdateStaffMember";
 import Std from "./components/admin/Std";
 import UpdateStd from "./components/admin/UpdateStd";
+
+import UploadQuiz from "./components/lecture/UploadQuiz"
+import ViewQuizzes from "./components/lecture/ViewQuizzes";
+/*import updateQ from "./components/lecture/updateQ";*/
+import UpdateQuiz from "./components/lecture/UpdateQuiz";
+
+
 import AdminProfile from "./components/admin/AdminProfile";
 import UpdateAdminProfile from "./components/admin/UpdateAdminProfile";
 import AddNotice from "./components/admin/AddNotice";
@@ -50,6 +71,7 @@ import UpdateNotice from "./components/admin/UpdateNotice";
 import Faculty_Notces from "./components/admin/Faculty_Notices";
 import Faculty_Notices from "./components/admin/Faculty_Notices";
 import ViewNotice from "./components/admin/ViewNotice";
+
 
 
 function App() {
@@ -73,8 +95,25 @@ function App() {
 
 
 
+
         <Route path="/studentMenu" element={<StudentMenu />} />
         <Route path="/SPMmodulePage" element={<SPMmodulePage />} />
+
+
+        {/*Student Group Navigation*/}
+        <Route path="/studentGroup" element={<StudentGroup />} />
+        <Route path="/CreateStudentGroup" element={<CreateStudentGroup />} />
+        <Route path="/updateStudentGroup/:id" element={<UpdateStudentGroup />} />
+        {/**Student Project Navigation*/}
+        <Route path="/studentProject" element={<StudentProject />} />
+        <Route path="/RegisterStudentProject" element={<RegisterStudentProject />} />
+        <Route path="/UpdateStudentProject/:id" element={<UpdateStudentProject />} />
+        {/**Student Profile Navigation*/}
+        <Route path="/StudentProfile" element={<StudentProfile />} />
+        <Route path="/StudentProfileLogin" element={<StudentProfileLogin />} />
+        <Route path="/StudentProfileUpdate/:id" element={<StudentProfileUpdate />} />
+
+
 
         <Route path="/SupportServiceHome" element={<SupportServiceHome />} />
         <Route path="/HostalDetails" element={<HostalDetails />} />
@@ -90,6 +129,7 @@ function App() {
 
 
 
+
         <Route path="/addStaffMember" element={<AddStaffMember />} />
         <Route path="/addAdmin" element={<AddAdmin />} />
         <Route path="/addNotice" element={<AddNotice />} />
@@ -101,11 +141,22 @@ function App() {
         <Route path="/staffMembers" element={<StaffMembers />} />
         <Route path="/f_notices" element={<AllNotices />} />
         <Route path="/stds" element={<Std />} />
+
+        
+        {/*Quiz  related paths*/}
+        <Route path="/uploadQuiz" element={<UploadQuiz />} />
+        <Route path="/viewAllQuizzes" element={<ViewQuizzes />} />
+        {/*<Route path="/updateQ" element={<updateQ />} />*/}
+        <Route path="/UpdateQuiz/:id" element={<UpdateQuiz />} />
+        
+        
+
         <Route path="/adminProfile/:id" element={<AdminProfile />} />
         <Route path="/admProfileUpdate/:id" element={<UpdateAdminProfile />} />
 
         <Route path="/notices" element={<Faculty_Notices />} />
         <Route path="/viewNotice/:id" element={<ViewNotice />} />
+
       </Routes>
 
       <Footer />

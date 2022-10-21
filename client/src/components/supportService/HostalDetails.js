@@ -47,8 +47,9 @@ import "./Supportserviceform.css";
         const result = hostal.filter((hostal) => {
           return hostal.hostalID.toLowerCase().includes(searchKey);
         });
-    
+        console.log("..hostolooo",result);
         setHostal(result);
+        
       }
     
       function handleSearchArea(e) {
