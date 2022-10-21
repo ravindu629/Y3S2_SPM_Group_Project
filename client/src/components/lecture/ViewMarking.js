@@ -7,6 +7,7 @@ import EditIcon from "@mui/icons-material/Edit";
 import PersonAddAlt1Icon from "@mui/icons-material/PersonAddAlt1";
 import PictureAsPdfIcon from "@mui/icons-material/PictureAsPdf";
 import { useNavigate } from "react-router-dom";
+import HomeIcon from '@mui/icons-material/Home';
 
 function ViewMarking() {
   const [Marking, setMarking] = useState([]);
@@ -82,7 +83,8 @@ function ViewMarking() {
 
 return (
     <div className="tableStyleL">
-      <div>
+     <div className="L-header">
+        <div className="header-index">
         <Button
           variant="contained"
           style={btnStyle}
@@ -91,7 +93,7 @@ return (
             navigate("/upload-marking");
           }}
         >
-          Add New Marking
+          Add New Quiz
         </Button>
         <Button
           variant="contained"
@@ -99,8 +101,21 @@ return (
           startIcon={<PictureAsPdfIcon />}
           onClick={()=>printDiv(`quiz-report`)}
         >
-          Generate Marking Report
+          Generate Quiz Report
         </Button>
+        </div>
+        <div className="homebtn">
+        <Button
+          variant="contained"
+          style={btnStyle}
+          startIcon={<HomeIcon />}
+          onClick={() => {
+            navigate("/lectureMenu");
+          }}
+        >
+         Home 
+        </Button>
+        </div>
       </div>
       
       <div className="searchBarL">
@@ -111,7 +126,7 @@ return (
         <div className="searchBar-divRight" >
         <input
           type="text"
-          class="form-control rounded"
+          class="search-control rounded"
           placeholder=" 🔍  Search"
           aria-label="Search"
           aria-describedby="search-addon"
@@ -125,7 +140,7 @@ return (
            return(
             
             <div class="quizCard-content" key={marking._id} >
-              <div class="label-div">
+              <div class="label-div2">
                <div class="label-contain">
                   <h2 style={{alignSelf:"center"}} >{index + 1}</h2>
                   <h2 style={{alignSelf:"center"}}>{marking.markingNumber}</h2>
@@ -139,7 +154,7 @@ return (
                         </center>
                </div>
               </div>
-              <div class="link-div">
+              <div class="link-div2">
               <a class="viewLink" href={`#${marking._id}`}> View</a>
               </div>
             </div>
