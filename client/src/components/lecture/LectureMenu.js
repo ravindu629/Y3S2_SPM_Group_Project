@@ -2,15 +2,17 @@ import React from "react";
 import { useNavigate } from "react-router-dom";
 import "../lecture/Lecture.css"
 import sir from "../images/animated-cartoon-lecture-animation-png-favpng-9geg7t8LAqp2kn5qf0uWEWRPp.jpg";
+import theNextYou from "../images/StudentImages/the-next-you-image.jpg"
 
 export default function LectureMenu() {
   let navigate = useNavigate();
   return (
-    <div>
+    <div className="tableStyleL lecture-menu-card">
+    <div className="lecture-menu-card">
     <div className="lectureMenu">
       <div className="lMheading">
-      <i class='fas fa-hand-point-down handI'></i>
-        Upload Quizes and Marking Schemes from here 
+      <i class='fa fa-hand-o-right handI'></i><br></br>
+      <h2> Upload Quizes and Marking Schemes from here </h2>
         
         </div>
       <div className="lecBtn">
@@ -63,10 +65,12 @@ export default function LectureMenu() {
           <div className="lectureMenuBtns">  View Quiz Report</div>
         </button>
       </div>
-      <div class="divider"></div>
-      
+      <div class="lecture-img handI">
+        <img src={theNextYou} alt="nextYou"/>
+      </div>
     </div>
-    
+    </div> 
+      
   </div>
     
   );
