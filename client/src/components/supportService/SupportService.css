@@ -1,199 +1,171 @@
 .Home_name {
-    color: beige;
+  color: beige;
 }
 
 .heading {
-    font-size: 180%;
-    color: #66fcf1;
-    margin-bottom: 3%;
-    font-weight: bold;
-  }
-  
-  .formStyle {
-    padding: 10% 30% 15% 10%;
-  }
-  
-  .formStyle_1 {
-    padding: 3% 3% 1%;
-    background-color: rgb(219, 235, 228);
-    border-radius: 1%;
-    font-weight: 600;
-  }
- 
-.left-nav-bar-button {
-    width: 280px;
-    height: 70px;
-    background-color: #ffffff;
-    font-weight: bold;
-    text-align: left;
-    margin-left:60px;
-    margin-top: -300;
-    cursor: pointer;
-    border-radius: 10px;
-    cursor: pointer;
+  font-size: 180%;
+  color: #66fcf1;
+  margin-bottom: 3%;
+  font-weight: bold;
+}
 
+.formStyle {
+  padding: 10% 30% 15% 10%;
+}
+
+.formStyle_1 {
+  padding: 3% 3% 1%;
+  background-color: rgb(219, 235, 228);
+  border-radius: 1%;
+  font-weight: 600;
+}
+
+.left-nav-bar-button {
+  width: 280px;
+  height: 70px;
+  background-color: #ffffff;
+  font-weight: bold;
+  text-align: left;
+  margin-left: 60px;
+  margin-top: -300;
+  cursor: pointer;
+  border-radius: 10px;
+  cursor: pointer;
 }
 .left-nav-bar-button:hover {
   background-color: rgb(230, 140, 23);
   transform: scale(1.12);
-
 }
 
 .left-button-set {
-
   display: flex;
   flex-direction: column;
   text-decoration: none;
   margin-left: 20px;
   font-size: 20px;
   margin-top: 150px;
-
 }
 
-
-
-
-
 .left-nav-bar-image {
-    width: 8vh;
-    margin-right: 2vh;
+  width: 8vh;
+  margin-right: 2vh;
 }
 
 .next-you-image {
-    display: flex;
-    position: relative;
-    padding-left: 280px;
-    margin-top: -250px;
-    flex-direction: column;
-    align-items: center;
-  
+  display: flex;
+  position: relative;
+  padding-left: 280px;
+  margin-top: -250px;
+  flex-direction: column;
+  align-items: center;
 }
 
 .next-you-image img {
-    width: 110vh;
-   margin-bottom: 20px;
+  width: 110vh;
+  margin-bottom: 20px;
 }
 
 .moduleMenu {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    position: relative;
-    font-size: 20px;
-    padding-bottom: 10vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  font-size: 20px;
+  padding-bottom: 10vh;
 }
 
 .spm_module_button {
-    width: 100vh;
-    margin-left: 260px;
-    cursor: pointer;
+  width: 100vh;
+  margin-left: 260px;
+  cursor: pointer;
 }
 
-.moduleMenu-image{
-    width: 8vh;
-    margin-right: 20vh;
-    margin-left: -20vh;
+.moduleMenu-image {
+  width: 8vh;
+  margin-right: 20vh;
+  margin-left: -20vh;
 }
 
-.moduleMenu button:hover{
-    transform: scale(1.12);
+.moduleMenu button:hover {
+  transform: scale(1.12);
 }
-
 
 .supportTitle {
-
-align-items: center;
-margin-left: 600px;
-color: aliceblue;
+  align-items: center;
+  margin-left: 600px;
+  color: aliceblue;
 }
 
 .heading {
-
-    align-items: center;
-    margin-left: 240px;
-    
-   
-    }
+  align-items: center;
+  margin-left: 240px;
+}
 .button_hostalDetails {
-    margin-top: -350px;
-    position: relative;
-    margin-left: 75%;
-    width: 20vh;
-    height: 5vh;
-    background-color: #cc5200;
-    border-radius: 10px;
-
-
-   
+  margin-top: -350px;
+  position: relative;
+  margin-left: 75%;
+  width: 20vh;
+  height: 5vh;
+  background-color: #cc5200;
+  border-radius: 10px;
 }
 
 .formStyle {
-    margin-left: 300px;
-    margin-right: 300px;
-    padding-top: 20px;
-    width: 90%;
-  }
+  margin-left: 300px;
+  margin-right: 300px;
+  padding-top: 20px;
+  width: 90%;
+}
 
-  .addButton {
-    margin-left: 585px;
-    background-color: #cc5200;
- 
+.addButton {
+  margin-left: 585px;
+  background-color: #cc5200;
+}
 
-  }
+.addHostel-btn {
+  margin-left: 550px;
+  width: 250px;
+}
 
-  .addHostel-btn {
-    margin-left: 550px;
-    width: 250px;
-    
-  }
+.lables {
+  color: #ffffff;
+}
 
-  
+/* .form-group {
+  margin-bottom: 10px;
+  font-size: 110%;
+  color: #ff6b15;
+} */
 
-
-  .lables {
-    color: #ffffff;
-  }
-
-  .form-group {
-    margin-bottom: 10px;
-    font-size: 110%;
-    color: #ff6b15;
-  }
-
-  .form-group-login {
-    margin-bottom: 10px;
-    font-size: 110%;
-
-    
-  }
-  .form-group-login input {
-    width: 350px;
-  }
-   .button_getreport {
-    margin-top: -350px;
-    position: relative;
-    margin-left: -50px;
-    width: 20vh;
-    height: 5vh;
-    background-color: #cc5200;
-    border-radius: 10px;
-
-   }
+.form-group-login {
+  margin-bottom: 10px;
+  font-size: 110%;
+}
+/* .form-group-login input {
+  width: 350px;
+} */
+.button_getreport {
+  margin-top: -350px;
+  position: relative;
+  margin-left: -50px;
+  width: 20vh;
+  height: 5vh;
+  background-color: #cc5200;
+  border-radius: 10px;
+}
 
 .button_getreport:hover {
   background-color: rgb(230, 140, 23);
   transform: scale(1.12);
-
 }
 
-
 .updateBtn {
-    margin-left: 565px;
+  margin-left: 565px;
 }
 
 .supporTitle {
-    color: #ffffff;
-    margin-left: 600px;
+  color: #ffffff;
+  margin-left: 600px;
 }
 
 .searchBar {
@@ -202,74 +174,65 @@ color: aliceblue;
   border-radius: 20px;
   margin-left: 70px;
   z-index: calc();
+}
+.searchBar input {
+  background-color: #a8cece;
+  border-radius: 20px;
+}
 
-  }
-  .searchBar input {
-    background-color: #a8cece;
-    border-radius: 20px;
-  
-  }
-
-  .searchBar-hostal {
+.searchBar-hostal {
   width: 3500px;
   border-radius: 20px;
   margin-left: 70px;
   z-index: calc();
+}
+.searchBar-hostal input {
+  background-color: #a8cece;
+  border-radius: 20px;
+}
 
+.table_search {
+  width: 90%;
+  margin-left: 65px;
+}
+.hostelImage {
+  display: flex;
+}
+.form {
+  background-color: #2d3837;
+  border-radius: 18px;
+}
 
-  }
-  .searchBar-hostal input {
-    background-color: #a8cece;
-    border-radius: 20px;
-  }
+/* .form-control {
+  width: 500px;
+} */
 
+.add-get-btn {
+  margin-left: 1400px;
+}
 
-  .table_search{
-    width: 90%;
-    margin-left: 65px;
-  }
-  .hostelImage{
-    display: flex;
-  }
-  .form {
-    background-color: #2d3837;
-    border-radius: 18px;
+.form-transport {
+  background-color: #04252b;
+  border-radius: 18px;
+}
+.hostelReport {
+  justify-content: center;
+  color: #ffffff;
+  margin-left: 700px;
+}
 
-  
-  }
-  .form-control {
-    width: 500px;
-  }
-
-  .add-get-btn {
-    margin-left: 1400px;
-
-  }
-
-  .form-transport {
-    background-color: #04252b;
-    border-radius: 18px;
-
-  
-  }
-  .hostelReport{
-    justify-content: center;
-    color: #ffffff;
-    margin-left: 700px;
-  }
-
-  .SupervisorSupportServices {
-    margin-top: -36%;
-    margin-left: 73%;
-    position: relative;
-    width: 400px;
-    height: 680px;
-    background-color: #20d4b646;
-    border-radius: 30px;
-    color: rgb(228, 32, 185);
-  }
-  .SuperServicesH2 {
-    text-align: center;
-    color: rgb(22, 20, 20);
-    padding-top: 34px;
-  }
+.SupervisorSupportServices {
+  margin-top: -36%;
+  margin-left: 73%;
+  position: relative;
+  width: 400px;
+  height: 680px;
+  background-color: #20d4b646;
+  border-radius: 30px;
+  color: rgb(228, 32, 185);
+}
+.SuperServicesH2 {
+  text-align: center;
+  color: rgb(22, 20, 20);
+  padding-top: 34px;
+}
