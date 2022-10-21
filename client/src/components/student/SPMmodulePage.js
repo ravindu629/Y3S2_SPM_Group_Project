@@ -70,7 +70,7 @@ export default function SPMmodulePage() {
                                     </a>
                                 </div><br />
                                 <div className="navItem">
-                                    <a href="/ResearchTopic">
+                                    <a href="/StudentProject">
                                         <button type="button" className="SPMRightNavBarButtons button1">
                                             <pre><img className="right-navbar-image" src={project} alt="project-image" />Student Projects</pre>
                                         </button>

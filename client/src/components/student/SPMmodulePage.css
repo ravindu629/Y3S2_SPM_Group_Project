@@ -46,7 +46,7 @@
 .SPMRightNavBar {
     display: flex;
     flex-direction: column;
-    margin-top: -95vh;
+    margin-top: -105vh;
     margin-left: 78%;
     position: relative;
     width: 400px;

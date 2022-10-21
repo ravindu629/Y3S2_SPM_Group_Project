@@ -49,12 +49,11 @@ export default function StudentLogin() {
       <div className="loginHeading">Student Login</div>
 
       <div className="container">
-        <div className="formStyle">
-          <div className="formStyle_2">
-
+        <div className="form_Style">
+          <div className="LoginformMainDiv">
             <form onSubmit={sendData}>
               <div className="form-group ">
-                <label for="id" >Student ID</label>
+                <label for="id">Student ID</label>
                 <input
                   type="text"
                   className="form-control"
