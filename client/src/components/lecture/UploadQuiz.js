@@ -5,6 +5,7 @@ import Button from "@mui/material/Button";
 import axios from "axios";
 import "../lecture/Lecture.css";
 import "../admin/admin.css";
+import HomeIcon from '@mui/icons-material/Home';
 
 function AddQuiz() {
   const [quiz, setQuiz] = useState({
@@ -24,7 +25,14 @@ function AddQuiz() {
     Lecture: String,
     other: String,
   });
-
+  const btnStyle = {
+    borderRadius: 35,
+    backgroundColor: "white",
+    margin: "0 18px 18px",
+    color: "black",
+    fontWeight: "bold",
+    fontFamily: "cursive"
+  };
   let navigate = useNavigate();
   
 
@@ -55,7 +63,20 @@ function AddQuiz() {
   return (
     <div className="tableStyleL">
       <div className="uploadQuiz-card">
+      <div className="homebtn2">
+        <Button
+          variant="contained"
+          style={btnStyle}
+          startIcon={<HomeIcon />}
+          onClick={() => {
+            navigate("/lectureMenu");
+          }}
+        >
+         Home 
+        </Button>
+        </div>
         <div className="Quiz_heading">Upload New Quiz</div>
+      
         <div className="QuizformStyle_1 ">
           <form onSubmit={sendData}>
           <div className="row quiz-form">

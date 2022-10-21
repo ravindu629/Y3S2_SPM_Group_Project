@@ -6,6 +6,7 @@ import DeleteForeverIcon from "@mui/icons-material/DeleteForever";
 import EditIcon from "@mui/icons-material/Edit";
 import PersonAddAlt1Icon from "@mui/icons-material/PersonAddAlt1";
 import PictureAsPdfIcon from "@mui/icons-material/PictureAsPdf";
+import HomeIcon from '@mui/icons-material/Home';
 import { useNavigate } from "react-router-dom";
 
 function ViewQuizzes() {
@@ -82,7 +83,8 @@ function ViewQuizzes() {
 
   return (
     <div className="tableStyleL">
-      <div>
+      <div className="L-header">
+        <div className="header-index">
         <Button
           variant="contained"
           style={btnStyle}
@@ -101,6 +103,19 @@ function ViewQuizzes() {
         >
           Generate Quiz Report
         </Button>
+        </div>
+        <div className="homebtn">
+        <Button
+          variant="contained"
+          style={btnStyle}
+          startIcon={<HomeIcon />}
+          onClick={() => {
+            navigate("/lectureMenu");
+          }}
+        >
+         Home 
+        </Button>
+        </div>
       </div>
       
       <div className="searchBarL">
@@ -111,8 +126,8 @@ function ViewQuizzes() {
         <div className="searchBar-divRight" >
         <input
           type="text"
-          class="form-control rounded"
-          placeholder=" 🔍  Search"
+          class="search-control rounded"
+          placeholder="Search    🔍"
           aria-label="Search"
           aria-describedby="search-addon"
           onChange={handleSearchArea}
