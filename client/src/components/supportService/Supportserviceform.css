@@ -133,12 +133,12 @@
   }
   
   .addButton-s {
-    margin-left: 505px;
+    margin-left: 535px;
     width: 200px;
   }
   
   .addHostel-btn {
-    margin-left: 530px;
+    margin-left: 500px;
    
   }
   
@@ -147,6 +147,7 @@
     font-size: 110%;
     color: #ff6b15;
     justify-content: center;
+    width: 80%;
   }
   .button_getreport {
    margin: 5px;
@@ -168,11 +169,11 @@
   }
   
   .updateBtn-s {
-    margin-left: 430px;
+    margin-left: 550px;
   }
   
   .updateBtn-ss{
-    margin-left: 410px;
+    margin-left: 530px;
   }
   
   .supporTitle {
@@ -309,15 +310,17 @@
       justify-content: flex-end;
     }
   
-    .col-sm-10 input {
+    .supLabel input {
       background-color: #faffff;
       border-radius: 10px;
       height: 50px;
+      margin: 10px;
     }
-    .col-sm-10 select {
+    .supLabel select {
       background-color: #faffff;
       border-radius: 10px;
       height: 50px;
+      margin: 10px;
     }
     .supmenuSliitlogo {
       justify-content: center;
@@ -334,3 +337,4 @@
         width: 50%;
         height: auto;
     }
+   
