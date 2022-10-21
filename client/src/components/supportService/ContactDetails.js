@@ -1,10 +1,11 @@
 import React from 'react'
-import sliitlogo from "../images/sliit.png";
+import "./Supportserviceform.css";
 import "./SupportService.css";
+import sliitlogo from "../images/SupportServiceImages/sliit_logo.jpg";
 
 const ContactDetails = () => {
   return (
-    <div>
+    <div className='contact'>
       <div class="SupervisorSupportServices">
         <div class="StdSup">
           <h2 class="SuperServicesH2"> 🧑‍💻 Support Services</h2>
@@ -16,10 +17,12 @@ const ContactDetails = () => {
           <h4><pre>      • 011 754 4801</pre></h4>
           <br></br>  <br></br>  <br></br>  <br></br>  <br></br>  <br></br>  <br></br>
 
-        </div>
-        <div className="supmenuSliitlogo">
+
+          <div className="supmenuSliitlogo">
           <img src={sliitlogo} />
           </div>
+        </div>
+      
       </div>
     </div>
   )

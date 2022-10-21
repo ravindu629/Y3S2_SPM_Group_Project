@@ -8,7 +8,7 @@ import StaffLogin from "./components/login/StaffLogin";
 import AdminMenu from "./components/admin/AdminMenu";
 import LectureMenu from "./components/lecture/LectureMenu";
 
-import SupportService from "./components/supportService/SupportService";
+
 
 import StudentLogin from "./components/login/StudentLogin";
 import AddSudent from "./components/student/AddStudent";
@@ -34,6 +34,10 @@ import StudentProfileUpdate from "./components/student/StudentProfileUpdate";
 
 //support services pages 
 import SupportServiceHome from "./components/supportService/SupportServiceHome";
+
+
+
+
 import HostalDetails from "./components/supportService/HostalDetails"
 import AddHostal from "./components/supportService/AddHostal"
 import UpdateHostal from "./components/supportService/UpdateHostal"
@@ -82,8 +86,19 @@ function App() {
         {/*Student*/}
         <Route path="/studentLogin" element={<StudentLogin />} />
         <Route path="/addStudent" element={<AddSudent />} />
+
+
+   
+
         <Route path="/studentMenu" element={<StudentMenu />} />
         <Route path="/SPMmodulePage" element={<SPMmodulePage />} />
+
+
+
+
+        <Route path="/studentMenu" element={<StudentMenu />} />
+        <Route path="/SPMmodulePage" element={<SPMmodulePage />} />
+
 
         {/*Student Group Navigation*/}
         <Route path="/studentGroup" element={<StudentGroup />} />
@@ -97,6 +112,7 @@ function App() {
         <Route path="/StudentProfile" element={<StudentProfile />} />
         <Route path="/StudentProfileLogin" element={<StudentProfileLogin />} />
         <Route path="/StudentProfileUpdate/:id" element={<StudentProfileUpdate />} />
+
 
 
         <Route path="/SupportServiceHome" element={<SupportServiceHome />} />

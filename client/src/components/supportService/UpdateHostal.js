@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import { useParams } from "react-router";
+import "./Supportserviceform.css";
 //import "./App.css";
 
 
@@ -69,19 +70,19 @@ import { useParams } from "react-router";
 
     <div class="supAddMarksForm">
       <br></br>
-         <h2 className="heading"> &nbsp;&nbsp;  &nbsp;&nbsp;  &nbsp;&nbsp;  &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;  &nbsp;&nbsp;  &nbsp;&nbsp;  &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;  &nbsp;&nbsp;  &nbsp;&nbsp;  &nbsp;&nbsp; &nbsp;&nbsp;  &nbsp;&nbsp; &nbsp;&nbsp;  &nbsp;&nbsp; &nbsp;&nbsp;  &nbsp;&nbsp; &nbsp;&nbsp;   Update Hostel Details</h2>
+         <h2 className="heading-s"> &nbsp;&nbsp;  &nbsp;&nbsp;  &nbsp;&nbsp;  &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;  &nbsp;&nbsp;  &nbsp;&nbsp;  &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;  &nbsp;&nbsp;  &nbsp;&nbsp;  &nbsp;&nbsp; &nbsp;&nbsp;  &nbsp;&nbsp; &nbsp;&nbsp;  &nbsp;&nbsp;   Update Hostel Details</h2>
 
-        <div className="form">  
-       <div className="formStyle">
+        <div className="form-s">  
+       <div className="formStyle-s">
            <form onSubmit={updateData}>
-           <div class="form-group row">
+           <div class="form-group-s row">
            <label for="hostalID" className="col-sm-2 col-form-label">
           <b>Hostel Id </b>
             </label>
             <div className="col-sm-10">
               <input
                 type="text"
-                className="form-control"
+                className="form-s-control"
                 id="hostalID"
                 name="hostalID"
                 placeholder="enter hostel id"
@@ -92,14 +93,14 @@ import { useParams } from "react-router";
             </div>
           </div>
 
-          <div class="form-group row">
+          <div class="form-group-s row">
           <label for="hostalName" className="col-sm-2 col-form-label">
             <b>Hostel Name </b>
             </label>
             <div className="col-sm-10">
               <input
                 type="text"
-                className="form-control"
+                className="form-s-control"
                 id="hostalName"
                 name="hostalName"
                 placeholder="enter hostal name"
@@ -110,14 +111,14 @@ import { useParams } from "react-router";
             </div>
           </div>
 
-          <div class="form-group row">
+          <div class="form-group-s row">
           <label for="Address" className="col-sm-2 col-form-label">
             <b> Address </b>
             </label>
             <div className="col-sm-10">
               <input
                 type="Text"
-                className="form-control"
+                className="form-s-control"
                 id="Address"
                 name="address"
                 placeholder="enter address"
@@ -128,14 +129,14 @@ import { useParams } from "react-router";
             </div>
           </div>
 
-          <div class="form-group row">
+          <div class="form-group-s row">
           <label for="bedRooms" className="col-sm-2 col-form-label">
            <b>  Bedrooms </b>
             </label>
             <div className="col-sm-10">
               <input
                 type="text"
-                className="form-control"
+                className="form-s-control"
                 id="bedRooms"
                 name="bedRooms"
                 placeholder="enter bedrooms"
@@ -146,14 +147,14 @@ import { useParams } from "react-router";
             </div>
           </div>
 
-          <div class="form-group row">
+          <div class="form-group-s row">
           <label for="bathrooms" className="col-sm-2 col-form-label">
            <b> Bathrooms  </b>
             </label>
             <div className="col-sm-10">
               <input
                 type="text"
-                className="form-control"
+                className="form-s-control"
                 maxlength="3"
                 id="bathrooms"
                 name="bathrooms"
@@ -165,14 +166,14 @@ import { useParams } from "react-router";
             </div>
           </div>
             
-          <div class="form-group row">
+          <div class="form-group-s row">
           <label for="persons" className="col-sm-2 col-form-label">
               <b> Person </b>
             </label>
             <div className="col-sm-10">
               <input
                 type="text"
-                className="form-control"
+                className="form-s-control"
                 id="persons"
                 name="persons"
                 placeholder="enter persons"
@@ -183,14 +184,14 @@ import { useParams } from "react-router";
             </div>
           </div>
           
-          <div class="form-group row">
+          <div class="form-group-s row">
           <label for="charge" className="col-sm-2 col-form-label">
           <b> price </b>
             </label>
             <div className="col-sm-10">
               <input
                 type="text"
-                className="form-control"
+                className="form-s-control"
                 id="charge"
                 name="charge"
                 placeholder="enter charge"
@@ -206,14 +207,14 @@ import { useParams } from "react-router";
           </div>
 
 
-          <div class="form-group row">
+          <div class="form-group-s row">
           <label for="contactNo" className="col-sm-2 col-form-label">
              <b>  Contact No </b>
             </label>
             <div className="col-sm-10">
               <input
                 type="tel"
-                className="form-control"
+                className="form-s-control"
                 id="contactNo"
                 name="contactNo"
                 placeholder="enter contact no"
@@ -229,14 +230,14 @@ import { useParams } from "react-router";
           </div>
       
           
-          <div class="form-group row">
+          <div class="form-group-s row">
          
-            <div  className="updateBtn">
+            <div  className="updateBtn-s">
               
               <button type="submit" class="btn btn-primary" > 
-              &nbsp;&nbsp;
+              
                 Update
-                &nbsp;&nbsp;
+                
               </button>  
 
          

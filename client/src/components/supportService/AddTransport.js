@@ -1,7 +1,7 @@
 import React,{useState} from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
-
+import "./Supportserviceform.css";
 
 
 
@@ -67,22 +67,22 @@ function AddTransport() {
     <div className="">
     <br></br>
     
-        <h2 className="heading">  &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp; Add Transport Service </h2>
+        <h2 className="heading-s">   &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp; Add Transport Service </h2>
         <br></br><br></br>
           
           <div className="form-transport">
-      <div className="formStyle">
+      <div className="formStyle-s">
         <form onSubmit={sendData}>
      
 
-        <div className="form-group row">
+        <div className="form-group-s row">
             <label for="transportID" className="col-sm-2 col-form-label">
          <b> Transport Id </b>
             </label>
             <div className="col-sm-10">
               <input
                 type="text"
-                className="form-control"
+                className="form-s-control"
                 id="transportID"
                 name="transportID"
                 placeholder="enter transport id"
@@ -94,14 +94,14 @@ function AddTransport() {
             </div>
           </div>
 
-          <div className="form-group row">
+          <div className="form-group-s row">
             <label for="vehicleType" className="col-sm-2 col-form-label">
           <b>  vehicle Type </b> 
             </label>
             <div className="col-sm-10">
               <select
                 type="text"
-                className="form-control"
+                className="form-s-control"
                 id="vehicleType"
                 name="vehicleType"
                 onChange={handleChange}
@@ -120,14 +120,14 @@ function AddTransport() {
               
             </div>
           </div>
-          <div className="form-group row">
+          <div className="form-group-s row">
             <label for="ownerName" className="col-sm-2 col-form-label">
            <b> owner Name </b>
             </label>
             <div className="col-sm-10">
               <input
                 type="Text"
-                className="form-control"
+                className="form-s-control"
                 id="ownerName"
                 name="ownerName"
                 placeholder="enter name"
@@ -138,14 +138,14 @@ function AddTransport() {
             </div>
           </div>
 
-          <div className="form-group row">
+          <div className="form-group-s row">
             <label for="capacity" className="col-sm-2 col-form-label">
            <b> capacity </b>
             </label>
             <div className="col-sm-10">
               <input
                 type="text"
-                className="form-control"
+                className="form-s-control"
                 id="capacity"
                 name="capacity"
                 placeholder="enter capacity"
@@ -156,14 +156,14 @@ function AddTransport() {
             </div>
           </div>
 
-          <div className="form-group row">
+          <div className="form-group-s row">
             <label for="coverage" className="col-sm-2 col-form-label">
             <b> coverage </b>
             </label>
             <div className="col-sm-10">
               <input
                 type="text"
-                className="form-control"
+                className="form-s-control"
                 id="coverage"
                 name="coverage"
                 placeholder="enter coverage areas"
@@ -175,7 +175,7 @@ function AddTransport() {
           </div>
 
 
-          <div className="form-group row">
+          <div className="form-group-s row">
             
             <label for="time" className="col-sm-2 col-form-label">
            <b>  Time </b>
@@ -183,7 +183,7 @@ function AddTransport() {
             <div className="col-sm-10">
               <input
                 type="time"
-                className="form-control"
+                className="form-s-control"
                 id="time"
                 name="time"
                 placeholder="enter time"
@@ -194,14 +194,14 @@ function AddTransport() {
             </div>
           </div>
 
-          <div className="form-group row">
+          <div className="form-group-s row">
             <label for="contactNo" className="col-sm-2 col-form-label">
            <b>  contact No </b>
             </label>
             <div className="col-sm-10">
               <input
                 type="text"
-                className="form-control"
+                className="form-s-control"
                 id="contactNo"
                 name="contactNo"
                 placeholder="enter contact no"
@@ -214,18 +214,18 @@ function AddTransport() {
 
             
           </div>
-<br></br>
-          <div className="form-group row">
+
+          <div className="form-group-s row">
         
-            <div className="addmarkSubBtn">
-              <div className="addButton">
+            
+              <div className="addButton-s">
               <button type="submit" className="btn btn-primary">
-              &nbsp;&nbsp;
-                Add
-                &nbsp;&nbsp;
+            
+              &nbsp;&nbsp;  &nbsp;&nbsp; Add &nbsp;&nbsp;&nbsp;&nbsp;
+              
               </button>
               </div>
-            </div>
+            
             
           </div>
         </form>

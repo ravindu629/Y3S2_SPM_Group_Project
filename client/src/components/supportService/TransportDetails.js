@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import EditIcon from "@mui/icons-material/Edit";
 import DeleteForeverIcon from "@mui/icons-material/DeleteForever";
+import "./Supportserviceform.css";
 
 
  function TransportDetails () {
@@ -67,18 +68,18 @@ import DeleteForeverIcon from "@mui/icons-material/DeleteForever";
         <div className="">
            
 
-            <h2 className="heading"> &nbsp;&nbsp;  &nbsp;&nbsp;  &nbsp;&nbsp;  &nbsp;&nbsp;&nbsp;&nbsp;  &nbsp;&nbsp;  &nbsp;&nbsp;  &nbsp;&nbsp;&nbsp;&nbsp;  &nbsp;&nbsp;  &nbsp;&nbsp;  &nbsp;&nbsp;  &nbsp;&nbsp;  &nbsp;&nbsp;  &nbsp;&nbsp;  &nbsp;&nbsp;  &nbsp;&nbsp;  &nbsp;&nbsp;  &nbsp;&nbsp;  &nbsp;&nbsp;  Transport Service Details</h2><br />
-            <div className="add-get-btn">
+          <center>  <h2 className="transportdetails"> Transport Service Details</h2></center><br />
+            <div className="tarnsportButton">
                 <a href="/AddTransport">
-                    <button type="button" className="button_getreport">
-                        <b> ➕ Add Transport </b>
+                    <button type="button" className="button_getreport_transport">
+                        <b> ➕ Add Transport</b>
                     </button>
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                 
                 </a>  
                 
                 <a href="/ViewTransportReport">
-                &nbsp;&nbsp;
-                    <button type="button" className="button_getreport">
+                &nbsp;&nbsp;&nbsp;&nbsp;
+                    <button type="button" className="button_getreport_transport">
                         <b> 📚 Get Report    &nbsp;&nbsp;</b>
                     </button>
                 </a>    
@@ -87,10 +88,10 @@ import DeleteForeverIcon from "@mui/icons-material/DeleteForever";
                 
             </div>
             
-            <div className="searchBar">
+            <div className="searchBar-hostal">
             <input
           type="text"
-          class="form-control rounded"
+          class="form-s-control rounded"
           placeholder=" 🔍 Search"
           aria-label="Search"
           aria-describedby="search-addon"
@@ -99,7 +100,7 @@ import DeleteForeverIcon from "@mui/icons-material/DeleteForever";
         />
            </div>
 <br></br>
-<div className="table_search"> 
+<div className="table_search-s"> 
             <table className="table table-bordered">
                 <thead className="table-dark">
                     <tr>
