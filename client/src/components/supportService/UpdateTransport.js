@@ -6,7 +6,7 @@ import { useParams } from "react-router";
 
 
 
- function AddMarks(){
+ function UpdateTransport(){
 
     const [valid, setValid] = useState(false);
     const [mark, setmarks] = useState({
@@ -68,19 +68,19 @@ import { useParams } from "react-router";
 
     <div class="supAddMarksForm">
       <br></br>
-         <h2 className="heading"> &nbsp;&nbsp;  &nbsp;&nbsp;  &nbsp;&nbsp;  &nbsp;&nbsp; &nbsp;&nbsp;  &nbsp;&nbsp; &nbsp;&nbsp;  &nbsp;&nbsp; &nbsp;&nbsp;  &nbsp;&nbsp; &nbsp;&nbsp;  &nbsp;&nbsp;  &nbsp;&nbsp; &nbsp;&nbsp;  &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Update Transport Details</h2>
+         <h2 className="heading-s"> &nbsp;&nbsp;  &nbsp;&nbsp;  &nbsp;&nbsp;  &nbsp;&nbsp; &nbsp;&nbsp;  &nbsp;&nbsp; &nbsp;&nbsp;  &nbsp;&nbsp; &nbsp;&nbsp;  &nbsp;&nbsp; &nbsp;&nbsp;  &nbsp;&nbsp;  &nbsp;&nbsp; &nbsp;&nbsp;  &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Update Transport Details</h2>
 <br></br>
        <div className="form-transport">
-       <div className="formStyle">
+       <div className="formStyle-s">
            <form onSubmit={updateData}>
-           <div class="form-group row">
+           <div class="form-group-s row">
             <label for="transportID" class="col-sm-2 col-form-label">
            <b> Transpor ID </b>
             </label>
             <div class="col-sm-10">
               <input
                 type="text"
-                class="form-control"
+                class="form-s-control"
                 id="transportID"
                 name="transportID"
                 placeholder="enter document name"
@@ -92,14 +92,14 @@ import { useParams } from "react-router";
             </div>
           </div>
 
-          <div class="form-group row">
+          <div class="form-group-s row">
             <label for="vehicleType" class="col-sm-2 col-form-label">
           <b>   Vehicle Type </b>
             </label>
             <div class="col-sm-10">
            <select
                 type="text"
-                class="form-control"
+                class="form-s-control"
                 id="vehicleType"
                 name="vehicleType"
            
@@ -117,14 +117,14 @@ import { useParams } from "react-router";
             </div>
           </div>
 
-          <div class="form-group row">
+          <div class="form-group-s row">
             <label for="ownerName" class="col-sm-2 col-form-label">
            <b> Owner Name </b>
             </label>
             <div class="col-sm-10">
               <input
                 type="text"
-                class="form-control"
+                class="form-s-control"
                 id="ownerName"
                 name="ownerName"
                 placeholder="enter group id"
@@ -135,14 +135,14 @@ import { useParams } from "react-router";
             </div>
           </div>
 
-          <div class="form-group row">
+          <div class="form-group-s row">
             <label for="capacity" class="col-sm-2 col-form-label">
             <b> Capacity </b>
             </label>
             <div class="col-sm-10">
               <input
                 type="text"
-                class="form-control"
+                class="form-s-control"
                 id="capacity"
                 name="capacity"
                 placeholder="enter topic name"
@@ -153,14 +153,14 @@ import { useParams } from "react-router";
             </div>
           </div>
 
-          <div class="form-group row">
+          <div class="form-group-s row">
             <label for="coverage" class="col-sm-2 col-form-label">
            <b> Coverage </b> 
             </label>
             <div class="col-sm-10">
               <input
                 type="text"
-                class="form-control"
+                class="form-s-control"
                 id="coverage"
                 name="coverage"
                 placeholder="enter marks"
@@ -171,14 +171,14 @@ import { useParams } from "react-router";
             </div>
           </div>
             
-          <div class="form-group row">
+          <div class="form-group-s row">
             <label for="time" class="col-sm-2 col-form-label">
           <b>   Time </b>
             </label>
             <div class="col-sm-10">
               <input
                 type="text"
-                class="form-control"
+                class="form-s-control"
                 id="time"
                 name="time"
                 placeholder="enter supervisor name"
@@ -189,14 +189,14 @@ import { useParams } from "react-router";
             </div>
           </div>
           
-          <div class="form-group row">
+          <div class="form-group-s row">
             <label for="contactNo" class="col-sm-2 col-form-label">
            <b>  Contact No </b>
             </label>
             <div class="col-sm-10">
               <input
                 type="text"
-                class="form-control"
+                class="form-s-control"
                 id="contactNo"
                 name="contactNo"
                 placeholder="enter feedback"
@@ -208,9 +208,9 @@ import { useParams } from "react-router";
           </div>
           <br></br>
           
-          <div class="form-group row">
+          <div class="form-group-s row">
          
-            <div  className="updateBtn">
+            <div  className="updateBtn-ss">
               
               <button type="submit" class="btn btn-primary" > 
               &nbsp;&nbsp;
@@ -236,5 +236,5 @@ import { useParams } from "react-router";
 
 };
 
-export default AddMarks;
+export default UpdateTransport;
 

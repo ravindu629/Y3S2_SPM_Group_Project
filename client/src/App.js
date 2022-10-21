@@ -20,10 +20,10 @@ import CreateStudentGroup from "./components/student/CreateStudentGroup";
 
 //support services pages 
 import SupportServiceHome from "./components/supportService/SupportServiceHome";
-<<<<<<< HEAD
 
-=======
->>>>>>> d26af8f6ff5f946f88c0b07a70fc2859fa646638
+
+
+
 import HostalDetails from "./components/supportService/HostalDetails"
 import AddHostal from "./components/supportService/AddHostal"
 import UpdateHostal from "./components/supportService/UpdateHostal"
@@ -52,11 +52,6 @@ import Faculty_Notices from "./components/admin/Faculty_Notices";
 import ViewNotice from "./components/admin/ViewNotice";
 
 
-<<<<<<< HEAD
-
-
-=======
->>>>>>> d26af8f6ff5f946f88c0b07a70fc2859fa646638
 function App() {
   return (
     <BrowserRouter>
@@ -69,7 +64,7 @@ function App() {
         {/*Student*/}
         <Route path="/studentLogin" element={<StudentLogin />} />
         <Route path="/addStudent" element={<AddSudent />} />
-<<<<<<< HEAD
+
 
    
 
@@ -77,10 +72,10 @@ function App() {
         <Route path="/SPMmodulePage" element={<SPMmodulePage />} />
 
 
-=======
+
         <Route path="/studentMenu" element={<StudentMenu />} />
         <Route path="/SPMmodulePage" element={<SPMmodulePage />} />
->>>>>>> d26af8f6ff5f946f88c0b07a70fc2859fa646638
+
         <Route path="/SupportServiceHome" element={<SupportServiceHome />} />
         <Route path="/HostalDetails" element={<HostalDetails />} />
         <Route path="/AddHostal" element={<AddHostal />} />

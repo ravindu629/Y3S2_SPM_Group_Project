@@ -61,34 +61,36 @@ import DeleteForeverIcon from "@mui/icons-material/DeleteForever";
 
 
     return (
-        <div className="all">
+        <div >
            <br></br>
-  
-            <h2 className="heading"> Available Hostels Details</h2><br />
-            
+      <div>
+          <h2 className="availableHostel"> Available Hostels Details </h2><br />
+         </div>
             <div  className="add-get-btn">
                 <a href="/Addhostal">
-                  <br></br>
+                  
                     <button type="button" className="button_getreport">
                         <b> ➕ Add Hostel     &nbsp;&nbsp;</b>
                     </button>
                  
                 </a>  
-                &nbsp;&nbsp;   &nbsp;&nbsp;   &nbsp;&nbsp;   &nbsp;&nbsp;   &nbsp;&nbsp;
+               
+   
+              
                 <a href="/ViewHostelReport">
-                &nbsp;&nbsp;
+                
                     <button type="button" className="button_getreport">
-                        <b> 📚 Get Report    &nbsp;&nbsp;</b>
+                        <b> 📚 Get Report  </b>
                     </button>
                 </a>         
-                       
+                </div>   
                  
-            </div>
+           
             
-            <div className="searchBar-hostal">
+          <div className="searchBar-hostal">
         <input
           type="text"
-          class="form-control rounded"
+          class="form-s-control rounded"
           placeholder=" 🔍  Search"
           aria-label="Search"
           aria-describedby="search-addon"
@@ -96,7 +98,7 @@ import DeleteForeverIcon from "@mui/icons-material/DeleteForever";
         />
       </div>
    <br></br>
-   <div className="table_search">
+   <div className="table_search-s">
             <div className="table table-success table-striped">
             <table className="table table-bordered">
                 <thead className="">

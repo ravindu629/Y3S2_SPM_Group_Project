@@ -70,23 +70,23 @@ function AddHostal() {
     <br></br>
      
       
-        <h2 className="heading">&nbsp;&nbsp;  &nbsp;&nbsp;&nbsp;&nbsp;  &nbsp;&nbsp;&nbsp;&nbsp;  &nbsp;&nbsp; &nbsp;&nbsp;  &nbsp;&nbsp; &nbsp;&nbsp;  &nbsp;&nbsp; &nbsp;&nbsp;  &nbsp;&nbsp; &nbsp;&nbsp;  &nbsp;&nbsp; &nbsp;&nbsp;  &nbsp;&nbsp; &nbsp;&nbsp;  &nbsp;&nbsp;&nbsp;&nbsp;  &nbsp;&nbsp;&nbsp;&nbsp;  &nbsp;&nbsp;&nbsp;&nbsp;  &nbsp;&nbsp;&nbsp;&nbsp; Add Hostel </h2>
-        <br></br>
+        <h2 className="heading-s">&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;  &nbsp;&nbsp;&nbsp;&nbsp;  &nbsp;&nbsp; &nbsp;&nbsp;  &nbsp;&nbsp; &nbsp;&nbsp;  &nbsp;&nbsp; &nbsp;&nbsp;  &nbsp;&nbsp; &nbsp;&nbsp;  &nbsp;&nbsp; &nbsp;&nbsp;  &nbsp;&nbsp; &nbsp;&nbsp;  &nbsp;&nbsp;&nbsp;&nbsp;  &nbsp;&nbsp;&nbsp;&nbsp;  &nbsp;&nbsp;&nbsp;&nbsp;  Add Hostel </h2>
+        
 
-        <div className="form" >
+        <div className="form-s" >
           <br></br>
-          <div className="formStyle">
+          <div className="formStyle-s">
         <form onSubmit={sendData}>
      
 
-        <div className="form-group row">
+        <div className="form-group-s row">
             <label for="hostalID" className="col-sm-2 col-form-label">
-         <b>&nbsp;   Hostel Id  </b>
+         <b> Hostel Id  </b>
             </label>
             <div className="col-sm-10">
               <input
                 type="text"
-                className="form-control"
+                className="form-s-control"
                 id="hostalID"
                 name="hostalID"
                 placeholder="enter hostel id"
@@ -98,14 +98,14 @@ function AddHostal() {
             </div>
           </div>
 
-          <div className="form-group row">
+          <div className="form-group-s row">
             <label for="hostalName" className="col-sm-2 col-form-label">
-           <b> &nbsp;  Hostel Name </b>
+           <b> Hostel Name </b>
             </label>
             <div className="col-sm-10">
               <input
                 type="text"
-                className="form-control"
+                className="form-s-control"
                 id="hostalName"
                 name="hostalName"
                 placeholder="enter hostal name"
@@ -115,14 +115,14 @@ function AddHostal() {
               />
             </div>
           </div>
-          <div className="form-group row">
+          <div className="form-group-s row">
             <label for="Address" className="col-sm-2 col-form-label">
-            <b>&nbsp; Address </b>
+            <b> Address </b>
             </label>
             <div className="col-sm-10">
               <input
                 type="Text"
-                className="form-control"
+                className="form-s-control"
                 id="Address"
                 name="address"
                 placeholder="enter address"
@@ -133,14 +133,14 @@ function AddHostal() {
             </div>
           </div>
 
-          <div className="form-group row">
+          <div className="form-group-s row">
             <label for="bedRooms" className="col-sm-2 col-form-label">
-           <b> &nbsp; Bedrooms </b>
+           <b> Bedrooms </b>
             </label>
             <div className="col-sm-10">
               <input
                 type="text"
-                className="form-control"
+                className="form-s-control"
                 id="bedRooms"
                 name="bedRooms"
                 placeholder="enter bedrooms"
@@ -151,14 +151,14 @@ function AddHostal() {
             </div>
           </div>
 
-          <div className="form-group row">
+          <div className="form-group-s row">
             <label for="bathrooms" className="col-sm-2 col-form-label">
            <b> &nbsp; Bathrooms </b>
             </label>
             <div className="col-sm-10">
               <input
                 type="text"
-                className="form-control"
+                className="form-s-control"
                 maxlength="3"
                 id="bathrooms"
                 name="bathrooms"
@@ -171,14 +171,14 @@ function AddHostal() {
           </div>
 
           
-          <div className="form-group row">
+          <div className="form-group-s row">
             <label for="persons" className="col-sm-2 col-form-label">
-             <b> &nbsp; Person  </b>
+             <b>  Person  </b>
             </label>
             <div className="col-sm-10">
               <input
                 type="text"
-                className="form-control"
+                className="form-s-control"
                 id="persons"
                 name="persons"
                 placeholder="enter persons"
@@ -189,14 +189,14 @@ function AddHostal() {
             </div>
           </div>
 
-          <div className="form-group row">
+          <div className="form-group-s row">
             <label for="charge" className="col-sm-2 col-form-label">
-         <b> &nbsp; price  </b>
+         <b>  price  </b>
             </label>
             <div className="col-sm-10">
               <input
                 type="text"
-                className="form-control"
+                className="form-s-control"
                 id="charge"
                 name="charge"
                 placeholder="enter charge per person"
@@ -207,14 +207,14 @@ function AddHostal() {
             </div>
             
           </div>
-          <div class="form-group row">
+          <div class="form-group-s row">
           <label for="contactNo" className="col-sm-2 col-form-label">
              <b>  Contact No </b>
             </label>
             <div className="col-sm-10">
               <input
                 type="tel"
-                className="form-control"
+                className="form-s-control"
                 id="contactNo"
                 name="contactNo"
                 placeholder="enter contact no"
