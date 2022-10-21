@@ -323,3 +323,14 @@
       justify-content: center;
       margin-left: 450px;
     }
+
+    .contactImage{
+        margin-left: 580px;
+        margin-top: -30%;
+        
+    
+    }
+    .contactImage img {
+        width: 50%;
+        height: auto;
+    }

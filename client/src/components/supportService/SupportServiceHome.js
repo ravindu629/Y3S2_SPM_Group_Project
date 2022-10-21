@@ -5,7 +5,7 @@ import "./Supportserviceform.css";
 
 export default function SMenu() {
   return (
-    <div>
+    <div className="contact">
       <h1 className="supporTitle">
         {" "}
         Support Services
@@ -15,7 +15,7 @@ export default function SMenu() {
       <a href="/HostalDetails">
           <button
             type="button"
-            className="btn btn-primary"
+            className="btn btn-secondary"
             style={{ width: "20%", fontSize: "140%", height:"115px", marginTop: "20px",borderBottomLeftRadius:"30px",borderColor:"black",backgroundColor:"#8000ff"}}
           >
             <b>Hostel Services</b>
@@ -44,6 +44,7 @@ export default function SMenu() {
         &nbsp;&nbsp;&nbsp;&nbsp;
         
         </div>
+        
         <div className="menuimage">
         <img src={theNextYou} alt="nextYouImage" />
       </div>{" "}
