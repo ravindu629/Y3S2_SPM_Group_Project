@@ -68,6 +68,9 @@ import Faculty_Notces from "./components/admin/Faculty_Notices";
 import Faculty_Notices from "./components/admin/Faculty_Notices";
 import ViewNotice from "./components/admin/ViewNotice";
 
+import UploadMarking from "./components/lecture/UploadMarking";
+import ViewMarking from "./components/lecture/ViewMarking";
+import UpdateMarking from "./components/lecture/UpdateMarking";
 
 
 function App() {
@@ -140,6 +143,11 @@ function App() {
 
         <Route path="/notices" element={<Faculty_Notices />} />
         <Route path="/viewNotice/:id" element={<ViewNotice />} />
+
+        <Route path="/upload-marking" element={<UploadMarking />} />
+        <Route path="/view-marking" element={<ViewMarking />} />
+        <Route path="/update-marking/:id" element={<UpdateMarking />} />
+
 
       </Routes>
 

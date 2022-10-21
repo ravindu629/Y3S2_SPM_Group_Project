@@ -74,7 +74,7 @@ function UpdateQuiz() {
 return (
     <div className="tableStyleL">
       <div className="uploadQuiz-card">
-        <div className="Quiz_heading">Upload New Quiz</div>
+        <div className="Quiz_heading">Update Quiz</div>
         <div className="QuizformStyle_1">
           <form onSubmit={UpdateQuiz}>
           <div className="row quiz-form">

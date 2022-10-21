@@ -40,7 +40,7 @@ export default function LectureMenu() {
           type="button"
           className="btn btn-light btn-lg btn-block"
           onClick={() => {
-            navigate("/admins");
+            navigate("/upload-marking");
           }}
         >
           <div className="lectureMenuBtns"> Upload Marking Scheme</div>
@@ -50,20 +50,12 @@ export default function LectureMenu() {
           type="button"
           className="btn btn-light btn-lg btn-block"
           onClick={() => {
-            navigate("/addStaffMember");
+            navigate("/view-marking");
           }}
         >
           <div className="lectureMenuBtns"> View Marking Scheme</div>
         </button>
-        <button
-          type="button"
-          className="btn btn-light btn-lg btn-block"
-          onClick={() => {
-            navigate("/addAdmin");
-          }}
-        >
-          <div className="lectureMenuBtns">  View Quiz Report</div>
-        </button>
+        
       </div>
       <div class="lecture-img handI">
         <img src={theNextYou} alt="nextYou"/>

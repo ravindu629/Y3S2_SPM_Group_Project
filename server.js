@@ -30,11 +30,14 @@ app.use("/api/studentProjects", require("./routes/StudentProject.route"));
 app.use("/api/staffMembers", require("./routes/Staff.route"));
 
 
-app.use("/api/quiz", require("./routes/Quiz.route"));
+
 
 
 app.use("/api/hostaldetails", require("./routes/HostalService.route"));
 app.use("/api/transportdetails", require("./routes/TransportService.route"));
+
+app.use("/api/quiz", require("./routes/Quiz.route"));
+app.use("/api/marking", require("./routes/Marking.routes"));
 
 
 app.listen(port, () => {
